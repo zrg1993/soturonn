@@ -1,0 +1,4925 @@
+keyword word_score
+os control
+
+52
+
+13
+
+powerpc 32-bit memory management 
+
+formats
+
+powerpc 32-bit address translation
+
+53
+
+54
+
+required reading
+
+• stallings chapter 8
+• stallings 128.887493471
+graphics frame buffers
+
+• 32 bit effective address
+– 12 bit byte selector 
+
+• =4kbyte pages
+
+– 16 bit page id
+
+• 64k pages 126.499159664
+william stallings
+
+chapter 2
+
+operating system overview
+operating system overview
+
+dave bremer
+
+otago polytechnic 116.778992937
+operating systems
+
+• stages include
+• stages include
+
+– serial processing
+– simple batch systems
+– multiprogrammed batch systems
+– time sharing systems
+
+serial processing
+
+• 105.040590452
+paging
+• unsegmented unpaged
+
+– virtual address = physical address
+– low complexity
+– high performance
+• unsegmented paged
+
+– memory viewed 98.2307840827
+time slot
+
+21
+
+22
+
+process control block
+
+pcb diagram
+
+identifier
+
+•
+• state
+• priority
+• program counter
+• memory pointers
+• context data
+•
+• accounting information 97.707891437
+– microkernel architecture
+– multithreading
+– multithreading
+– symmetric multiprocessing
+– distributed operating systems
+– object-oriented design
+
+microkernel architecture
+
+• 87.3069789859
+modern operating 
+
+systems
+
+– microsoft windows overview
+– unix systems
+– linux
+
+major advances
+
+• operating systems 79.840232234
+modern operating 
+
+systems
+
+– microsoft windows overview
+– unix systems
+– linux
+
+single-user
+multitasking
+
+• 73.202020755
+modern operating 
+
+systems
+
+– microsoft windows overview
+– unix systems
+– linux
+
+modular
+
+monolithic kernel
+• 72.674476404
+modern operating 
+
+systems
+
+– microsoft windows overview
+– unix systems
+– linux
+
+operating system
+
+• 68.9236409821
+– improper synchronization
+– improper synchronization
+– failed mutual exclusion
+– non-determinate program operation
+– deadlocks
+
+components 65.9048391368
+modern operating 
+
+systems
+
+– microsoft windows overview
+– unix systems
+– linux
+
+description 65.8490795786
+– dynamic linking
+– stackable modules
+
+linux kernel modules
+
+linux kernel
+components
+
+objectives 63.4257936508
+• segmented paged
+
+access control
+
+47
+
+48
+
+12
+
+pentium ii segmentation
+
+pentium ii protection
+
+• 62.5626633518
+modern operating 
+
+systems
+
+– microsoft windows overview
+– unix systems
+– linux
+
+evolution 61.7157462452
+modern 
+
+operating systems
+
+– microsoft windows overview
+– unix systems
+– linux 59.8490795786
+paging
+
+45
+
+46
+
+pentium ii
+
+pentium ii address translation 
+
+mechanism
+
+• hardware 55.0840646497
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+•  data integrity 52.1448638513
+response time 
+
+20 % 
+33 % 
+33 % 
+33 % 
+30 min 
+6 jobs/hr 
+18 min 
+
+40 % 
+67 % 
+67 % 
+67 % 
+15 min 
+
+12 jobs/hr 
+
+10 min 
+table 51.8260611261
+access control
+– long-term storage
+
+virtual memory
+
+• file system implements long-term store
+• virtual memory 51.705709785
+issue
+
+19
+
+20
+
+5
+
+short term scheduler
+
+process states
+
+• dispatcher
+• fine grained decisions 51.1308484092
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+needed block 49.7655823141
+paging
+– berkeley unix
+
+• segmented unpaged
+
+– paging manages allocation 48.9752647715
+computer resources
+
+william stallings 
+
+computer organization 
+
+operating system support 48.4658559019
+– scheduling
+– setup time
+
+simple batch systems
+
+• resident monitor program
+• users submit jobs 48.4529693989
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+ 
+
+os typically 47.7058024296
+level 0
+
+49
+
+50
+
+pentium ii paging
+
+powerpc memory management hardware
+
+• segmentation 47.6986999588
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+ 
+type 46.4623241688
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+ 
+
+program 45.9944526828
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+functions 45.6170860735
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+ 
+
+figure  2 45.1156575021
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 43.7956575021
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+3 43.7956575021
+computer application 
+
+ 
+
+ch-2 operating system overview 
+
+operating system 
+
+2 43.7956575021
+page directory
+• 1024 entries max
+• splits 4g linear memory 43.2938640974
+segment
+• unsegmented virtual memory 232 = 4gbytes
+• segmented 246=64 terabytes
+
+– 42.1208949097
+manageable subproblems
+
+os design hierarchy
+
+roadmap
+
+– operating system objectives/functions
+– 40.1239920453
+virtual 
+
+memory
+
+39
+
+40
+
+10
+
+page table structure
+
+translation lookaside buffer
+
+• 36.5506906042
+disrupting 
+system integrity
+
+roadmap
+
+– operating system objectives/functions
+– 35.7055137845
+virtual memory
+
+windows architecture
+
+client/server model
+
+• windows os 35.6080961143
+tlb holding 32 page table entries
+
+51
+
+• 32 bit – paging 35.5774173965
+data
+
+9
+
+10
+
+desirable hardware features
+
+multi-programmed batch systems
+
+• memory protection
+
+– 32.038941439
+main memory
+
+virtual memory
+
+virtual memory
+
+addressing
+
+information protection 31.863751464
+physical 
+
+memory access
+– fetch page table entry
+– fetch data
+
+• 31.6638627065
+computer system
+
+operating system services
+
+• program creation
+• program execution
+• access 31.5182665988
+smp advantages
+
+• performance
+
+– allowing parallel processing
+
+• availability
+
+– failure 31.2656862745
+line-at-a-time scroll mode terminals affects os design 31.1476449275
+variable sized partitions
+
+29
+
+30
+
+fixed
+
+partitioning
+
+variable sized partitions 29.8455128205
+prentice hall
+
+roadmap
+
+– operating system objectives/functions
+– 29.7888471178
+operating systems
+– major achievements
+– developments leading 29.5982955125
+5 principal storage 
+
+management responsibilities
+– process isolation
+– automatic allocation 29.5492550026
+application
+• accounting
+
+– collect usage statistics 
+– monitor performance 28.8004481793
+block address translation
+
+– map 4 large blocks 28.7842105263
+batch multiprogramming versus time sharing
+
+6
+
+operating systems 28.6645937435
+rpc
+
+windows objects
+
+• windows draws heavily 28.5707070707
+– scheduling
+– setup time
+
+simple batch system
+
+• early computers 28.3372395841
+time
+
+• solutions
+
+– good page replacement algorithms
+– reduce number 28.0601269119
+base register – limit register  address binding  base register 27 27.5916083916
+multi-programming
+• long term
+• medium term
+• short term
+• 27.3357142857
+page table
+
+– tlb
+
+41
+
+42
+
+tlb operation
+
+tlb 27.2567187714
+paged linear address space
+– protection 26.2148148148
+unix
+
+traditional unix kernel
+
+system 26.1527777778
+17
+
+18
+
+long term scheduling
+
+medium term scheduling
+
+• determines 25.9778911565
+services
+– fixes
+
+roadmap
+
+– operating system objectives/functions
+– 25.3483709273
+process scheduling
+
+25
+
+26
+
+memory management
+
+• uni-program
+
+– memory split 25.3115838068
+– availability
+– confidentiality
+– data integrity
+– authenticity
+
+scheduling 24.9512471655
+job
+
+time sharing
+minimize response time
+commands entered 24.9348302848
+small chunks -page 
+
+frames
+
+• split programs 24.8855072464
+single byte level
+– translation table needed 24.0645412652
+rtos solution demonstrates unique performance characteristics 23.1918767507
+30  modern general purpose operating systems permit 22.9337435257
+instance
+
+roadmap
+
+– operating system objectives/functions
+– 22.3602756892
+external hardware errors
+– software errors 
+– operating system 22.1500708403
+operating system 
+
+batch multi-programming 
+maximize processor’ 22.0563074353
+operating system
+
+interactive
+
+•
+• batch
+• single program 21.51916855
+operating system
+
+batch multiprogramming
+maximize processor 21.0896407686
+modern operating 
+– developments leading 20.7976462896
+roadmap
+
+– operating system objectives/functions
+– 20.7888471178
+multi-access systems
+
+• system access
+
+– controls access 20.5465670374
+unique interface
+– os presents standard interface 20.4101449275
+job
+
+• monitor handles scheduling
+
+6
+
+8
+
+2
+
+memory layout 19.8325894057
+pentium iv extended instruction set 19.4758241758
+operating
+
+systems
+
+• operating systems 19.4234817814
+multiple 
+
+users
+users
+
+• multiple users simultaneously access 19.406621137
+accidentally  reading  job  control 
+instructions 19.2739393939
+– single secondary memory space
+
+• early stage 19.2699425287
+simple segmentation
+
+– 64 bit paging 19.1618357488
+smallest legal physical memory address 18.9732758621
+job1 
+
+heavy compute 
+
+5 min 
+50 mb 18.967032967
+paging
+
+virtual memory
+
+• demand paging
+
+– 18.9093007068
+contiguous memory allocation types virtual memory 18.8851964128
+operator
+• operator batches jobs
+• monitor controls sequence 18.820530303
+architecture
+
+6th edition
+week 10 18.7142857143
+time-sharing operating systems switch tasks based 18.695074224
+30     simple batch systems  early computers 18.6607952434
+kernel
+– address spaces
+– interprocess communication 18.5666666667
+programs
+
+utilization
+
+15
+
+16
+
+4
+
+time sharing systems
+
+scheduling
+
+• 18.4005962758
+utilization histograms
+
+time sharing systems
+
+• 18.313048213
+called real memory
+• user/programmer sees 18.1982758621
+cpu
+• operating system relinquishes control 17.996130031
+exploit modern 
+32-bit 17.9492753623
+– basic scheduling
+
+multithreading
+
+• process 17.8400320827
+– fairness
+– differential responsiveness
+– efficiency
+
+key elements 17.7979691877
+multiprocessing
+
+distributed
+
+operating systems
+
+• 17.7117408907
+2003
+
+operating system overview 17.7109250399
+multiprogrammed
+batch systems
+
+• cpu 17.5143036702
+simple batch operating 
+system 17.3199720315
+architecture optimizes input/output performance 17.1966386555
+define logical memory partitions subject 17.1633568337
+memory fragmentation page description table 30 17.0223023258
+operating system
+
+system structure
+
+• view 16.8443749233
+microsoft windows 2000 / 7 / 8 16.8328613235
+assign 200/10 = 20ms cpu time 16.6688659247
+monitor improves job setup time 16.6188557389
+resident monitor
+
+job control language
+
+instructions 16.5174314574
+principal storage management responsibilities 16.4321428571
+process
+• operating system maintains list 16.2569971143
+developed
+
+• major advances include 16.1272378517
+algorithm – deadlock avoidance  deadlock prevention  25 16.125
+• operating system relinquishes control 16.0745614035
+operating system
+
+• program development
+– editors 16.0277425491
+monitor
+
+job control language
+
+• special type 16.0183838384
+equal sized small 
+
+chunks 16.0
+fall 2003
+
+jinzhong niu september 15 16.0
+maximize processor utilization
+
+• monitor
+• monitor
+
+– software 15.9238528139
+operating system
+• programs interact directly 15.8934019832
+system
+
+• incremental growth
+
+– additional processors 15.75
+1000 microsecond  process hierarchy  context switching  16 15.7061285213
+called pages
+• virtual address 15.7035714286
+modern 
+– developments leading 15.6397515528
+3 multiprogrammed batch systems 15.5927350427
+multiprogramming operating systems impose 15.545074224
+scheduling means extra cpu time 15.5209067411
+•  failed  mutual  exclusion 15.5
+modern  operating 
+systems 15.4943495863
+modern operating systems 15.4943495863
+developed batch operating systems 15.3484558665
+virtual memory involves separation 15.1208949097
+operating system
+• machines run 14.9692982456
+base address
+
+• split memory 14.9232758621
+time sharing 
+
+maximize response time 14.8742242242
+modern operating system 14.8571700992
+desirable hardware
+
+features
+
+• memory protection 14.8470000471
+required
+
+• page fault
+
+– required page 14.818369453
+• major advances include 14.7794117647
+microsoft windows 14.702020202
+large mainframe computer systems 14.6878267364
+memory
+• operating system spends 14.5645039322
+local address spaces
+– protection 14.5481481481
+users
+
+services cont…
+
+• controlled access 14.5291277153
+32-bit offset
+• 2 bits 14.5
+multitasking operating systems  multitasking 14.4176232436
+run concurrently
+
+• thread
+
+– dispatchable unit 14.3947368421
+resources
+
+services cont…
+
+• error detection 14.370952381
+file system implements 14.3541666667
+– increase main memory 
+
+• expensive
+• leads 14.3066091954
+case linear address space 14.2974358974
+run multiple 
+
+programs
+
+• main drivers 14.28175924
+cache operation
+
+43
+
+44
+
+11
+
+segmentation
+
+advantages 14.2179487179
+multi-programmed batch system 14.2055555556
+numerous tasks 
+– os handles scheduling 14.1788524105
+hole
+
+31
+
+32
+
+8
+
+variable sized partitions 14.1102564103
+disrupting 
+operating system 14.0745614035
+operation
+
+• user mode
+
+– user program executes 14.0507085451
+files
+• system access
+• error detection 13.8424600658
+attributes remain essentially unchanged 13.8333333333
+load-time address binding schemes 13.8
+computer  system  development  created  problems 13.798170469
+termed serial processing 13.7761904762
+real-time  transaction 
+processing  systems 13.6871794872
+identify physical storage sites 13.6071428571
+job control language commands
+provided 13.6050505051
+partitions
+– unix system 13.5560897436
+recent history
+
+37
+
+38
+
+thrashing
+
+bonus
+
+• 13.5
+diagnose
+• errors typically include 13.4692307692
+scheduling algorithms scheduling algorithms 13.4540816327
+– processes
+– memory management
+– information protection 13.4417123008
+batch operating system 13.3634502924
+batch  operating  system 13.3634502924
+large operating systems 13.3117408907
+threads
+
+symmetric
+
+multiprocessing 13.2857142857
+major theoretical advances 13.2794117647
+handle multiple 
+
+interactive jobs
+
+• processor’ 13.21003996
+executed
+
+• kernel mode
+
+– monitor executes 13.2084356725
+5
+
+7
+
+early systems
+
+• late 1940s 13.2038461538
+stages 13.0
+collect usage statistics 13.0
+process
+
+process management
+
+memory management
+
+• 12.9492583948
+require contiguous page frames
+• 12.9150326797
+resource management
+– system 
+
+process
+
+• fundamental 12.9002928537
+memory management hardware detects 12.8095661846
+degrading pure cpu performance 12.8039215686
+simple batch systems 12.7992567819
+2 simple batch systems 12.7992567819
+data loaded
+– clock generates interrupts 12.7908730159
+handle multiple batch jobs 12.7791486291
+dynamic partitioning
+
+33
+
+34
+
+relocation
+
+paging
+
+• 12.7727743271
+interthread communication facilities include 12.7555555556
+4kbyte pages
+
+• 12.7142857143
+simpler 
+operating  systems 12.7117408907
+mainframe operating systems 12.7117408907
+contemporary  operating  systems 12.7117408907
+partitioning
+
+• long term queue 12.6785714286
+hardware technologies devel-
+opment 12.6612903226
+executing program
+
+• multi-program
+
+– “user” part 12.6172655992
+operating system design 12.5745614035
+make serial processing 12.553968254
+sophisticated memory management techniques 12.4816091954
+application program development tools 12.4769906694
+application  programs  require  means 12.4299516908
+real-time operating systems 12.4117408907
+older operating systems 12.3784075574
+virtual address space 12.3642857143
+task consumes system storage 12.3452380952
+state diagram 12.3103448276
+batch job list won’ 12.2939393939
+cpu time called quantum time 12.291163222
+process
+
+• protection bits give 4 levels 12.2341786302
+distributed computer systems 12.2306838792
+operating system – objectives 12.1995614035
+operating system objectives 12.1995614035
++------------+
++-------------------+
+
+controlled
+components 12.1944444444
+simple batch  system 12.1620772947
+time-sharing  operating  systems 12.1617408907
+time-sharing operating systems 12.1617408907
+operating  systems  meet 12.1117408907
+mainframe operating system 12.0745614035
+operating system research 12.0745614035
+operating system pcsc-301 12.0745614035
+multitasking operating systems 12.0646820672
+• program execution
+
+– os handles scheduling 12.0609809246
+operations include os calls 12.0562987737
+bit  • greater capacity 12.0444444444
+wasted computer processing time 12.0396112132
+job 
+duration 
+memory required 11.9891450806
+access forbidden memory location 11.9758863038
+access  forbidden  memory  location 11.9758863038
+required 30-minute time period 11.9358937885
+development
+
+object-oriented design
+
+• 11.9210526316
+memory
+– operating system 11.8978372656
+real-time operating system 11.7745614035
+operating system ﬁrst 11.7412280702
+automatic job sequencing provided 11.732034632
+level page table lookup
+
+– 11.7027485481
+consumable resource node dot 11.6706349206
+reusable resource node dot 11.6706349206
+microkernel assigns 11.6666666667
+support  multiple  processes 
+include 11.6462658077
+operating system occurs 11.6459899749
+slow human reaction time 11.6222972973
+slow  human  reaction  time 11.6222972973
+multiple users simultaneously access 11.5933412796
+multiple  users 
+simultaneously  access 11.5933412796
+common software design techniques 11.5757575758
+architecture helps provide 11.5714285714
+handle multiple interactive jobs 11.5671828172
+small kernel
+
+• enables programmers 11.5666666667
+multiprogramming operating systems 11.545074224
+multiprogramming  operating  systems 11.545074224
+project mac
+
+• time slicing 11.4972972973
+shell  accepts  user  commands 11.4898989899
+short 
+
+•
+
+term scheduler 11.4761904762
+kernel mode
+– privileged instructions 11.4286111111
+multitasking operating system 11.42750258
+required number page frames 11.4264261058
+operating system interleaving 11.4078947368
+unix shell ﬁle 11.3958333333
+virtual 
+address consisting 11.3642857143
+including operating system 11.3602756892
+system clock generated interrupts 11.3583333333
+data segments
+
+• simplifies handling 11.3492063492
+prentice hall 1998
+
+• loads 11.3333333333
+• 
+
+improper  synchronization 11.2857142857
+ctss
+
+• compatible time-sharing system 11.2833333333
+primitive operating system 11.2412280702
+users actively requesting service 11.2134581105
+managing 
+
+resources
+
+• resource allocation policies 11.1826129426
+operating system service 11.1654704944
+run multiple commands automatically 11.1629186603
+subsequently alternately grants access 11.1526104418
+operating system code 11.0745614035
+operating  system  exploits 11.0745614035
+designing system software
+• error 11.0638528139
+systems combine segmentation 11.0538461538
+monopolizing system
+
+• privileged instructions
+
+– 11.0466666667
+partition description table 11.0454545455
+1 simple program execution attributes 11.0386502532
+single main memory space 11.0366091954
+manageable 
+subproblems 11.0
+mutual exclusion mechanism 11.0
+total memory space exists 10.9899425287
+physical memory address 10.9732758621
+ physical memory address 10.9732758621
+graphics terminal typically 10.95
+multiprogramming 
+operating  system 10.9078947368
+monitor automatically begins loading 10.8966666667
+operating system principles 10.8745614035
+physical 
+
+memory
+
+paging
+
+• 10.8341454273
+medium term 
+scheduler 10.8095238095
+virtual memory committed 10.7875615764
+overwriting common memory areas 10.7816091954
+hardware
+hardware
+
+• main objectives 10.7809139785
+multiprocessor • distributed processing 10.7761904762
+1 serial processing 10.7761904762
+serial processing 10.7761904762
+distributed processing environments 10.7761904762
+uniprocessor system • multiprocessing 10.7738095238
+process id 10.7379912664
+effective computer capacity 10.7339805825
+effective  computer  capacity 10.7339805825
+resource management
+
+• key responsibility 10.7162231559
+important operating system 10.7109250399
+provide data flow path 10.7063492063
+called job control language 10.6300505051
+modules
+– loadable modules
+– 10.6
+os provided message passing 10.5958592133
+diﬀerent components 10.5833333333
+os  frequently  relinquishes  control 10.5672877847
+control
+
+• job returns control 10.5606060606
+client/server model
+– common 10.5476190476
+interrupt os gained control 10.5283267457
+improper 
+design 10.5
+unix system 10.4791666667
+single system
+
+• processes communicate 10.4580839895
+run multiple programs concurrently 10.4484259067
+special hardware components 10.4112903226
+time sharing systems 10.3844767845
+transaction processing system 10.35
+program
+• physical address 10.3487951807
+development
+• early stage 10.3210526316
+error  occurs  causing 
+control 10.3095238095
+reducing  disk  write  time 10.2867709815
+• key object oriented concepts 10.2524064171
+time-
+sharing system 10.25
+simple  batch  environment 10.245410628
+early systems presented 10.2038461538
+plato ii 10.1666666667
+process  process control block  13 10.1601930591
+• memory pointers 10.1566091954
+base register holds 300040 10.1487179487
+computer system hardware 10.1119375718
+make space
+– select page 10.0816993464
+real-time 
+transaction systems 10.0538461538
+multiprogramming  batch  system 10.0388888889
+major achievements 10.0294117647
+define 
+program  modules 9.99879518072
+multiuser interactive systems 9.9641025641
+earliest computer system 9.95064724919
+16 segment registers
+
+• segment registers 9.94871794872
+overwhelmingly complex undertaking 
+
+ 
+
+prepared 9.94444444444
+early  computer  models 9.93398058252
+exploit paging capabilities 9.92753623188
+problem involves controlling access 9.921841211
+airline reservation system 9.91666666667
+linux 9.9
+implement memory systems 9.87712201592
+message system – processes communicate 9.86379827522
+cpu
+
+11
+
+12
+
+3
+
+single program
+
+multi-programming 9.80036380817
+cpu time called quantum 9.79386592475
+virtual memory reference 9.78756157635
+5
+
+principal objective
+source 9.75
+concurrency – mutual exclusion 9.75
+powerful hardware components 9.74462365591
+pentium iii 9.71428571429
+adding modular extensions 9.71428571429
+operating 
+
+systems 9.71174089069
+operating systems 9.71174089069
+operating systems
+
+• 9.71174089069
+operating
+systems 9.71174089069
+operating  systems 9.71174089069
+operating systems
+
+55
+
+14
+
+1 9.71174089069
+management
+– automatic allocation 9.70412087912
+unauthorized modification 
+•  authenticity 9.7
+computer hardware features 9.6952709051
+unique identifier 9.66666666667
+logical address space 9.66315789474
+resident monitor consuming 5000 9.63238095238
+dos batch ﬁle 9.62222222222
+compatible time-sharing system 9.61666666667
+printer
+printer
+
+• problems include 9.53361344538
+object-oriented design 9.5
+human reaction time 9.4972972973
+modern os separates 9.49275362319
+30     logical memory address 9.48643375681
+discuss virtual memory 9.45422824302
+long-term scheduler controls 9.45178571429
+15 min 
+100 mb 9.42857142857
+10 min 
+75 mb 9.42857142857
+cooperating process  cpu scheduling  18 9.42826737682
+called  kernel  mode 9.42361111111
+mutual exclusion creates 9.4
+protection mechanism
+• 14 bits 9.39814814815
+multiple  user  jobs  reside 9.39444444444
+computer memory/ storage 9.39112343967
+minimal processing capabilities 9.38333333333
+virtual address 9.36428571429
+virtual 
+address 9.36428571429
+windows 
+
+development developed 9.35978780944
+computer system consists 9.32564724919
+exploitation means management 9.325
+automatic job processing 9.26536796537
+graphics terminals 9.25
+resumes  control  long 9.25
+minimize turnaround time 9.2472972973
+schedule diﬀerent processes 9.24475065617
+time sharing
+
+early 9.23063063063
+requires  saving 
+hardware  registers 9.21898263027
+manipulating computer hardware 9.1952709051
+computer system resources 9.19064724919
+computer  system  resources 9.19064724919
+system 
+software tools 9.1829004329
+simple batch-processing scheme 9.17874396135
+modular programming
+– protection 9.17012617013
+automatic job sequencing 9.13203463203
+monolithic kernel
+
+– 9.11111111111
+maximize cpu utilization 9.10014005602
+provide easily accessible
+interfaces 9.07936507937
+meet difficult practical problems 9.07647058824
+– operating system 9.07456140351
+operating system 9.07456140351
+logical address generated 9.06315789474
+minimize 
+response  time 9.04359359359
+minimize  disk  traffic 9.03947368421
+reserve 
+computer time 9.03127787982
+entries 
+include 9.0
+im-
+poses control 9.0
+replace binary strings 9.0
+thing worth mentioning 9.0
+numerous tasks 
+
+required 8.97192982456
+ordinary computer software
+– 8.94307149162
+ordinary computer software 8.94307149162
+system programs comprises 8.90217391304
+monitor performance parameters 8.89568627451
+monitor  performance parameters 8.89568627451
+includes pointers 8.88888888889
+single-processor multiprogramming systems 8.88717948718
+achieve greatest performance 8.88235294118
+single sequential thread 8.88
+single  sequential  thread 8.88
+process p1 holds rb 8.85920338759
+process kernel handling 8.84910237749
+batch systems 8.84273504274
+diﬀerent moments 8.83333333333
+general-purpose time sharing 8.83063063063
+maximize  processor  utilization 8.82142857143
+maximize processor utilization 8.82142857143
+paging  systems 8.81471571906
+memory management hardware 8.80956618465
+long-term store 8.8
+facilitates  system  evolution 8.78333333333
+$run makes control transferred 8.74473684211
+manages 
+secondary memory 8.73994252874
+specialized scheduling algorithms 8.72704081633
+key design objective 8.72058823529
+shared variables  ipc facility 8.71666666667
+hierarchical architecture 8.71428571429
+system response time 8.71026026026
+os relinquishes 
+control 8.71014492754
+data
+
+• file system 8.70337301587
+single memory component 8.70327586207
+distributed systems 8.6967032967
+con-
+trolling facility 8.66666666667
+main  memory  concurrently 8.6566091954
+random access memory 8.6425529705
+overview 8.63636363636
+non-contiguous memory allocation 8.63096816976
+event-driven system switches 8.61666666667
+overwhelmingly complex undertaking 8.61111111111
+scheduling arrival time 8.59933811362
+niced process wait waiting 8.59269212108
+monopolizing system
+– prevent 8.58333333333
+dynamic memory allocation 8.55953959833
+tcp/ip socket communication 8.55555555556
+monitors     interprocess communication 8.55555555556
+multi-access systems
+– 8.55384615385
+multiple programs concurrently 8.55368906456
+system
+
+• privileged instructions
+
+– 8.54666666667
+dedicated personal computer 8.53398058252
+properly designed system 8.52777777778
+multiprogramming  batch  operation 8.50683760684
+ahmet Özkurt
+
+1
+
+layers 8.5
+preceding item apply 8.5
+reserve time slots 8.4972972973
+regular  time  intervals 8.4972972973
+time elapses due 8.4972972973
+main  memory 
+simultaneously 8.48994252874
+called time
+sharing 8.45563063063
+equal-size fixed partitions 8.45192307692
+scheduling algorithms assume 8.44132653061
+single processor system 8.43952380952
+machine language instruction set 8.43675213675
+process control block 8.42220179269
+toy  system  put 8.41666666667
+interactive computing facility 8.41025641026
+scheduling algorithms decide 8.39370748299
+terminals
+
+batch multiprogramming 8.37222222222
+operation systems
+evolve 8.36703296703
+demonstrated time-sharing system 8.36666666667
+general-
+purpose tools 8.35714285714
+process  index  register 8.35337588176
+monitor  retains  control 8.34666666667
+monitor regains control 8.34666666667
+system service call 8.34090909091
+mixture
+
+• page directory 8.30392156863
+require periodic access 8.26372155288
+ipc mechanism offering 8.25
+execution-time address-binding scheme 8.22222222222
+user
+
+ctss operation
+
+problems 8.21765162942
+diﬀerent users 8.20588235294
+generates object code 8.18181818182
+dynamic partitioning strategies 8.17857142857
+paging  system 8.17753623188
+additional control problems 8.17647058824
+fairly  sophisticated  compared 8.16666666667
+fairly sophisticated compared 8.16666666667
+smp schedules processes 8.16141732283
+main  memory 
+physically 8.1566091954
+shuffle memory contents 8.1566091954
+main  memory  space 8.1566091954
+physical address 8.15
+memory management unit 8.14827586207
+ memory management unit 8.14827586207
+algorithms include 8.125
+meet performance requirements 8.11568627451
+pass input/output commands 8.1
+high levels 8.09803921569
+computer systems 8.08782673637
+smallest leftover hole 8.08333333333
+events
+
+• resident monitor 8.07682539683
+dynamic allocation strategies 8.0695970696
+client  multiple instances 8.06818181818
+job  control 
+statements 8.06060606061
+specific system resources 8.05666666667
+file system facilities 8.05416666667
+direct memory access 8.0425529705
+graph edge directed 8.04166666667
+simple  signaling  technique 8.02795031056
+job control language 8.00505050505
+low 8.0
+mutual exclusion 4 8.0
+join adjacent holes 8.0
+•  differential  responsiveness 8.0
+commands entered 8.0
+mutual exclusion 8.0
+generate relocatable code 8.0
+resume  user 
+processing 7.95656565657
+mmu relocation register 7.94871794872
+independent hardware component 7.94700460829
+assume  minimal  processor  requirements 7.94047619048
+shared buffers 7.93333333333
+required memory resulted 7.92853901996
+dynamic  mapping  hardware 7.92319508449
+batch processing 7.92222222222
+batch  processing 7.92222222222
+fork system call 7.91666666667
+active 
+
+processes
+
+swapping
+
+• problem 7.90564809207
+external hardware errors 7.89718775848
+deﬁned interfaces 7.88888888889
+common processing resource 7.8873015873
+storage allocation scheme 7.88705738706
+wasted time due 7.8722972973
+wasted  time  due 7.8722972973
+events
+– batch jobs 7.8696969697
+remaining 
+resident portion 7.86904761905
+os grants access 7.8627553693
+provide food quickly 7.85714285714
+avoiding manual operations 7.84615384615
+shorter time scale 7.83063063063
+context-switch time depends 7.83063063063
+virtual storage 7.82142857143
+• faster access time 7.81657440573
+single non-sharable resource 7.80063492063
+address binding 7.8
+maintenance function periodically 7.8
+incur greater overhead 7.8
+virtual 
+memory 7.78756157635
+virtual  memory 7.78756157635
+virtual memory 7.78756157635
+perspective
+
+• monitor controls 7.78416666667
+receiving status information 7.78387096774
+multiprocessing system 7.77380952381
+scheduling 
+decisions 7.76870748299
+levels conforms nicely 7.76470588235
+segmentation
+
+• paging 7.76086956522
+cpu time sharing 11 7.75219925808
+sharing cpu time 7.75219925808
+overwhelmingly complexity 7.75
+respective process ids 7.73799126638
+addressing scheme 7.72222222222
+os functionality resides 7.71014492754
+os  regained 
+control 7.71014492754
+higher priority level 7.70564516129
+– program returns control 7.69879518072
+access
+authorised users 7.69182612804
+supports  modular  programming 7.68864468864
+large hole
+– compaction 7.68333333333
+involved numerous 
+steps 7.66666666667
+applied  varies  greatly 7.66666666667
+- 
+
+early  computers 7.66153846154
+user interacts directly 7.65656565657
+user interacts 
+directly 7.65656565657
+exit system call 7.65
+high-level language program 7.64323962517
+priori claim maximum 7.64285714286
+memory pdt access 7.6425529705
+maximum allowable time 7.64015444015
+user 
+
+access
+access
+
+– 7.62845320677
+effective development 7.62105263158
+64-bit microprocessors
+
+• designed 7.61111111111
+resource allocation graph 7.60332722833
+base address 7.6
+equal sized 7.6
+wasted memory
+– leads 7.59827586207
+processor  register 
+contents 7.59157509158
+windows  nt  4 7.59090909091
+windows ce 7.59090909091
+programming language fortran 7.58547008547
+•  nondeterminate  program  operation 7.58341056534
+largest leftover hole 7.58333333333
+concurrent process management 7.56299126638
+status
+
+23
+
+24
+
+6
+
+key elements 7.55630252101
+control systems 7.55384615385
+mainframe systems 7.55384615385
+avoiding external fragmentation 7.54358974359
+high degree 7.53333333333
+context-switch speed varies 7.52380952381
+cpu scheduling algorithm 7.52360944378
+provide protection mechanisms 7.50529100529
+provide  protection 
+mechanisms 7.50529100529
+principle objective 
+source 7.5
+voluntarily release control 7.5
+work
+– dispatchable unit 7.5
+intel x86 series 7.5
+multiple tasks share 7.4904040404
+external identifier 7.46666666667
+priority level relative 7.45564516129
+computer system 7.45064724919
+computer 
+system 7.45064724919
+/o-intensive business applications 7.44444444444
+preceding list separately 7.44444444444
+bit 7.44444444444
+loop back interface 7.43333333333
+smp system 7.41666666667
+underneath hardware resources 7.40129032258
+write data items 7.34920634921
+growing data structures
+• 7.34920634921
+issues
+
+• multiple jobs 7.3474025974
+computer operator 7.33398058252
+reading 7.33333333333
+increasing access time 7.31657440573
+preemptive preemptive first- 7.28571428571
+large block 7.28421052632
+fortran source program 7.28212851406
+special input/output controllers 7.26666666667
+paging mechanism 7.26086956522
+shortest remaining time 7.2472972973
+address memory 7.22327586207
+older  systems 7.22051282051
+older multiprogramming model 7.21428571429
+•  setup time 7.21158301158
+setup time 7.21158301158
+setup  time 7.21158301158
+application program 7.19879518072
+application program 10 7.19879518072
+application  program 7.19879518072
+main storage locations 7.19047619048
+hapless  user  typically 7.1898989899
+user program wishes 7.18869417062
+– encapsulation
+– object class 7.18181818182
+levels software dependent
+– 7.17379679144
+vary 
+greatly  depending 7.16666666667
+primitive  signal  mechanism 7.16666666667
+secondary store 7.16666666667
+time
+
+– hardware upgrades 7.15858761988
+•  long-term  storage 7.15714285714
+long-term storage 7.15714285714
+real address 7.15
+support multiple processes 7.14626580768
+including process scheduling 7.12574636842
+3 batch multi-programming 7.08888888889
+user logical memory 7.0763327467
+run multiple 
+• designed 7.0740297714
+• accounting information 7.05529953917
+os jointly control 7.04347826087
+programmer interacted directly 7.04166666667
+magnetic  tape  drive 7.03333333333
+programs  share  memory 7.03100533067
+memory
+
+• monitor reads 7.02708538588
+transfer control back 7.02380952381
+multiple independent processes 7.01531342673
+long-term scheduler 7.01428571429
+30    long-term scheduler 7.01428571429
+time-sharing  systems 7.00384615385
+notable additional feature 7.0
+p2 holds ra 7.0
+time periods spent 6.9972972973
+views
+
+services provided 6.99285714286
+user program executes 6.98869417062
+user  program  status 6.98869417062
+application programs 6.98550724638
+application programs
+
+• 6.98550724638
+general purpose tasks 6.97272727273
+os controls access 6.96692203597
+multiple processes reside 6.92959914102
+elapsed time 
+throughput 6.92586872587
+program
+– execution context 6.92526576896
+processes require access 6.92513887571
+paging hardware 6.9221598878
+practical system 6.91666666667
+• processes indirectly aware 6.91141732283
+counting  os  overhead 6.91014492754
+counting os overhead 6.91014492754
+secondary storage devices 6.90218790219
+final control problem 6.89423076923
+multiple modules 6.86818181818
+response
+• accounting
+
+3
+
+2
+
+4
+
+1 6.86772486772
+disk de-
+fragmentation 6.86639676113
+program counter 6.86546184739
+• program counter 6.86546184739
+ demand paging 6.86086956522
+user  program  area 6.85536083729
+user program area 6.85536083729
+average  resource  utilization 6.84920634921
+resource management module 6.84563492063
+internal identifier 6.83333333333
+ base register 6.81538461538
+base register 6.81538461538
+major  elements 6.81512605042
+job” simply means 6.81060606061
+single system 6.79666666667
+intervening  idle  time 6.78301158301
+multiprogrammed 6.75
+write variable 6.75
+memory system 6.73994252874
+•  process  isolation 6.73799126638
+• system access 6.7359437751
+•  system access 6.7359437751
+related partition exists 6.72727272727
+scheduling algorithms 6.72704081633
+monitor
+
+• interrupts
+
+modes 6.72166666667
+multi-programming system 6.71666666667
+manage multi-
+
+•
+
+programming 6.70769230769
+major problems 6.70588235294
+external storage devices 6.70218790219
+general term 6.7012987013
+slower access speed 6.67641996558
+share global variables 6.67222222222
+decisions dynamically 6.66666666667
+• logical address 6.66315789474
+logical address 6.66315789474
+processes exhibit cooperation 6.66141732283
+devices
+• controlled access 6.64209993126
+resident monitor 6.63238095238
+privileged  instructions  lead 6.63
+system mode 6.60416666667
+• processes directly aware 6.5780839895
+physical memory 6.57327586207
+physical memory  28 6.57327586207
+– message size fixed 6.5724789916
+software development process 6.56813480705
+unix 6.5625
+automation systems 6.55384615385
+public systems 6.55384615385
+interrupt nice running 6.54545454545
+run time
+
+• characteristics 6.53489128226
+program creation 6.53212851406
+major progresses 6.52941176471
+storage medium 6.52380952381
+memory blocks shared 6.52327586207
+including  storage  devices 6.52123552124
+limit registers specifies 6.51981351981
+achieve  maximum  efficiency 6.51785714286
+setup 
+sequence 6.51428571429
+lower layers deal 6.5
+•  deadlocks 6.5
+include  libraries 6.5
+multiple processes executing 6.49150390292
+race condition occurs 6.4880952381
+special process created 6.48799126638
+“process 
+– execution context 6.46446185461
+intermediate queue
+– swap 6.45833333333
+final result depends 6.45833333333
+kernel call 6.44444444444
+million machine instructions 6.4441025641
+transaction processing 6.43333333333
+batch jobs 6.42525252525
+jcl command provided 6.4
+extremely 
+
+expensive
+– important 6.38636363636
+long-term  queue 6.38333333333
+long-term 
+queue 6.38333333333
+•  automatic  allocation 6.37912087912
+application programmer 6.375
+time-sharing system 6.36666666667
+4 time-sharing system 6.36666666667
+time-sharing  system 6.36666666667
+compiler program ﬁrst 6.36546184739
+called  pages 6.33928571429
+end user views 6.33605283605
+buffers 6.33333333333
+include internal 6.33333333333
+short burst 6.33333333333
+specialized channel hardware 6.32795698925
+memory
+
+– segmentation 6.32327586207
+specific system 6.31666666667
+page directory 6.30392156863
+operation system 6.30128205128
+system  users 6.28921568627
+entire  batch 6.28888888889
+entire batch 6.28888888889
+fetch  instructions 6.28
+bypass paging
+
+– 6.26086956522
+multiuser system 6.25
+multiuser  system 6.25
+event requiring notification 6.25
+system call 6.25
+resources include 6.24
+major os 6.23955669224
+system structure 6.22435897436
+monitor  loads  job1 6.21846153846
+computer spends 6.20064724919
+computer  hardware 6.1952709051
+computer hardware 6.1952709051
+user program code 6.18869417062
+resource manager
+
+evolution 6.1873015873
+user
+– user program 6.17859316052
+link external devices 6.17837837838
+categories include 6.16666666667
+term process 6.16656269495
+time
+
+• solutions 6.16396396396
+hardware 
+features 6.16129032258
+limit register 6.16083916084
+ limit register 6.16083916084
+output  operations  active 6.16043956044
+require os designers 6.15458937198
+fast access times 6.15261044177
+memory management 
+3 6.14827586207
+memory management 6.14827586207
+processing time 6.13063063063
+batch multiprogramming 6.12222222222
+page table 6.12210338681
+resource manager
+
+types 6.12063492063
+prevent  independent  processes 6.11379827522
+scheduling policies 6.10204081633
+short-term  queue  consists 6.10119047619
+ demand segmentation 6.1
+run larger programs 6.08024408848
+larger programs
+
+– swapping
+
+27
+
+28
+
+7 6.06050724638
+os assigns r1 6.04347826087
+single-processor computer 6.03398058252
+major  lines 6.02941176471
+process batch
+• 6.02688015526
+modular programming 6.02197802198
+modular  programming 6.02197802198
+finish transferring data 6.01587301587
+systems set 6.01538461538
+computer
+
+• key 6.00456881782
+integrity 6.0
+global variable 6.0
+control mechanism 6.0
+extended  periods 6.0
+project mac 6.0
+event-driven design 6.0
+linking 6.0
+batch os 5.99903381643
+logical pages 5.97744360902
+fair share amount 5.97222222222
+•  memory protection 5.97142401022
+memory  protection 5.97142401022
+key design 5.97058823529
+status 1 0 100 allocated  2 100 120 allocated 3 220 300 5.96666666667
+smaller  systems 5.95384615385
+memory hierarchy  8 5.94827586207
+memory hierarchy 5.94827586207
+memory  hierarchy 5.94827586207
+special language 5.94444444444
+kernel
+functions 5.93253968254
+required memory 5.92853901996
+principal tool 5.91666666667
+system  managers 5.91666666667
+system collects 5.91666666667
+system ran 5.91666666667
+system managers 5.91666666667
+multiple-processor system 5.91666666667
+segment
+
+– 4 bits 5.91666666667
+required page
+– 5.90918472652
+executing real-time applications 5.90634920635
+system programs 5.90217391304
+degrade performance 5.88235294118
+limit simultaneously  5.87878787879
+interactive
+
+• multi-programming 5.87692307692
+desired priority 5.875
+storage space 5.85714285714
+control tools 5.85714285714
+os  adds  jobs 5.8465085639
+dynamic partitioning 5.84523809524
+system resource 5.8373015873
+powerful segmentation
+
+• 5.83333333333
+diﬀerent 5.83333333333
+time 
+sharing 5.83063063063
+time sharing 5.83063063063
+time  sharing 5.83063063063
+memory  space 5.82327586207
+functions
+
+• convenience
+
+– making 5.82142857143
+access control 5.81927710843
+control access 5.81927710843
+access  control 5.81927710843
+simple reads 5.81366459627
+modules 
+dynamically 5.8
+work
+– executes sequentially 5.8
+30   fixed partitioning 5.79166666667
+fixed partitioning 5.79166666667
+– convenience
+– efficiency
+– ability 5.775
+interactive mode 5.76442307692
+complex channel programs 5.76328502415
+variable   receive 5.75
+multiprogramming system 5.75
+variable length 5.75
+long time 5.7472972973
+management
+– support 5.74166666667
+memory partitioning 29 5.73994252874
+•  error detection 5.7380952381
+system functions 5.7380952381
+• error detection 5.7380952381
+computer  program 5.73277576325
+fixedsize 
+pages 5.71428571429
+free frames
+• 5.71428571429
+process user programs 5.71339750265
+users simultaneously 5.70588235294
+good claim 5.7
+allocate processor time 5.69570999571
+machine  level  instructions 5.69141439206
+process  list  built 5.68243571082
+improve performance 5.68235294118
+improve  performance 5.68235294118
+maximize  throughput 5.67857142857
+cpu states 5.67156862745
+special type 5.66666666667
+storage allocation 5.66483516484
+storage  allocation 5.66483516484
+context information 5.66034155598
+system  resources 5.65666666667
+system 
+resources 5.65666666667
+system resources 5.65666666667
+design issues 5.64285714286
+information protection 5.63201911589
+time required 5.60256045519
+windows 2000 5.59090909091
+windows 5.59090909091
+“windows” 5.59090909091
+equal-size partitions 5.57692307692
+real memory 5.57327586207
+• automatic conversion 5.57142857143
+rtos performs 5.57142857143
+common 
+functions 
+loaded 5.55476190476
+equal size
+– process 5.54975597226
+computer networks 5.53398058252
+dedicated computer 5.53398058252
+multiple computers 5.52972027972
+• context data 5.52567693744
+context data 5.52567693744
+final binding 5.525
+secondary storage 5.52380952381
+secondary  storage 5.52380952381
+computer programs 5.5194878289
+shared  system 5.51666666667
+interruption 
+•  confidentiality 5.5
+alter
+
+• timer
+
+– prevent 5.5
+returns control 5.5
+control returns 5.5
+issue 5.5
+signaling  mechanism 5.5
+pass control 5.5
+time  slicing 5.4972972973
+completes  processing 5.49047619048
+completes processing 5.49047619048
+memory area 5.48994252874
+secondary  memory 5.48994252874
+memory segment 5.48994252874
+secondary memory 5.48994252874
+process states  14 5.48799126638
+small hole 5.48333333333
+system programmers 5.47222222222
+key  mechanism 5.47058823529
+key  responsibility 5.47058823529
+simple ms-dos 5.45652173913
+priority level 5.45564516129
+interactive users 5.44947209653
+multiple  users 5.44073083779
+multiple users 5.44073083779
+dynamic – shell 5.42857142857
+multics system 5.41666666667
+sophisticated support 5.41666666667
+early 
+1970s 5.4
+early versions 5.4
+free block 5.3984962406
+run  concurrently 5.39473684211
+wasted space 5.375
+• efficiency
+
+– allowing 5.375
+monitor” means 5.34666666667
+necessarily simultaneously  5.33333333333
+involves mounting 5.33333333333
+richer  sharing 5.33333333333
+special cache 5.33333333333
+simplest  techniques 5.33333333333
+physical addresses 5.33333333333
+orderly management 5.325
+total memory 5.32327586207
+access time 5.31657440573
+uniprogramming 
+
+multiprogramming 
+
+ 
+processor 5.30952380952
+design 
+
+principles 5.3
+design principles 5.3
+simple situation 5.28985507246
+status information 5.28387096774
+pages
+
+• allocate 5.26984126984
+variable number 5.26724137931
+• controlled access 5.26372155288
+•  controlled  access 5.26372155288
+dynamic  mapping 5.2619047619
+controls access 5.25677710843
+file access 5.25677710843
+file  access 5.25677710843
+single users 5.25254901961
+programming language 5.25213675214
+programming 
+language 5.25213675214
+late  1940s 5.25
+resource management 5.24563492063
+resource management 
+5 5.24563492063
+30 preemptive scheduling 5.24489795918
+short-term scheduling 5.24489795918
+process tree results 5.23799126638
+early 
+multiprogramming 5.23333333333
+direct  access 5.21927710843
+direct access 5.21927710843
+running process takes 5.21526399365
+os 
+handles 5.21014492754
+os handles 5.21014492754
+os maintains 5.21014492754
+os design 5.21014492754
+os  design 5.21014492754
+multiple jobs 5.20454545455
+translated automatically 5.2
+maintain good 5 5.2
+powerful tools 5.19047619048
+software errors 5.17832167832
+context switch 5.17647058824
+current 
+
+context 5.17647058824
+control problems 5.17647058824
+system behavior 5.16666666667
+context-switch time 5.16396396396
+clock time 5.16396396396
+• main memory 5.1566091954
+memory location 5.1566091954
+main 
+
+•
+
+memory 5.1566091954
+main 
+memory 5.1566091954
+memory accessible 5.1566091954
+main  memory 5.1566091954
+main memory 5.1566091954
+simple examples 5.15652173913
+monitor executes 5.14666666667
+preemptive policies 5.14285714286
+issues commands 5.14285714286
+control jobs 
+
+• 5.13636363636
+typical hierarchy 5.125
+processor
+
+uniprogramming
+
+• processor 5.11904761905
+early os 5.11014492754
+computer task 5.10540915395
+scheduling duties 5.10204081633
+scheduling methodology 5.10204081633
+first-served scheduling 5.10204081633
+block size 5.0959752322
+logical memory 5.08643375681
+main objective 5.08333333333
+smallest hole 5.08333333333
+single program 5.07879518072
+hardware support 5.07795698925
+• fixed-sized partitions
+
+– 5.07692307692
+interactive sessions 5.07692307692
+global memory 5.07327586207
+fair access 5.06927710843
+terminal
+
+table 1 5.06818181818
+multiple instances 5.06818181818
+interactive user 5.06682206682
+memory error 5.06137110016
+processes running
+– fit 5.05535671677
+directed graph 5.04166666667
+clock interrupts 5.04166666667
+share access 5.04149933066
+computer exclusively 5.03398058252
+job3 half 
+finished 5.025
+unauthorized access 5.01927710843
+program
+
+• access 5.01807228916
+monitor ﬁrst 5.01333333333
+provide protection 5.00529100529
+provide  protection 5.00529100529
+assumes control 5.0
+recent proliferation 5.0
+transfers  control 5.0
+entry 5.0
+alternately  seize 5.0
+seized 
+control 5.0
+byte 5.0
+sending commands 5.0
+•  availability 5.0
+reducing capacity 5.0
+phrase “control 5.0
+regaining control
+
+• 5.0
+monolithic 5.0
+orderly  control 5.0
+application 5.0
+regaining  control 5.0
+design constraints 5.0
+web sites 5.0
+• identifier 5.0
+turnaround time 4.9972972973
+earliest  computers 4.96153846154
+source program 4.94879518072
+higher-level language 4.94444444444
+assembly language 4.94444444444
+single job 4.94060606061
+device-by-device  utilization 4.92857142857
+functions required 4.92669172932
+fixed-sized partitioning 4.91666666667
+microprocessors
+
+– support 4.91666666667
+good os 4.91014492754
+scheduling  function 4.90204081633
+communication link 4.88888888889
+limit based 4.87878787879
+programmer
+• segmentation 4.875
+fixed boundaries 4.875
+authorised users 4.87254901961
+larger – depends 4.86666666667
+transfer control 4.85714285714
+short-term scheduler 4.85714285714
+existing tools 4.85714285714
+chapter 4.85714285714
+chapter 6 4.85714285714
+chapter 5 4.85714285714
+device management 4.85625
+limit registers 4.85314685315
+non-preemptive scheduling 4.85204081633
+disk
+• processes “swapped” 4.85089100705
+cpu utilization 4.85014005602
+active
+– half 4.85
+receiving data 4.84920634921
+resource utilization 4.84920634921
+including communication 4.84126984127
+diﬀerence 4.83333333333
+simultaneously  busy 4.83333333333
+interact directly 4.83333333333
+time  scale 4.83063063063
+preemptive mode 4.83035714286
+typically called 4.825
+• splitting memory 4.82327586207
+memory technologies 4.82327586207
+memory cells 4.82327586207
+memory unit 4.82327586207
+– increased memory 4.82327586207
+overcommit memory 4.82327586207
+reference memory 4.82327586207
+memory limitations 4.82327586207
+large-capacity memory 4.82327586207
+assigning 
+memory 4.82327586207
+controlling access 4.81927710843
+legally access 4.81927710843
+access rights 4.81927710843
+denied access 4.81927710843
+access
+
+• contention 4.81927710843
+interrupt handling 4.81818181818
+multiple units 4.81818181818
+user  memory 4.81317485197
+missing page 4.80392156863
+1024 page groups 4.80392156863
+page # 21
+
+ 
+
+csc33200 4.80392156863
+single resource 4.80063492063
+jcl commands 4.8
+response  time 4.79359359359
+response time 4.79359359359
+programs
+
+13
+
+14
+
+multi-programming 4.78550724638
+monitor  controls 4.78416666667
+device failure 4.78125
+controlled 
+jointly 4.77777777778
+job scheduler 4.77489177489
+information needed 4.76958525346
+errors appeared 4.76923076923
+fixing errors 4.76923076923
+scheduling 
+policy 4.76870748299
+scheduling criteria 4.76870748299
+scheduling policy 4.76870748299
+complexity 4.75
+designated 
+privileged 4.75
+components 4.75
+involve loading 4.75
+common software 4.74242424242
+additional process 4.73799126638
+computer easier 4.73398058252
+early 1960s 4.73333333333
+context includes 4.73202614379
+machine depending 4.73076923077
+multiple processes 4.72959914102
+improve utilization 4.72857142857
+improve  utilization 4.72857142857
+resource allocation 4.72832722833
+resource  allocation 4.72832722833
+execution  context 4.72647058824
+execution context 4.72647058824
+software structure 4.71678321678
+control signals 4.71428571429
+medium-term scheduler 4.71428571429
+control  signals 4.71428571429
+model  proposed 4.71428571429
+30 medium-term scheduler – 4.71428571429
+memory
+instructions 4.70327586207
+soft real-time 4.7
+memory speed 4.68041871921
+user mode 
+– 4.6773989899
+user mode 4.6773989899
+resource node 4.67063492063
+automatically blocked 4.66666666667
+attributes listed 4.66666666667
+channel commands 4.66666666667
+upgraded easily 4.66666666667
+fully exploit 4.66666666667
+full-featured facility 4.66666666667
+greatly improved 4.66666666667
+computing  environment 4.66666666667
+16-bit segment 4.66666666667
+• hardware upgrades 4.66129032258
+underlying hardware 4.66129032258
+underlying  hardware 4.66129032258
+hardware bus 4.66129032258
+hardware platform 4.66129032258
+data registers 4.6568986569
+data structure 4.6568986569
+memory internal 4.6566091954
+memory requirements 4.6566091954
+maximum time 4.64015444015
+minimal  interfaces 4.63888888889
+cpu scheduler 4.63585434174
+needed  data 4.63492063492
+data needed 4.63492063492
+privileged  instructions 4.63
+•  privileged  instructions 4.63
+called
+libraries 4.625
+program development 4.6198478123
+•  program  development 4.6198478123
+• program development 4.6198478123
+object file 4.61931818182
+access function 4.61927710843
+single process 4.61799126638
+key characteristics 4.61344537815
+security
+– scheduling 4.60204081633
+common interface 4.6
+greater detail 4.6
+user
+
+demand 4.5898989899
+user demand 4.5898989899
+service time 4.58820638821
+resource type 4.5873015873
+make  allocation 4.58547008547
+largest hole 4.58333333333
+unauthorized  users 4.57254901961
+unauthorized users 4.57254901961
+accounting 4.57142857143
+•  accounting 4.57142857143
+• accounting 4.57142857143
+requires access 4.56927710843
+– multiple processors
+– 4.56818181818
+job monopolizing 4.56060606061
+shortest job 4.56060606061
+services directly 4.55952380952
+page
+offset 4.55392156863
+systems 4.55384615385
+parallel execution 4.55
+monitor program 4.54546184739
+agreed limit  4.54545454545
+external fragmentation 4.54358974359
+ external fragmentation 4.54358974359
+free memory 4.53756157635
+tasks based 4.53333333333
+fortran program 4.53212851406
+error message 4.52380952381
+single  processor 4.52285714286
+single processor 4.52285714286
+common object 4.51515151515
+main object 4.51515151515
+main problems 4.50980392157
+split 4.5
+1024 entries 4.5
+relinquishing  control 4.5
+relinquish  control 4.5
+store 4.5
+work space 4.5
+faster memories 4.5
+global
+– half 4.5
+include 4.5
+regain control 4.5
+viewed 4.5
+organized properly 4.5
+hierarchical layers 4.5
+time discipline 4.4972972973
+minimum  time 4.4972972973
+time gap 4.4972972973
+requesting  process 4.48799126638
+clock  interrupt 4.48484848485
+losing information 4.48387096774
+storing 
+information 4.48387096774
+monitor
+
+– jobs 4.48303030303
+single module 4.48
+fragmentation leads 4.47692307692
+• main issues 4.47619047619
+fair share 4.47222222222
+key 
+
+differences 4.47058823529
+key difference 4.47058823529
+key 
+difference 4.47058823529
+p4 executes 4.46666666667
+7090/7094 computers 4.46153846154
+computers  attached 4.46153846154
+multiple-access computers 4.46153846154
+called multiprogramming 4.45833333333
+shared storage 4.45714285714
+hard real-time 4.45
+input/output operations 4.44615384615
+preceding list 4.44444444444
+entire file 4.4375
+non-preemptive mode 4.4375
+term 4.42857142857
+shared memory 4.42327586207
+ shared memory 4.42327586207
+cpu time 4.41886592475
+allocated memory 4.4066091954
+error 
+condition 4.40476190476
+error condition 4.40476190476
+error  condition 4.40476190476
+process switching 4.40465793304
+cooperating process 4.40465793304
+hardware  resources 4.40129032258
+hardware resources 4.40129032258
+address 4.4
+fetch 4.4
+job3 
+
+heavy 4.4
+run time 4.3920341394
+interrupt occurs 4.38961038961
+object  program 4.38061336254
+allocate memory 4.37883141762
+hardware signals 4.37557603687
+introduces interrupts 4.375
+achieve efficiency 4.375
+users don’ 4.37254901961
+time swapping
+• 4.3722972973
+os
+
+hardware 4.37143525012
+implement frequently 4.35714285714
+external  objects 4.35555555556
+multitasking doesn 4.35294117647
+sending data 4.34920634921
+pdt data 4.34920634921
+data contained 4.34920634921
+shares data 4.34920634921
+monitor automates 4.34666666667
+monitor decides 4.34666666667
+common strategy 4.33333333333
+actual location 4.33333333333
+main differences 4.33333333333
+external/internal  mapping 4.33333333333
+alloted period 4.33333333333
+related subset 4.33333333333
+creation 4.33333333333
+basic 
+ 
+
+prepared 4.33333333333
+additional portion 4.33333333333
+preceding
+
+multiprogramming
+
+• 4.33333333333
+memory
+– bring 4.32327586207
+expand  memory 4.32327586207
+bigger memory 4.32327586207
+page number 4.32116294794
+resource manager 4.32063492063
+internal information 4.31720430108
+current state 4.31034482759
+state names 4.31034482759
+processor spends 4.30952380952
+programming 
+burden 4.30769230769
+registers copied 4.30769230769
+hierarchical structure 4.30769230769
+processor 
+hardware 4.30414746544
+key 
+
+requirements 4.30392156863
+facilities provided 4.3
+ compile time 4.2972972973
+compile time 4.2972972973
+predictable response 4.2962962963
+response  times 4.2962962963
+slow 
+compared 4.29166666667
+slow compared 4.29166666667
+batch 4.28888888889
+synchronization 4.28571428571
+including viruses 4.28571428571
+resident 4.28571428571
+information  stored 4.28387096774
+information 
+stored 4.28387096774
+general motors 4.27272727273
+uniform 
+interface 4.26666666667
+user/computer interface 4.26666666667
+uniform interface 4.26666666667
+active processes 4.26141732283
+paging 4.26086956522
+paging  2 4.26086956522
+time executing 4.2592020592
+memory protected 4.25184729064
+real work 4.25
+chronically  late 4.25
+page-mode terminals 4.25
+higher layer 4.25
+necessarily aware 4.25
+total 10 units 4.25
+processor begins 4.24285714286
+make computers 4.23931623932
+process 
+properly 4.23799126638
+machine code 4.23076923077
+short-term queue 4.22619047619
+simplest scheme 4.22222222222
+monitor 
+consists 4.22166666667
+end users 4.21870286576
+20  million  instructions 4.21333333333
+fortran instructions 4.21333333333
+os  involved 4.21014492754
+fixed portion 4.20833333333
+ data transfer 4.20634920635
+provide data 4.20634920635
+monitor  reads 4.20380952381
+tasks earlier 4.2
+toggle  switches 4.2
+slightly larger 4.2
+toggle switches 4.2
+current program 4.19879518072
+interrupt-handling program 4.19879518072
+program text 4.19879518072
+program code 4.19879518072
+program  proceeded 4.19879518072
+current
+program 4.19879518072
+compiled  program 4.19879518072
+program  references 4.19879518072
+incoming  program 4.19879518072
+executable program 
+• 4.19879518072
+executable program
+– 4.19879518072
+program delay 4.19879518072
+list  presented 4.19444444444
+hardware device 4.19254032258
+user 
+program 4.18869417062
+user  program 4.18869417062
+user program 4.18869417062
+compile operation 4.18461538462
+internal data 4.18253968254
+level  5  provided 4.18064516129
+job2 
+
+heavy 4.17647058824
+all-too-common  problems 4.17647058824
+pure form 4.16666666667
+allotted  time 4.16396396396
+allotted time 4.16396396396
+concurrent processes 4.16141732283
+common  functions 4.15476190476
+waiting occurs 4.14835164835
+distributed 4.14285714286
+issues arise 4.14285714286
+preemptive version 4.14285714286
+implementation issues 4.14285714286
+processor time 4.14015444015
+processor  time 4.14015444015
+process generated 4.13799126638
+key tool 4.13725490196
+page # 7
+
+ 
+
+ 
+ 
+
+prepared 4.13725490196
+common function 4.13333333333
+response
+
+– internal 4.12962962963
+simply wasted 4.125
+final values 4.125
+cpu switches 4.12156862745
+complex power 4.11111111111
+kernel 4.11111111111
+complex pieces 4.11111111111
+specially designed 4.11111111111
+machine  instructions 4.11076923077
+machine instructions 4.11076923077
+100 machine instructions 4.11076923077
+fixed-size 
+blocks 4.1
+greater cost 4.1
+fixed-size blocks 4.1
+fixed-sized blocks 4.1
+p3 executes 4.1
+controls processes 4.09891732283
+service 
+discriminate 4.09090909091
+units based 4.08333333333
+minimal  impact 4.08333333333
+waiting time 4.07422037422
+time waiting 4.07422037422
+main  resources 4.07333333333
+resources ra 4.07333333333
+main resources 4.07333333333
+event occurs 4.07142857143
+allowed access 4.06927710843
+$job
+$ftn 4.06060606061
+current  job 4.06060606061
+– $job
+– $ftn
+– 4.06060606061
+process  state 4.04833609396
+“process 
+
+state” 4.04833609396
+execution time 4.0472972973
+ execution time 4.0472972973
+high-level  view 4.04545454545
+limit assures 4.04545454545
+os  interleaving 4.04347826087
+os interleaving 4.04347826087
+os assigns 4.04347826087
+includes information 4.0394265233
+running state 4.03761755486
+tape drive 4.03333333333
+machine instruction 4.03076923077
+independent process 4.02370555209
+os structure 4.01783723523
+higher  levels 4.01470588235
+monitor
+
+• timer
+
+– 4.01333333333
+driver routines 4.0
+future  enhancements 4.0
+entirety independently 4.0
+ug students 4.0
+reference books 4.0
+enhanced version 4.0
+circular chain 4.0
+pro-
+gram 4.0
+involve 
+mounting 4.0
+entering  queries 4.0
+decreasing frequency 4.0
+requests ra 4.0
+read/write heads 4.0
+possibly  networks 4.0
+graphical manner 4.0
+machine-aided cognition 4.0
+interrupt-handling routines 4.0
+initial values 4.0
+current values 4.0
+central idea 4.0
+variable-length  segments 4.0
+ardeshana 
+email 4.0
+central  theme 4.0
+mid 1950s
+• 4.0
+holt [holt72] 4.0
+unvariable unit 4.0
+account numbers 4.0
+increasing capacity 4.0
+vice versa 4.0
+4gbytes 4.0
+requests rb 4.0
+dispatcher 4.0
+job3 begins 4.0
+absolute code 4.0
+graphical frameworks 4.0
+multi threading 4.0
+central themes 4.0
+subsequently refined 4.0
+leisurely pace 4.0
+send/receive  implementation 4.0
+gardi college 4.0
+8k segments 4.0
+critical section 4.0
+exhibit aspects 4.0
+safety hazard 4.0
+previous
+versions 4.0
+$ftn tells 4.0
+hierarchical  fashion 4.0
+widespread influence 4.0
+average 1/ 4.0
+hierarchical fashion 4.0
+carefully investigate 4.0
+proper  verification 4.0
+resolve conflicts 4.0
+determines 4.0
+1 subsequent versions 4.0
+roughly grouped 4.0
+billing purposes 4.0
+mnemonic symbols 4.0
+hardcopy  sign- 4.0
+future enhancements 4.0
+donald bitzer 4.0
+web browser 4.0
+average  1/ 4.0
+cyclic manner 4.0
+class notes 4.0
+exact names 4.0
+security  mechanisms 4.0
+dismounting tapes 4.0
+left untouched 4.0
+electronic circuits 4.0
+representative  calculation 4.0
+5a illustrates 4.0
+internet transmission 4.0
+recompiled 
+independently 4.0
+bell laboratories 4.0
+suﬃce 4.0
+handled
+
+– printers 4.0
+re-loading
+
+• lends 4.0
+lower-capacity memories 4.0
+slower memories 4.0
+ﬁnally summarize 4.0
+submission time 3.9972972973
+resume  processes 3.99475065617
+hardware channels 3.99462365591
+called  files 3.99342105263
+current  user 3.9898989899
+user submits 3.9898989899
+individual user 3.9898989899
+user submitting 3.9898989899
+user  submits 3.9898989899
+disk drive 3.98947368421
+primitive functions 3.9880952381
+primitive functions
+
+• 3.9880952381
+programs residing 3.98550724638
+creating programs 3.98550724638
+utility programs 3.98550724638
+library programs 3.98550724638
+sufficient information 3.98387096774
+information abstraction 3.98387096774
+addresses generated 3.98333333333
+prevent deadlock 3.97916666667
+user 
+programs 3.97540623628
+user programs 3.97540623628
+total  set 3.96153846154
+os makes 3.96014492754
+• simple 3.95652173913
+simple 3.95652173913
+processor registers 3.95054945055
+independent processes 3.94713160855
+entire list 3.94444444444
+controlled parts 3.94444444444
+process  reside 3.93799126638
+data
+– addresses 3.93253968254
+specific device 3.93125
+logical channel 3.9298245614
+logical  step 3.9298245614
+efficient solution 3.92857142857
+evolve
+
+layers 3.92857142857
+running program 3.926067908
+running program
+– 3.926067908
+program running 3.926067908
+conventional cpu 3.92156862745
+cpu motivated 3.92156862745
+resource represented 3.92063492063
+resource  contention 3.92063492063
+desired  resource 3.92063492063
+critical resource 3.92063492063
+resource contention 3.92063492063
+monitor  performs 3.9180952381
+branch  back 3.91666666667
+branch back 3.91666666667
+system’ 3.91666666667
+race condition  21 3.91666666667
+system 3.91666666667
+load time 3.91396396396
+ load time 3.91396396396
+30  internal fragmentation 3.91025641026
+os typically 3.91014492754
+os program 3.90894010826
+$end
+
+$job 3.90675990676
+specific reason 3.9
+job
+
+multiprogramming 3.89393939394
+assign processor 3.89285714286
+standardized interfaces 3.88888888889
+well-defined interfaces 3.88888888889
+resume execution 3.88333333333
+performance 3.88235294118
+30 performance 3.88235294118
+consisting instructions 3.88
+• priority 3.875
+priority 3.875
+channel program 3.86546184739
+actual transfer 3.85714285714
+multiprocessing 3.85714285714
+critical operations 3.84615384615
+call/return 
+
+operations 3.84615384615
+external devices 3.84504504505
+processor switches 3.84285714286
+programs frequently 3.84265010352
+end user 3.83605283605
+16  million  lines 3.83333333333
+fortran compiler 3.83333333333
+common reason 3.83333333333
+work jointly 3.83333333333
+card reader 3.83333333333
+tape copy 3.83333333333
+uniprogramming  column 3.83333333333
+internal identifiers 3.83333333333
+multiprogramming  column 3.83333333333
+card  reader 3.83333333333
+multiprogramming 
+environment 3.83333333333
+• scaling
+
+multiprogramming 3.83333333333
+detailed requirements 3.83333333333
+card decks 3.83333333333
+fundamental  requirements 3.83333333333
+higher level 3.83064516129
+time limits 3.83063063063
+rest
+time 3.83063063063
+processes interact 3.8280839895
+user 
+requirements 3.82323232323
+os designed 3.82125603865
+complex  os 3.82125603865
+machine addresses 3.8141025641
+ready state 3.81034482759
+parameters passed 3.80952380952
+instruction  concludes 3.8
+modules 3.8
+operator 3.8
+command sequence 3.8
+- ajay 3.8
+disk drives 3.78947368421
+continuous  disk 3.78947368421
+• disk light 3.78947368421
+blocked state 3.77701149425
+tasks waiting 3.77692307692
+general sense 3.77272727273
+ongoing problem 3.76923076923
+problem remains 3.76923076923
+network interface 3.76666666667
+lower levels 3.76470588235
+upper  levels 3.76470588235
+logical properties 3.76315789474
+cease 
+executing 3.7619047619
+previously  executing 3.7619047619
+hard disks 3.75
+concurrency encompasses 3.75
+ physical 3.75
+open ended 3.75
+fair amount 3.75
+states 3.75
+non-preemptive version 3.75
+half hour 3.75
+simply reporting 3.75
+calling
+
+open 3.75
+• program execution 3.74879518072
+•  program  execution 3.74879518072
+users
+
+programmer 3.74754901961
+waiter time 3.7472972973
+error occurred 3.7380952381
+error  halted 3.7380952381
+individual process 3.73799126638
+successor process 3.73799126638
+process starts 3.73799126638
+incoming  process 3.73799126638
+interruptible
+• process 3.73799126638
+current process 3.73799126638
+dispatch process 3.73799126638
+process enters 3.73799126638
+preempted process 3.73799126638
+background process 3.73799126638
+process arrives 3.73799126638
+provide instructions 3.73714285714
+approximately equal 3.73333333333
+independent applications 3.73015873016
+partition sl 3.72727272727
+partition belongs 3.72727272727
+processors share 3.72222222222
+scheme  works 3.72222222222
+finished
+
+monitor’ 3.72166666667
+resource types 3.72063492063
+user running 3.71717171717
+free holes 3.71428571429
+pages 3.71428571429
+graphical output 3.71428571429
+managing individual 3.71428571429
+output appeared 3.71428571429
+modular 3.71428571429
+duplicate 
+signals 3.71428571429
+jobs  waiting 3.71328671329
+os learns 3.71014492754
+os  proper 3.71014492754
+os  decides 3.71014492754
+os expands 3.71014492754
+os directs 3.71014492754
+os communicate 3.71014492754
+macintosh os 3.71014492754
+hierarchical  os 3.71014492754
+full-featured  os 3.71014492754
+os masks 3.71014492754
+os occupies 3.71014492754
+os decides 3.71014492754
+os chooses 3.71014492754
+subscription facilities 3.7
+program ready 3.69879518072
+block 3.68421052632
+process  list 3.68243571082
+jcl instructions 3.68
+monitor 
+
+prepared 3.68
+swapping function 3.675
+display  lights 3.66666666667
+detailed 
+understanding 3.66666666667
+calculation  concerns 3.66666666667
+detailed understanding 3.66666666667
+strictly 
+part 3.66666666667
+strictly part 3.66666666667
+require  5  minutes 3.66666666667
+goals step 3.66666666667
+strict categories 3.66666666667
+5000th word 3.66666666667
+upgraded independently 3.66666666667
+timer  expires 3.66666666667
+display 
+lights 3.66666666667
+concerns 
+relating 3.66666666667
+convenient interface 3.66666666667
+• solutions 3.66666666667
+medium 3.66666666667
+contiguous 3.66666666667
+organization 3.66666666667
+existing processes 3.66141732283
+processes communicate 3.66141732283
+dispatching 
+processes 3.66141732283
+processes vary 3.66141732283
+successive processes 3.66141732283
+processes
+• lends 3.66141732283
+executable processes 3.66141732283
+remove processes 3.66141732283
+channel programs 3.65217391304
+saved state 3.64367816092
+mechanisms introduced 3.64285714286
+executing 
+instructions 3.6419047619
+executing instructions 3.6419047619
+jobs ready 3.63636363636
+jobs  ready 3.63636363636
+processing 3.63333333333
+monitor perform 3.61939393939
+including testing 3.61904761905
+essential elements 3.61904761905
+register 3.61538461538
+process consists 3.61299126638
+job execution 3.61060606061
+shared section 3.6
+uniquely characterized 3.6
+process completes 3.59513412352
+ready queue 3.58333333333
+dynamically 
+allocated 3.58333333333
+segments allocated 3.58333333333
+program-generated addresses 3.58333333333
+addresses
+– locations 3.58333333333
+level organizes 3.58064516129
+lower level 3.58064516129
+iowait waiting 3.57692307692
+pause waiting 3.57692307692
+  monitor  point 3.57393939394
+loaded  back 3.56666666667
+state transition 3.56034482759
+interrupt process 3.55617308456
+run processes 3.55615416494
+includes outstanding 3.55555555556
+talented  programmers 3.55555555556
+branch 
+instruction 3.55
+uninterrupted execution 3.55
+function requiring 3.55
+read  data 3.54920634921
+hardware-oriented  view 3.54545454545
+hard disk 3.53947368421
+computer • 3.53398058252
+computer’ 3.53398058252
+computer
+
+– 3.53398058252
+computer 
+• 3.53398058252
+computer 3.53398058252
+unauthorized 
+
+prepared 3.53333333333
+variables depend 3.53333333333
+program 
+
+prepared 3.53212851406
+os functions 3.53157349896
+device driver 3.53125
+programmable device 3.53125
+immediately reads 3.52380952381
+providing frequently 3.52380952381
+general approach 3.52272727273
+shared  resource 3.52063492063
+actual number 3.51724137931
+unlimited number 3.51724137931
+data occur 3.51587301587
+referred 
+monitor 3.51333333333
+track
+
+35
+
+36
+
+9
+
+logical 3.51315789474
+general case 3.5034965035
+presents 3.5
+exact consequences 3.5
+considerable amount 3.5
+smp 3.5
+features 3.5
+000 36-bit words 3.5
+conditional branching 3.5
+relationships hold 3.5
+security  attacks 3.5
+finite amount 3.5
+console  consisting 3.5
+proved impossible 3.5
+permanent blocking 3.5
+displaying results 3.5
+decreasing cost 3.5
+dilemma facing 3.5
+000  36-bit  words 3.5
+variable-length entities 3.5
+flexibility frees 3.5
+latent  bugs 3.5
+directory 3.5
+design 3.5
+loans up- 3.5
+release date 3.5
+assignment statement 3.5
+handles 3.5
+distinguish mainframes 3.5
+apartment building 3.5
+gross  underutilization 3.5
+user-friendly apis 3.5
+temporarily hold 3.5
+architectural
+
+approaches
+
+• 3.5
+suspended awaiting 3.5
+heavily 3.5
+precise timing 3.5
+segmentation 3.5
+logical  point 3.49043062201
+logical point 3.49043062201
+named  objects 3.48888888889
+process takes 3.48799126638
+child’ process 3.48799126638
+child process 3.48799126638
+programs ready 3.48550724638
+general terms 3.47272727273
+blocked awaiting 3.46666666667
+running process 3.46526399365
+peculiar  set 3.46153846154
+peculiar set 3.46153846154
+processes stored 3.46141732283
+interrupted job 3.46060606061
+os simply 3.46014492754
+final question 3.45833333333
+p1 exits 3.45454545455
+multimedia applications 3.44444444444
+upper-level applications 3.44444444444
+real-world applications 3.44444444444
+protected subsystem 3.42857142857
+efficient manner 3.42857142857
+job2 remaining 3.42647058824
+allocates cpu 3.42156862745
+requested resource 3.42063492063
+open word 3.41666666667
+partial load 3.41666666667
+manually load 3.41666666667
+decision requires 3.41666666667
+decision  requires 3.41666666667
+size difference 3.41176470588
+child processes 3.41141732283
+fragmentation depend 3.41025641026
+process requests 3.40465793304
+interrupt-handling  routine 3.4
+binding 3.4
+interrupt-handling routine 3.4
+temporarily 
+interrupted 3.4
+small 3.4
+job1 completes 3.3956043956
+user  loaded 3.3898989899
+running processes 3.38869005011
+hold instructions 3.38
+peripheral 
+devices 3.37837837838
+os aims 3.3768115942
+files
+
+– accessing 3.36842105263
+speed ranges 3.35714285714
+processor
+
+os 3.35300207039
+program written 3.34165232358
+run applications 3.33918128655
+part aims 3.33333333333
+sharing 3.33333333333
+buffer 3.33333333333
+completely responsible 3.33333333333
+multiprogramming  begin 3.33333333333
+logic gates 3.33333333333
+preempted 
+
+prepared 3.33333333333
+primitive form 3.33333333333
+unpredictable ways 3.33333333333
+completely 
+responsible 3.33333333333
+limited usefulness 3.33333333333
+missing portion 3.33333333333
+start responding 3.33333333333
+terminate successfully 3.33333333333
+internal 
+
+security 3.33333333333
+management 3.325
+table 2 3.31818181818
+table 5 3.31818181818
+table  2 3.31818181818
+table 
+2 3.31818181818
+table 3.31818181818
+deadlock & starvation  22 3.3125
+– $load
+– $run
+– 3.31140350877
+os  deals 3.31014492754
+ibm 701 [weiz81] 3.3
+handle 3.28571428571
+device requires 3.28125
+device  requires 3.28125
+circular wait 3 3.27777777778
+instruction set 3.26153846154
+histogram shown 3.25
+manages 3.25
+precise conditions 3.25
+inevitably  grown 3.25
+– failure 3.25
+normal 
+completion 3.25
+long 3.25
+absolutely guarantee 3.25
+unsuccessful completion 3.25
+programs executed 3.24866514111
+level requests 3.24731182796
+output device 3.24553571429
+processes  waiting 3.23834039976
+processes waiting 3.23834039976
+ready process 3.23799126638
+competing processes 3.23284589426
+extreme case 3.23076923077
+significant point 3.22727272727
+operations defined 3.22115384615
+allocate processes 3.21697287839
+signals 
+indicating 3.21428571429
+os parts 3.21014492754
+os tables 3.21014492754
+os  begin 3.21014492754
+blocked process 3.20465793304
+base 3.2
+level relies 3.18064516129
+level 6 relies 3.18064516129
+level  deals 3.18064516129
+context 3.17647058824
+running applications 3.17171717172
+made till 3.16666666667
+deterministic nature 3.16666666667
+criteria  conflict 3.16666666667
+• processes unaware 3.16141732283
+destroy processes 3.16141732283
+processes update 3.16141732283
+p3 completes 3.15714285714
+essential 
+
+functions 3.15476190476
+level performs 3.15207373272
+protection 3.14814814815
+protection
+• 3.14814814815
+•  protection 3.14814814815
+invoke deadlock 3.14583333333
+deadlock situation 3.14583333333
+complete list 3.14444444444
+utilities
+
++---------------+ 3.14285714286
+processor encounters 3.14285714286
+partition size 3.13903743316
+important  line 3.13636363636
+areas span 3.125
+hierarchy 3.125
+objectives 3.125
+1 objectives 3.125
+providing applications 3.11111111111
+required
+• 3.10526315789
+required 3.10526315789
+partition defined 3.10227272727
+scheduling 3.10204081633
+•  scheduling 3.10204081633
+activity characterized 3.1
+activity  characterized 3.1
+simply rely 3.08333333333
+completes 15 minutes 3.07936507937
+partitions 3.07692307692
+round-robin technique 3.07142857143
+similar technique 3.07142857143
+input  device 3.06971153846
+input device 3.06971153846
+input 
+device 3.06971153846
+multiple 3.06818181818
+/ receive 3.06542056075
+protected areas 3.05357142857
+continue execution 3.05
+multiprogramming refer 3.03333333333
+ibm os 3.01014492754
+parallel 3.0
+fault 3.0
+“control 3.0
+30  mechanism 3.0
+allowing 3.0
+interprocess 3.0
+thread 3.0
+similar demands 3.0
+control 3.0
+means 3.0
+commands 3.0
+dot 3.0
+space 3.0
+execute instructions 2.99764705882
+process interaction  20 2.98799126638
+processor accesses 2.97619047619
+named files 2.96842105263
+executing entity 2.9619047619
+os designer 2.96014492754
+p1 updates 2.95454545455
+swap waiting 2.95192307692
+language 2.94444444444
+perform part 2.93939393939
+perform immediately 2.93939393939
+dynamic 2.92857142857
+utilization 2.92857142857
+job2 requires 2.92647058824
+input devices 2.91683991684
+selects processes 2.91141732283
+smaller cost 2.9
+interleaved execution 2.88333333333
+single 2.88
+connected devices 2.87837837838
+defined event 2.875
+fixed 2.875
+  processor  point 2.87012987013
+important 
+concept 2.86713286713
+storage 2.85714285714
+important collection 2.83636363636
+chance  timing 2.83333333333
+p2 updates 2.83333333333
+cost reasons 2.83333333333
+memory 2.82327586207
+memory
+
+• 2.82327586207
+memory
+
+– 2.82327586207
+•  access 2.81927710843
+• access 2.81927710843
+access 2.81927710843
+os details 2.81014492754
+allocation 2.80769230769
+page
+
+• 2.80392156863
+page # 16 2.80392156863
+page # 8 2.80392156863
+page # 10 2.80392156863
+page # 11 2.80392156863
+page # 12 2.80392156863
+page # 13 2.80392156863
+page # 14 2.80392156863
+page # 15 2.80392156863
+page # 17 2.80392156863
+page # 18 2.80392156863
+page # 19 2.80392156863
+page # 9 2.80392156863
+page # 5 2.80392156863
+page # 2 2.80392156863
+page # 3 2.80392156863
+page # 1 2.80392156863
+page # 6 2.80392156863
+page # 4 2.80392156863
+page # 20 2.80392156863
+page 2.80392156863
+executes 2.8
+multi-programming 2.8
+• multi-programming 2.8
+multi-programming
+
+•
+• 2.8
+processes execute 2.77906438166
+errors 2.76923076923
+node 2.75
+quantum 2.75
+reduce 2.75
+loading 2.75
+requesting 2.75
+device  controller 2.73125
+similar concept 2.73076923077
+desirable 2.71428571429
+model 2.71428571429
+scheduler 2.71428571429
+initially  submitted 2.7
+real-time 2.7
+mode 2.6875
+commonly referred 2.66666666667
+•  fairness 2.66666666667
+permit 2.66666666667
+type 2.66666666667
+directly 2.66666666667
+facility 2.66666666667
+• fixes 2.66666666667
+switching 2.66666666667
+exists 2.66666666667
+fairness 2.66666666667
+clock 2.66666666667
+relocation 2.66666666667
+segment 2.66666666667
+fixes 2.66666666667
+hardware
+
+– 2.66129032258
+hardware
+• 2.66129032258
+hardware 2.66129032258
+grant request 2.64285714286
+convenient 
+concept 2.63076923077
+threads read 2.62857142857
+called 2.625
+provided 2.6
+begins 2.6
+input/output 2.6
+parent terminates 2.58333333333
+ exchange messages 2.58333333333
+communication 2.55555555556
+ibm customers 2.55
+limit 2.54545454545
+solution 2.5
+designing 2.5
+shell 2.5
+causing 2.5
+flow 2.5
+enables 2.5
+views 2.5
+saving 2.5
+monopolizing 2.5
+batches 2.5
+select 2.5
+remain 2.5
+history 2.5
++-------------------+ 2.5
+purpose 2.5
+algorithm 2.5
+local 2.5
++------------+ 2.5
+time 2.4972972973
+information 2.48387096774
+wait   banker’ 2.47777777778
+key 2.47058823529
+external 2.46666666667
+computers 2.46153846154
+time-sharing 2.45
+require 2.44444444444
+controlled 2.44444444444
+file 2.4375
+controls 2.4375
+development 2.42105263158
+support 2.41666666667
+•  support 2.41666666667
+software
+
+• 2.40909090909
+software 2.40909090909
+leads 2.4
+generated 2.4
+meet 2.4
+equal 2.4
+operation 2.38461538462
+wasted 2.375
+interrupts
+– 2.375
+•  efficiency 2.375
+• efficiency 2.375
+interrupts 2.375
+10 users 2.37254901961
+users
+
+– 2.37254901961
+users 2.37254901961
+multitasking 2.35294117647
+data 2.34920634921
+data
+
+• 2.34920634921
+monitor
+
+•
+• 2.34666666667
+monitor
+
+– 2.34666666667
+monitor
+– 2.34666666667
+monitor 2.34666666667
+give 2.33333333333
+rb 2.33333333333
+contents 2.33333333333
+cooperation 2.33333333333
+location 2.33333333333
+call 2.33333333333
+editors 2.33333333333
+loads 2.33333333333
+main 2.33333333333
+ﬁle 2.33333333333
+period 2.33333333333
+strategies 2.33333333333
+common 2.33333333333
+based 2.33333333333
+cache 2.33333333333
+accessible 2.33333333333
+growth 2.33333333333
+• state 2.31034482759
+state 2.31034482759
+registers 2.30769230769
+structure 2.30769230769
+response 2.2962962963
+message 2.28571428571
+needed 2.28571428571
+including 
+
+• 2.28571428571
+elements 2.28571428571
+independent 2.28571428571
+general 2.27272727273
+interface 2.26666666667
+logical 2.26315789474
+ logical 2.26315789474
+ipc  26 2.25
+aware 2.25
+ipc 2.25
+late 2.25
+presented 2.25
+terminals 2.25
+assign 2.25
+remaining 27 2.25
+makes 2.25
+error 2.2380952381
+machine 2.23076923077
+share 2.22222222222
+scheme 2.22222222222
+reside 2.2
+overhead 2.2
+tasks 2.2
+variables 2.2
+typically 2.2
+larger 2.2
+program 2.19879518072
+program’ 2.19879518072
+object 2.18181818182
+problems 2.17647058824
+primitive 2.16666666667
+prevent 2.16666666667
+interact 2.16666666667
+back 2.16666666667
+directed 2.16666666667
+compared 2.16666666667
+maximum 2.14285714286
+characteristics 2.14285714286
+preemptive 2.14285714286
+30 jobs 2.13636363636
+jobs 2.13636363636
+slow 2.125
+slow
+
+•
+• 2.125
+final 2.125
+complex 2.11111111111
+designed 2.11111111111
+blocks 2.1
+service 2.09090909091
+hole 2.08333333333
+queue 2.08333333333
+fragmentation 2.07692307692
+job 2.06060606061
+segments 2.0
+increasing 2.0
+consisting 2.0
+items 2.0
+unit 2.0
+separates 2.0
+feature 2.0
+communicate 2.0
+vary 2.0
+schemes 2.0
+tree 2.0
+principle 2.0
+mixture 2.0
+reference 2.0
+capacity 2.0
+applied 2.0
+designers 2.0
+deal 2.0
+resulted 2.0
+environment 2.0
+slower 2.0
+adds 2.0
+switch 2.0
+structures 2.0
+locations 2.0
+average 2.0
+segments  3 2.0
+relative 2.0
+modes 2.0
+making 2.0
+•  convenience 2.0
+controlling 2.0
+r1 2.0
+specialized 2.0
+fundamental 2.0
+instances 2.0
+built 2.0
+• convenience 2.0
+pdt 2.0
+upgrades 2.0
+transferring 2.0
+lower 2.0
+spent 2.0
+exploits 2.0
+signal 2.0
+code 2.0
+notable 2.0
+dedicated 2.0
+• specialized 2.0
+subsequently 2.0
+ compaction 2.0
+times 2.0
+class 2.0
+technologies 2.0
+achieve 2.0
+command 2.0
+lead 2.0
+demonstrated 2.0
+holes 2.0
+user 1.9898989899
+user’ 1.9898989899
+user
+– 1.9898989899
+programs 1.98550724638
+list 1.94444444444
+cpu 1.92156862745
+ cpu 1.92156862745
+resource 1.92063492063
+run
+• 1.89473684211
+run 1.89473684211
+$run 1.89473684211
+services 1.89285714286
+services
+– 1.89285714286
+interfaces 1.88888888889
+objects 1.88888888889
+instructions 1.88
+instructions & 4 1.88
+consists 1.875
+swapping 1.875
+3 evolution 1.86666666667
+evolution 1.86666666667
+provide 1.85714285714
+speed 1.85714285714
+reads 1.85714285714
+completes 1.85714285714
+frequently 1.85714285714
+transfer 1.85714285714
+end 1.84615384615
+operations 1.84615384615
+– $end 1.84615384615
+requirements 1.83333333333
+multiprogramming 1.83333333333
+card 1.83333333333
+uniprogramming 1.83333333333
+internal 1.83333333333
+• multiprogramming 1.83333333333
+tape 1.83333333333
+functions  2 1.82142857143
+functions
+
+• 1.82142857143
+functions
+
+1 1.82142857143
+functions 1.82142857143
+interrupt 1.81818181818
+30 interrupt 1.81818181818
+deadlock  23 1.8125
+deadlock 1.8125
+30   deadlock 1.8125
+deadlock  24 1.8125
+types 1.8
+principles 1.8
+improve 1.8
+compile 1.8
+instruction 1.8
+- 
+
+1 1.8
+- 1.8
+jcl 1.8
+stored 1.8
+sequence 1.8
+function 1.8
+disk 1.78947368421
+make 1.77777777778
+problem 1.76923076923
+levels
+• 1.76470588235
+levels 1.76470588235
+executing 1.7619047619
+concurrency 1.75
+created 1.75
+child 1.75
+takes 1.75
+22 units 1.75
+concurrency  19 1.75
+requiring 1.75
+hard 1.75
+simply 1.75
+expensive 1.75
+non-preemptive 1.75
+open 1.75
+requires 1.75
+race 1.75
+terminal 1.75
+schedule 1.75
+offset 1.75
+branch 1.75
+resources 1.74
+process
+• 1.73799126638
+process 1.73799126638
+process
+
+• 1.73799126638
+process
+– 1.73799126638
+partition 1.72727272727
+• running 1.72727272727
+running 1.72727272727
+free 1.71428571429
+assume 1.71428571429
+managing 1.71428571429
+signals 1.71428571429
+output 1.71428571429
+•  os 1.71014492754
+os  9 1.71014492754
+os 1.71014492754
+os’ 1.71014492754
+os
+
+• 1.71014492754
+1 os 1.71014492754
+2 os 1.71014492754
+facilities 1.7
+facilities
+
+– 1.7
+lights 1.66666666667
+fit 1.66666666667
+tool 1.66666666667
+• part 1.66666666667
+result 1.66666666667
+word 1.66666666667
+understanding 1.66666666667
+policy 1.66666666667
+fork 1.66666666667
+channel 1.66666666667
+ctss 1.66666666667
+allotted 1.66666666667
+finish 1.66666666667
+specifies 1.66666666667
+decide 1.66666666667
+•  timer 1.66666666667
+alter 1.66666666667
+mmu 1.66666666667
+part 1.66666666667
+aims 1.66666666667
+discuss 1.66666666667
+decision 1.66666666667
+step 1.66666666667
+categories 1.66666666667
+p4 1.66666666667
+supports 1.66666666667
+timer 1.66666666667
+providing 1.66666666667
+concerns 1.66666666667
+criteria 1.66666666667
+part 1 1.66666666667
+requests 1.66666666667
+upgraded 1.66666666667
+immediately 1.66666666667
+controllers 1.66666666667
+processes 1.66141732283
+processes 
+2 1.66141732283
+processor’ 1.64285714286
+processor 1.64285714286
+processor • 1.64285714286
+processor
+
+– 1.64285714286
+processor 
+• 1.64285714286
+important 1.63636363636
+areas 1.625
+concepts 1.6
+shared 1.6
+transferred 1.6
+relies 1.6
+characterized 1.6
+deals 1.6
+named 1.6
+module 1.6
+allocated …… 1.58333333333
+addresses 1.58333333333
+allocated 1.58333333333
+•  level 10 1.58064516129
+•  level 11 1.58064516129
+•  level 12 1.58064516129
+•  level  13 1.58064516129
+•  level  8 1.58064516129
+level 1.58064516129
+level 5 1.58064516129
+level 1 1.58064516129
+level 0 1.58064516129
+level 3 1.58064516129
+level 2 1.58064516129
+•  level 9 1.58064516129
+•  level 6 1.58064516129
+•  level 7 1.58064516129
+•  level 4 1.58064516129
+•  level 5 1.58064516129
+•  level 2 1.58064516129
+•  level 3 1.58064516129
+•  level 1 1.58064516129
+level 6 1.58064516129
+level 12 1.58064516129
+level  8 1.58064516129
+level  5 1.58064516129
+– level 2 1.58064516129
+waiting 1.57692307692
+technique 1.57142857143
+competing 1.57142857143
+task 1.57142857143
+performs 1.57142857143
+instance 1.57142857143
+allocate 1.55555555556
+includes 1.55555555556
+• allocate 1.55555555556
+programmers 1.55555555556
+execution 
+• 1.55
+execution 1.55
+execution
+– 1.55
+execution • 1.55
+view 1.54545454545
+job1 1.53846153846
+•  job1 1.53846153846
+input 1.53846153846
+device’ 1.53125
+device 1.53125
+number 1.51724137931
+indicating 0 1.5
+updates 1.5
+hold 1.5
+work 1.5
+abstraction 1.5
+series 1.5
+release 4 1.5
+• ready 1.5
+assures 1.5
+ difficult 1.5
+busy 1.5
+release 1.5
+steps 1.5
+security 1.5
+starvation 1.5
+dilemma 1.5
+consequences 1.5
+update 1.5
+unaware 1.5
+cost 1.5
+commonly 1.5
+flexibility 1.5
+relinquish 1.5
+processors  6 1.5
+suspended 1.5
+impossible 1.5
+properties 1.5
+bugs 1.5
+destroy 1.5
+begin 1.5
+occurred 1.5
+ms-dos 1.5
+allocates 1.5
+underutilization 1.5
+bigger 1.5
+interruption 1.5
+encounters 1.5
+apis 1.5
+sufficient 1.5
+requested 1.5
+network 1.5
+multics 1.5
+ranges 1.5
+reason 1.5
+amount 1.5
+hour 1.5
+sense 1.5
+processors 1.5
+event 1.5
+put 1.5
+expand 1.5
+tables 1.5
+branching 1.5
+compiler 1.5
+activity 1.5
+ready 1.5
+grant 1.5
+conflict 1.5
+000 words 1.5
+exclusively 1.5
+demands 1.5
+security
+
+• 1.5
+submission 1.5
+continue 1.5
+span 1.5
+line 1.5
+similar 1.5
+results 1.5
+regain 1.5
+lines 1.5
+security 
+4 1.5
+permanent 1.5
+constraints 1.5
+relinquishing 1.5
+approaches 1.5
+halted 1.5
+distinguish 1.5
+assignment 1.5
+”  work 1.5
+connected 1.5
+bring 1.5
+entities 1.5
+words 1.5
+timing 1.5
+000 
+initially 1.5
+sequentially 1.5
+parts 1.5
+difficult 1.5
+console 1.5
+works 1.5
+round-robin 1.5
+loans 1.5
+building 1.5
+blocked 1.46666666667
+• blocked 1.46666666667
+set 1.46153846154
+p1 1.45454545455
+applications 1.44444444444
+events 1.44444444444
+evolve 1.42857142857
+throughput 1.42857142857
+protected 1.42857142857
+efficient 1.42857142857
+printer 1.42857142857
+threads 1.42857142857
+load 1.41666666667
+size 1.41176470588
+creates 1.4
+• ability 1.4
+convenient 1.4
+job3 1.4
+loaded 1.4
+•  ability 1.4
+exit 1.4
+• exit 1.4
+000 
+•  job3 1.4
+smaller 1.4
+manage 1.4
+interrupted 1.4
+swapped 1.4
+routine 1.4
+ability 1.4
+devices 1.37837837838
+devices
+
+– 1.37837837838
+swap 1.375
+programmer
+• 1.375
+– swap 1.375
+defined 1.375
+programmer 1.375
+finished 1.375
+files 1.36842105263
+– developed 1.34782608696
+developed 1.34782608696
+limited 1.33333333333
+saved 1.33333333333
+approximately  32 1.33333333333
+channels 1.33333333333
+approximately 1.33333333333
+listed 1.33333333333
+responsible 1.33333333333
+testing 1.33333333333
+logic 1.33333333333
+rely 1.33333333333
+depend 1.33333333333
+fast 1.33333333333
+accesses 1.33333333333
+ways 1.33333333333
+situation 1.33333333333
+aspects 1.33333333333
+start 1.33333333333
+invoke 1.33333333333
+rest 1.33333333333
+p2 1.33333333333
+interleaved 1.33333333333
+essential 1.33333333333
+question 1.33333333333
+prepared 1.33333333333
+impact 1.33333333333
+exchange 1.33333333333
+1960s 1.33333333333
+terminate 1.33333333333
+limits 1.33333333333
+reasons 1.33333333333
+chance 1.33333333333
+terminates 1.33333333333
+portion 1.33333333333
+figure  2 1.32
+figure 1.32
+figure 2 1.32
+ibm 7094 1.3
+ibm’ 1.3
+ibm 1.3
+p3 1.3
+ibm 709 1.3
+ibm 704 1.3
+ibm 701 1.3
+idle 1.28571428571
+idle 
+
+– 1.28571428571
+wait 1.27777777778
+perform 1.27272727273
+executed 1.26315789474
+guarantee 1.25
+messages 1.25
+approach 1.25
+grown 1.25
+track 1.25
+– selects 1.25
+selects 1.25
+allowed 1.25
+shown 1.25
+waiter 1.25
+transition 1.25
+parent 1.25
+completion 1.25
+conditions 1.25
+ messages 1.25
+behavior 1.25
+customers 1.25
+designer 1.25
+interaction 1.25
+concept 1.23076923077
+case 1.23076923077
+point 1.22727272727
+45 minutes 1.22222222222
+15  minutes 1.22222222222
+5 minutes 1.22222222222
+20 
+minutes 1.22222222222
+30  minutes 1.22222222222
+minutes 1.22222222222
+easier 1.2
+terms 1.2
+banker 1.2
+– collection 1.2
+entity 1.2
+read 1.2
+complete 1.2
+controller 1.2
+examples 1.2
+banker’ 1.2
+refer 1.2
+degree 1.2
+collection 1.2
+submitted 1.2
+job2 1.17647058824
+000 
+•  job2 1.17647058824
+nature 1.16666666667
+occur 1.16666666667
+form 1.16666666667
+referred 1.16666666667
+made 1.16666666667
+utilities 1.14285714286
+passed 1.14285714286
+request 1.14285714286
+written 1.14285714286
+introduced 1.14285714286
+execute 1.11764705882
+30    details 1.1
+4  details 1.1
+details 1.1
+/ 1.06542056075
+transitions 1.0
+restriction 1.0
+caused 1.0
+started 1.0
+encounter 1.0
+d-bus 1.0
+implemented 1.0
++ 1.0
+supplied 1.0
+children 1.0
+met 1.0
+obtained 1.0
+inefficiently 1.0
+changed 1.0
+sjf 1.0
+prints 1.0
+brought 1.0
+visible 1.0
+txt 1.0
+dat 
+
+ 
+
+ 
+
+ 
+
+4 1.0
+separated 1.0
+advance 1.0
+re-linking 1.0
+circumstances 1.0
+room 1.0
+permits 1.0
+best-fit 1.0
+root 1.0
+initiate 1.0
+faults 1.0
+answer 1.0
+classify 1.0
+attempt 1.0
+order 1.0
+affect 1.0
+responsive 1.0
+produced 1.0
+denoted 1.0
+[denn84] 1.0
+overcome 1.0
+affected 1.0
+cpus 1.0
+break 1.0
+aborted 1.0
+queues 1.0
+simplified 1.0
+interfering 1.0
+queued 1.0
+carry 1.0
+overwrite 1.0
+rw 1.0
+rr 1.0
+database
+
+– 1.0
+pool 1.0
+november 1961 1.0
+millions 1.0
+r2 1.0
+organize 1.0
+clarity 1.0
+illustrate 1.0
+loaders 1.0
+master 1.0
+semaphores 1.0
+serve 1.0
+operands 1.0
+rate 1.0
+viewview
+– 1.0
+classes 1.0
+spectrum 1.0
+regulate 1.0
+forced 1.0
+instructs 1.0
+transactions 1.0
+ﬃciently 1.0
+exercised 1.0
+manifested 1.0
+calculated 1.0
+points 1.0
+notion 1.0
+fitted 1.0
+ibsys 1.0
+contributed 1.0
+ending 1.0
+defects 1.0
+• eventually 1.0
+subtle 1.0
+menu 1.0
+delays 1.0
+rich 1.0
+stop 1.0
+downtime 1.0
+runs 1.0
+fields 1.0
+lots 1.0
+reassigned 1.0
+preserve 1.0
+extent 1.0
+deadlocked 1.0
+faced 1.0
+protect 1.0
+layered 1.0
+unlinked 1.0
+ease 1.0
+expected 1.0
+flexible 1.0
+comfortable 1.0
+employ 1.0
+suppose 1.0
+balance 1.0
+study 1.0
+procedure 1.0
+existence 1.0
+explanation 1.0
+svr4 1.0
+anticipating 1.0
+mouse 1.0
+things 1.0
+linked 1.0
+unfortunate 1.0
+hand 1.0
+opportunity 1.0
+pay-back 1.0
+assigned 1.0
+--------> 1.0
+disparity 1.0
+easy 1.0
+save 1.0
+interprets 1.0
+5c 1.0
+5b 1.0
+advanced 1.0
+obvious 1.0
+30 introduction 1.0
+hung 1.0
+[corb62] 1.0
+ignore 1.0
+proceeding 1.0
+core 1.0
+relationship 1.0
+permitted 1.0
+conceal 1.0
+ first-fit 1.0
+wrap 1.0
+abstractions 1.0
+remained 1.0
+offer 1.0
+true 1.0
+portions 1.0
+prevents 1.0
+inclusive 1.0
+abstract 1.0
+exist 1.0
+usability 1.0
+constructed 1.0
+pipe 1.0
+generally 1.0
+successful 1.0
+shows 1.0
+intent 1.0
+longer 1.0
+restored 1.0
+managed 1.0
+switched 1.0
+activated 1.0
+focus 1.0
+computation 1.0
+devoted 1.0
+division 1.0
+advantage 1.0
+invade 1.0
+quick 1.0
+occurrence 1.0
+sign 1.0
+slowed 1.0
+satisfy 1.0
+waste
+
+• 1.0
+appears 1.0
+infrequently 1.0
+multi-tasking 1.0
+vivid 1.0
+working 1.0
+illusion 1.0
+live 1.0
+compactly 1.0
+today 1.0
+modularization 1.0
+overlays 1.0
+validity 1.0
+cases 1.0
+effort 1.0
+behalf 1.0
+modified 1.0
+chip 1.0
+locks 1.0
+abort 1.0
+performed 1.0
+hides 1.0
+productive 1.0
+divided 1.0
+subroutines 1.0
+fourth 1.0
+paramount 1.0
+explored 1.0
+goal 1.0
+sectors 1.0
+“loser” 1.0
+definitions 1.0
+talk 1.0
+unacceptable 1.0
+pointer 1.0
+schedulers  17 1.0
+supplemented 1.0
+group 1.0
+coordinates 1.0
+inefficiency 1.0
+halt 1.0
+introduce 1.0
+records 1.0
+maintaining 1.0
+accommodate 1.0
+single-program 1.0
+synchronize 1.0
+hijack 1.0
+simplicity 1.0
+year 1.0
+intended 1.0
+factors 1.0
+/filename 1.0
+opcodes 1.0
+possibility 1.0
+remainder 1.0
+reasonable 1.0
+turn 1.0
+suspend 1.0
+comprised 1.0
+job4 1.0
+sheet 1.0
+broadcast 1.0
+released 1.0
+rotate 1.0
+clients 1.0
+24021985@gmail 1.0
+sections 1.0
+cards 1.0
+accessed 1.0
+outcome 1.0
+topics 1.0
+note 1.0
+potential 1.0
+altered 1.0
+invoked 1.0
+pair 1.0
+considered 1.0
+implications 1.0
+ lack 1.0
+show 1.0
+discovered 1.0
+upgrade 1.0
+awareness 1.0
+ clients 1.0
+30 briefly 1.0
+prime 1.0
+mapped 1.0
+4mbyte
+
+• 1.0
+keyboard 1.0
+concern 1.0
+detect 1.0
+served 1.0
+trade- 1.0
+screen 1.0
+• ﬁxes 1.0
+efficiently 1.0
+fix 1.0
+6/ 1.0
+maintained 1.0
+ordered 1.0
+tuning 1.0
+capable 1.0
+ﬁxes 1.0
+6a 1.0
+6b 1.0
+developing 1.0
+resorting 1.0
+lynxos 1.0
+technology 1.0
+develop 1.0
+threatens 1.0
+granted 1.0
+place 
+
+• 1.0
+first-fit 1.0
+assist 1.0
+ﬃcient 1.0
+media 1.0
+inability 1.0
+consisted 1.0
+actions 1.0
+aspect 1.0
+summed 1.0
+multiples 1.0
+improvement 1.0
+setting 1.0
+aborts 1.0
+role 1.0
+scheduled 1.0
+decomposed 1.0
+comparing 1.0
+admitting 1.0
+decomposes 1.0
+latters 1.0
+benefit 1.0
+moving 1.0
+competition 1.0
+recorded 1.0
+clear-cut 1.0
+seconds 1.0
+refers 1.0
+throw 1.0
+manufacturer 1.0
+hiatus 1.0
+meaning 1.0
+srt 1.0
+determine 1.0
+intervention 1.0
+prepare 1.0
+regard 1.0
+arranges 1.0
+2 lists 1.0
+describe 1.0
+moved 1.0
+examine 1.0
+linkers 1.0
+moves 1.0
+ideally 1.0
+field 1.0
+gaining 1.0
+nucleus 1.0
+included 1.0
++-----------------------------------+ 1.0
+parallelism 1.0
+sub-divided 1.0
+starting 1.0
+juggled 1.0
+worms 1.0
+11  suggests 1.0
+debuggers 1.0
+issued 1.0
+activities 1.0
+returned 1.0
+2 effects 1.0
+ best-fit 1.0
+sum 1.0
+fcfs 1.0
+method 1.0
+contrast 1.0
+movement 1.0
+full 1.0
+tracks 1.0
+search 1.0
+pick 1.0
+action 1.0
+mediator 1.0
+proceed 1.0
+distinct 1.0
+initiates 1.0
+recall 1.0
+evolved 1.0
+ram 1.0
+os/360 1.0
+priorities 1.0
+acts 1.0
+utilize 1.0
+preemption 2 1.0
+maps 1.0
+uni-programming 1.0
+reflect 1.0
+workstation 1.0
+200 ms 1.0
+coexisting 1.0
+2 
+
+sec
+
+– 1.0
+rapidly 1.0
+detected 1.0
+return 1.0
+association 1.0
+capability 1.0
+stopped 1.0
+found 1.0
+6 finally 1.0
+malfunction 1.0
+measurement 1.0
+30 • blocked/waiting 1.0
+print 1.0
+effect 1.0
+symbian 1.0
+difficulty 1.0
+beginning 1.0
+retained 1.0
+positioning 1.0
+threat 1.0
+contender 1.0
+differ 1.0
+discussed 1.0
+introduction 1.0
+overlaying 1.0
+option 1.0
+relieved 1.0
+kind 1.0
+contrary 1.0
+maintainability 1.0
+initialized 1.0
+freeing 1.0
+vulnerable 1.0
+directives 1.0
+build 1.0
+analogy 1.0
+finding 1.0
+play 1.0
+added 1.0
+reach 1.0
+clear 1.0
+clean 1.0
+phenomenon 1.0
+indicator 1.0
+writes 1.0
+cheaper 1.0
+mid-1950s 1.0
+combinations 1.0
+achieved 1.0
+startup 1.0
+os/mvt 1.0
+recently 1.0
+depicts 1.0
+feeling 1.0
+restaurant 1.0
+corresponds 1.0
+disabled
+
+– 1.0
+create 1.0
+imagine 1.0
+repertoire 1.0
+understand 1.0
+systematic 1.0
+indefinitely 1.0
+leave 1.0
+pack 1.0
+costly 1.0
+5000 
+•  job4 1.0
+unaffected 1.0
+fetching 1.0
+moment 1.0
+idling 1.0
+database 1.0
+characterizing 1.0
+clears 1.0
+chore 1.0
+questions 1.0
+alternative 1.0
+associations 1.0
+microcomputers 1.0
+big 1.0
+success 1.0
+curious 1.0
+delivered 1.0
+customize 1.0
+eliminate 1.0
+inconvenience 1.0
+ﬁnish 1.0
+article 1.0
+subtract 1.0
+optimize 1.0
+gnome 1.0
+range 1.0
+reworked 1.0
+occupy 1.0
+vendors 1.0
+kde 1.0
+analyze 1.0
+retrying 1.0
+ send 1.0
+virtually 1.0
+cid 1.0
+fulfilling 1.0
+characteristic 1.0
+possession 1.0
+resolving 1.0
+responded 1.0
+place 1.0
+presenting 1.0
+os/2 1.0
+produce 1.0
+illustrated 1.0
+notify 1.0
+concerned 1.0
+send 1.0
+suite 1.0
+privilege
+
+– 0 1.0
+continues 1.0
+assignments 1.0
+dealt 1.0
+enforce 1.0
+imply 1.0
+pipes 1.0
+expressed 1.0
++-------------------------+ 1.0
+led 1.0
+engage 1.0
+suggests 1.0
+situations 1.0
+examining 1.0
+ﬃciency 1.0
+depicted 1.0
+milliseconds 1.0
+4 clients 1.0
+sort 1.0
+cooperate 1.0
+averaged 1.0
+reproduce 1.0
+regions 1.0
+located 1.0
+administrator 1.0
+monitoring 1.0
+owns 1.0
+element 1.0
+lined 1.0
+producer 1.0
+move 1.0
+customer 1.0
+perfect 1.0
+dr 1.0
+degrees 1.0
+choose 1.0
+covered 1.0
+practice 1.0
+transparent 1.0
+edit 1.0
+eases 1.0
+programmed 1.0
+constitute 1.0
+relates 1.0
+000 bytes 1.0
+250 mbytes 1.0
++------------------------------+ 1.0
+reaches 1.0
+reached 1.0
+interrupt-driven 1.0
+ establish 1.0
+addressed 1.0
+enforcement 1.0
+completed 1.0
+lists 1.0
+reflecting 1.0
+remember 1.0
+subroutine 1.0
+distinguished 1.0
+correspond 1.0
+supplanted 1.0
+mit 1.0
+installations 1.0
+deploy 1.0
+2  seconds 1.0
+mechanical 1.0
+fact 1.0
+supported 1.0
+one- 1.0
+employed 1.0
+diagnosing 1.0
+years 1.0
+compile-time 1.0
+places 1.0
+requirement 1.0
+delayed 1.0
+acquired 1.0
+closer 1.0
+clearing 1.0
+• null 1.0
+difficulties 1.0
+2  suggests 1.0
+tens 1.0
+progress 1.0
+opening 1.0
+importance 1.0
+interfere 1.0
+ worst-fit 1.0
+os-9 1.0
+sequences 1.0
+[brow84] 1.0
+powered 1.0
+addition 1.0
+semaphore 1.0
+utilizing 1.0
+topology 1.0
+suggested 1.0
+finishes 1.0
+received 1.0
+present 1.0
+unlike 1.0
+harder 1.0
+reliability 1.0
+conceived 1.0
+identity 1.0
+thought 1.0
+– coalesce 1.0
+obtain 1.0
+protecting 1.0
+• 
+
+  
+
+considerations 1.0
+ simulating 1.0
+add 1.0
+billionths 1.0
+comments 1.0
+supervise 1.0
+lost 1.0
+admitted 1.0
+30  competition 1.0
+clusters 1.0
+platforms 1.0
+assuming 1.0
+locate 1.0
+waits 1.0
+host 1.0
+carried 1.0
+basis 1.0
+terminated 1.0
+apps 1.0
+cs-ccny 1.0
+triggered 1.0
+delivery 1.0
+versatile 1.0
+dma 1.0
+evident 1.0
+record 1.0
+piece 1.0
+internals 1.0
+resumption 1.0
+proceeds 1.0
+variety 1.0
+book 1.0
+repeat 1.0
+kinds 1.0
+os/390 1.0
+compete 1.0
+420939 0
+… 0
+1960 0
+1961 0
+1963 0
+©2008 0
+100 0
+$
+• 0
+1975 0
+1973 0
+3
+
+1 0
+90% 0
+0 0
+1 0
+100% 0
+2 0
+10 0
+15 0
+2
+
+1 0
+3 0
+20 0
+300040 0
+4 0
+5 0
+12 0
+120900 0
+ 0
+30 2 0
+27 0
+7 0
+8 0
+⇒ 0
+96% 0
+9 0
+= 1 0
+1 μ 0
+= 5 0
+= 3 0
+32 0
+30 0
+= 4 0
+= 2 0
+= 0
+2014 0
+40 0
+• 0
+– 0
+’ 0
+“ 0

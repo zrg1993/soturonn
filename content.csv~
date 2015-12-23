@@ -1,0 +1,127 @@
+chapter 1 operating system overview
+1.1 operating system objectives and functions
+1.2 the evolution of operating systems
+1.3 major achievements
+1.4 developments leading to modern operating systems
+1.5 virtual machines
+1.6 os design considerations for multiprocessor and multicore
+1.7 microsoft windows overview
+1.8 traditional unix systems
+1.9 modern unix systems
+1.10 linux
+1.11 linux vserver virtual machine architecture
+1.12 recommended reading and web sites
+1.13 key terms, review questions, and problems
+chapter 2 process description and control
+2.1 what is a process?
+2.2 process states
+2.3 process description
+2.4 process control
+2.5 execution of the operating system
+2.6 security issues
+2.7 unix svr4 process management
+2.8 summary
+2.9 recommended reading
+2.10 key terms, review questions, and problems
+chapter 3 threads
+3.1 processes and threads
+3.2 types of threads
+3.3 multicore and multithreading
+3.4 windows 7 thread and smp management
+3.5 solaris thread and smp management
+3.6 linux process and thread management
+3.7 mac os x grand central dispatch
+3.8 summary
+3.9 recommended reading
+3.10 key terms, review questions, and problems
+chapter 4 concurrency: mutual exclusion and synchronization
+4.1 principles of concurrency
+4.2 mutual exclusion: hardware support
+4.3 semaphores
+4.4 monitors
+4.5 message passing
+4.6 readers writers problem
+4.7 summary
+4.8 recommended reading
+4.9 key terms, review questions, and problems
+chapter 5 concurrency: deadlock and starvation
+5.1 principles of deadlock
+5.2 deadlock prevention
+5.3 deadlock avoidance
+5.4 deadlock detection
+5.5 an integrated deadlock strategy
+5.6 dining philosophers problem
+5.7 unix concurrency mechanisms
+5.8 linux kernel concurrency mechanisms
+5.9 solaris thread synchronization primitives
+5.10 windows 7 concurrency mechanisms
+5.11 summary
+5.12 recommended reading
+5.13 key terms, review questions, and problems
+chapter 6 memory management
+6.1 memory management requirements
+6.2 memory partitioning
+6.3 paging
+6.4 segmentation
+6.5 security issues
+6.6 summary
+6.7 recommended reading
+6.8 key terms, review questions, and problems
+6a loading and linking
+chapter 7 virtual memory
+7.1 hardware and control structures
+7.2 operating system software
+7.3 unix and solaris memory management
+7.4 linux memory management
+7.5 windows memory management
+7.6 summary
+7.7 recommended reading and web sites
+7.8 key terms, review questions, and problems
+chapter 8 uniprocessor scheduling
+8.1 types of processor scheduling
+8.2 scheduling algorithms
+8.3 traditional unix scheduling
+8.4 summary
+8.5 recommended reading
+8.6 key terms, review questions, and problems
+chapter 9 multiprocessor and real-time scheduling
+9.1 multiprocessor scheduling
+9.2 real-time scheduling
+9.3 linux scheduling
+9.4 unix svr4 scheduling
+9.5 unix freebsd scheduling
+9.6 windows scheduling
+9.7 linux virtual machine process scheduling
+9.8 summary
+9.9 recommended reading
+9.10 key terms, review questions, and problems
+chapter 10 i/o management and disk scheduling
+10.1 i/o devices
+10.2 organization of the i/o function
+10.3 operating system design issues
+10.4 i/o buffering
+10.5 disk scheduling
+10.6 raid
+10.7 disk cache
+10.8 unix svr4 i/o
+10.9 linux i/o
+10.10 windows i/o
+10.11 summary
+10.12 recommended reading
+10.13 key terms, review questions, and problems
+chapter 11 file management
+11.1 overview
+11.2 file organization and access
+11.3 b-trees
+11.4 file directories
+11.5 file sharing
+11.6 record blocking
+11.7 secondary storage management
+11.8 file system security
+11.9 unix file management
+11.10 linux virtual file system
+11.11 windows file system
+11.12 summary
+11.13 recommended reading
+11.14 key terms, review questions, and problems
+references

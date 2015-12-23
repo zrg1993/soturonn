@@ -1,0 +1,3141 @@
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+(cid:1) Operating System Objectives and Functions :- 
+
+ 
+
+ 
+
+An  Operating  System  exploits  the  hardware  resources  of  one  or  more 
+processors  to  provide  a  set  of  services  to  system  users.  The  OS  also  manages 
+secondary memory and I/O devices on behalf of its users. So it is necessary to have 
+some understanding some of computer system hardware. 
+
+An OS is a program that controls the execution of application programs and 
+acts  as  an  interface  between  applications  and  the  computer  hardware.  It  can  be 
+thought of as having three objectives: 
+•  Convenience: An OS makes a computer more convenient to use. 
+•  Efficiency:  An  OS  allows  the  computer  system  resources  to  be  used  in  an 
+
+efficient manner. 
+
+•  Ability to evolve: An OS should be constructed in such a way as to permit the 
+effective development, testing, and introduction of new system functions without 
+interfering with service. 
+
+User  can  be  viewed  in  a  layered  or  hierarchical  fashion,  as  depicted  in 
+Figure 2.1.The user of those applications, the end user, generally is not concerned 
+with the details of computer hardware. Thus, the end user views a computer system 
+in terms of a set of applications. An application can be expressed in a programming 
+language and is developed by an application programmer. If one were to develop 
+an  application  program  as  a  set  of  machine  instructions  that  is  completely 
+responsible  for  controlling  the  computer  hardware,  one  would  be  faced  with  an 
+overwhelmingly complex undertaking 
+
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+ 
+
+Page # 1
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+OS typically provides services in the following areas: 
+ 
+
+•  Program  development:  The  OS  provides  a  variety  of  facilities  and  services, 
+such as editors and debuggers, to assist the programmer in creating programs. 
+Typically, these services are in the form of utility programs that, while not strictly 
+part  of  the  core  of  the  OS,  are  supplied  with  the  OS  and  are  referred  to  as 
+application program development tools. 
+
+•  Program  execution:  A  number  of  steps  need  to  be  performed  to  execute  a 
+program. Instructions and data must be loaded into main memory, I/O devices 
+and  files  must  be  initialized,  and  other  resources  must  be  prepared.  The  OS 
+handles these scheduling duties for the user. 
+
+•  Access  to  I/O  devices:  Each  I/O  device  requires  its  own  peculiar  set  of 
+instructions  or  control  signals  for  operation.  The  OS  provides  a  uniform 
+interface that hides these details so that programmers can access such devices 
+using simple reads and writes. 
+
+•  Controlled  access  to  files:  For  file  access,  the  OS  must  reflect  a  detailed 
+understanding of not only the nature of the I/O device (disk drive, tape drive) but 
+also the structure of the data contained in the files on the storage medium. In 
+the  case  of  a  system  with  multiple  users,  the  OS  may  provide  protection 
+mechanisms to control access to the files. 
+
+•  System access: For shared or public systems, the OS controls access to the 
+system as a whole and to specific system resources. The access function must 
+provide  protection  of  resources  and  data  from  unauthorized  users  and  must 
+resolve conflicts for resource contention. 
+
+•  Error detection and response: A variety of errors can occur while a computer 
+system is running. These include internal and external hardware errors, such as 
+a memory error, or a device failure or malfunction; and various software errors, 
+such  as  division  by  zero,  attempt  to  access  forbidden  memory  location,  and 
+inability of the OS to grant the request of an application. In each case, the OS 
+must  provide  a  response  that  clears  the  error  condition  with  the  least 
+impact on running applications.  
+
+•  Accounting: A good OS will collect usage statistics for various resources and 
+monitor  performance parameters  such  as  response  time.  On  any  system,  this 
+information  is  useful  in  anticipating  the  need  for  future  enhancements  and  in 
+tuning  the  system  to  improve  performance.  On  a  multiuser  system,  the 
+information can be used for billing purposes. 
+
+ 
+
+(cid:1) Operating System as a Resource Manager :- 
+
+ 
+
+A computer is a set of resources for the movement, storage, and processing 
+of data and for the control of these functions. The OS is responsible for managing 
+these resources. Can we say that it is the OS that controls the movement, storage, 
+and processing of data? From one point of view, the answer is yes: By managing 
+the  computer’s  resources,  the  OS  is  in  control  of  the  computer’s  basic 
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+Page # 2
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+functions.  But  this  control  is  exercised  in  a  curious  way.  Normally,  we  think  of  a 
+control mechanism as something external to that which is controlled. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+•  The OS functions in the same way as ordinary computer software; that is, it is a 
+
+program or suite of programs executed by the processor. 
+
+•  The  OS  frequently  relinquishes  control  and  must  depend  on  the  processor  to 
+
+allow it to regain control. 
+
+ 
+
+Like other computer programs, the OS provides instructions for the processor. 
+ 
+The key difference is in the intent of the program. The OS directs the processor in 
+the  use  of  the  other  system  resources  and  in  the  timing  of  its  execution  of  other 
+programs.  But  in  order  for  the  processor  to  do  any  of  these  things,  it  must  cease 
+executing the OS program and execute other programs. Thus, the OS relinquishes 
+control  for  the  processor  to  do  some  “useful”  work  and  then  resumes  control  long 
+enough to prepare the processor to do the next piece of work. 
+
+Figure  2.2  suggests  the  main  resources  that  are  managed  by  the  OS.A 
+portion of the OS are in main memory. This includes the kernel, or nucleus, which 
+contains  the  most  frequently,  used  functions  in  the  OS  and,  at  a  given  time,  other 
+portions  of  the  OS  currently  in  use.  The  remainder  of  main  memory  contains  user 
+programs  and  data.  The  allocation  of  this  resource  (main  memory)  is  controlled 
+jointly by the OS and memory management hardware in the processor, as we shall 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 3
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+see.  The  OS  decides  when  an  I/O  device  can  be  used  by  a  program  in  execution 
+and controls access to and use of files. The processor itself is a resource and the 
+OS must determine how much processor time is to be devoted to the execution of a 
+particular user program. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+(cid:1) The Evolution of Operation System :- 
+
+1.  Serial Processing :- 
+
+With  the  earliest  computers,  from  the  late  1940s  to  the  mid-1950s,  the 
+programmer interacted directly with the computer hardware; there was no OS. These 
+computers  were  run  from  a  console  consisting  of  display  lights,  toggle  switches, 
+some form of input device, and a printer. Programs in machine code were loaded via 
+the  input  device  (e.g.,  a  card  reader).  If  an  error  halted  the  program,  the  error 
+condition  was  indicated  by  the  lights.  If  the  program  proceeded  to  a  normal 
+completion, the output appeared on the printer. These early systems presented two 
+main problems: 
+ 
+
+•  Scheduling:  Most  installations  used  a  hardcopy  sign-up  sheet  to  reserve 
+computer time. Typically, a user could sign up for a block of time in multiples of 
+a half hour or so. A user might sign up for an hour and finish in 45 minutes; this 
+would result in wasted computer processing time. On the other hand, the user 
+might  run  into  problems,  not  finish  in  the  allotted  time,  and  be  forced  to  stop 
+before resolving the problem. 
+
+•  Setup time: A single program, called a job, could involve loading the compiler 
+plus the high-level language program (source program) into memory, saving the 
+compiled  program  (object  program)  and  then  loading  and  linking  together  the 
+object  program  and  common  functions.  Each  of  these  steps  could  involve 
+mounting or dismounting tapes or setting up card decks. If an error occurred, 
+the  hapless  user  typically  had  to  go  back  to  the  beginning  of  the  setup 
+sequence. Thus, a considerable amount of time was spent just in setting up the 
+program to run. 
+
+ 
+
+This mode of operation could be termed serial processing, reflecting the fact 
+that  users  have  access  to  the  computer  in  series.  Over  time,  various  system 
+software tools were developed to attempt to make serial processing more efficient. 
+These  include  libraries  of  common  functions,  linkers,  loaders,  debuggers,  and  I/O 
+driver routines that were available as common software for all users. 
+
+ 
+
+2.  Simple Batch Systems :- 
+
+Early  computers  were  very  expensive,  and  therefore  it  was  important  to 
+maximize  processor  utilization.  The  wasted  time  due  to  scheduling  and  setup  time 
+was unacceptable. 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 4
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+To  improve  utilization,  the  concept  of  a  batch  operating  system  was 
+developed. It appears that the first batch operating system was developed in the 
+mid-1950s by General Motors for use on an IBM 701. 
+
+The central idea behind the simple batch-processing scheme is the use of a 
+piece  of  software  known  as  the  monitor.  With  this  type  of  OS, the  user  no  longer 
+has  direct  access  to  the  processor.  Instead,  the  user  submits  the  job  on  cards  or 
+tape to a computer operator, who batches the jobs together sequentially and places 
+the  entire  batch  on  an  input  device,  for  use  by  the  monitor.  Each  program  is 
+constructed  to  branch  back  to  the  monitor  when  it  completes  processing,  at  which 
+point the monitor automatically begins loading the next program. 
+
+ 
+
+To  understand  how  this  scheme  works,  let  us  look  at  it  from  two  points  of 
+
+view: 
+
+ 
+
+to  as 
+
+job 
+
+that  are 
+
+  Monitor  Point  of  View:  -  The 
+monitor  controls  the  sequence  of 
+events.  For  this  to  be  so  much  of 
+the  monitor  must  always  be  in 
+main  memory  and  available  for 
+execution (Figure 2.3).That portion 
+the  resident 
+is  referred 
+monitor.  The  rest  of  the  monitor 
+consists  of  utilities  and  common 
+functions 
+loaded  as 
+subroutines to the user program at 
+the  beginning  of  any 
+that 
+requires  them.  The  monitor  reads 
+in jobs one at a time from the input 
+device  (typically  a  card  reader  or 
+magnetic  tape  drive).As  it  is  read 
+in,  the  current  job  is  placed  in  the 
+user  program  area,  and  control  is 
+passed to this job. When the job is 
+completed, it returns control to the 
+monitor, which immediately reads in the next job. The results of each job are 
+sent to an output device, such as a printer, for delivery to the user. 
+
+ 
+
+  Processor  Point  of  View:  -  At  a  certain  point,  the  processor  is  executing 
+instructions  from  the  portion  of  main  memory  containing  the  monitor.  These 
+instructions  cause  the  next  job  to  be  read  into  another  portion  of  main 
+memory. Once a job has been read in, the processor will encounter a branch 
+instruction in the monitor that instructs the processor to continue execution at 
+the start of the user program. The processor will then execute the instructions 
+in  the  user  program  until  it  encounters  an  ending  or  error  condition.  Either 
+event  causes  the  processor  to  fetch  its  next  instruction  from  the  monitor 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 5
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+program. Thus the phrase “control is passed to a job” simply means that the 
+processor is now fetching and executing instructions in a user program, and 
+“control is returned to the monitor” means that the processor is now fetching 
+and executing instructions from the monitor program. 
+The  monitor  performs  a  scheduling  function:  A  batch  of  jobs  is  queued  up, 
+and  jobs  are  executed  as  rapidly  as  possible,  with  no  intervening  idle  time.  The 
+monitor improves job setup time as well. With each job, instructions are included in a 
+primitive form of job control language (JCL). This is a special type of programming 
+language used to provide instructions to the monitor. A simple example is that of a 
+user submitting a program written in the programming language FORTRAN. 
+
+ 
+The  monitor,  or  batch  operating  system,  is  simply  a  computer  program.  It 
+relies  on  the  ability  of  the  processor  to  fetch  instructions  from  various  portions  of 
+main  memory  to  alternately  seize  and  relinquish  control.  Certain  other  hardware 
+features are also desirable: 
+•  Memory protection: While the user program is executing, it must not alter the 
+memory area containing the monitor. If such an attempt is made, the processor 
+hardware should detect an error and transfer control to the monitor. The monitor 
+would then abort the job, print out an error message, and load in the next job. 
+
+•  Timer:  A  timer is used to prevent a single job from monopolizing  the system. 
+The  timer  is  set  at  the  beginning  of  each  job.  If  the  timer  expires,  the  user 
+program is stopped, and control returns to the monitor. 
+
+•  Privileged  instructions:  Certain  machine  level  instructions  are  designated 
+privileged and can be executed only by the monitor. If the processor encounters 
+such  an  instruction  while  executing  a  user  program,  an  error  occurs  causing 
+control  to be  transferred  to  the monitor.  Among  the  privileged  instructions  are 
+I/O  instructions,  so  that  the  monitor  retains  control  of  all  I/O  devices.  This 
+prevents,  for  example,  a  user  program  from  accidentally  reading  job  control 
+instructions from the next job. If a user program wishes to perform I/O, it must 
+request that the monitor perform the operation for it. 
+Interrupts:  Early  computer  models  did  not  have  this  capability.  This  feature 
+gives  the  OS  more  flexibility  in  relinquishing  control  to  and  regaining  control 
+from user programs. 
+
+• 
+
+  
+
+Considerations  of  memory  protection  and  privileged  instructions  lead  to  the 
+concept of modes of operation. A user program executes in a user mode, in which 
+certain  areas  of  memory  are  protected  from  the  user’s  use  and  in  which  certain 
+instructions may not be executed. The monitor executes in a system mode, or what 
+has  come  to  be  called  kernel  mode,  in  which  privileged  instructions  may  be 
+executed and in which protected areas of memory may be accessed. 
+
+ 
+ 
+ 
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 6
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+3.  Multi-Programmed Batch System :- 
+
+ 
+
+ 
+
+Even with the automatic job sequencing provided by a simple batch operating 
+system,  the  processor  is  often  idle.  The  problem  is  that  I/O  devices  are  slow 
+compared  to  the  processor.  Figure  2.4  details  a  representative  calculation.  The 
+calculation  concerns  a  program  that  processes  a  file  of  records  and  performs,  on 
+average, 100 machine instructions per record. In this example the computer spends 
+over 96% of its time waiting for I/O devices to finish transferring data to and from the 
+file. Figure 2.5a illustrates this situation, where we have a single program, referred to 
+as uniprogramming. The processor spends a certain amount of time executing, until 
+it  reaches  an  I/O  instruction.  It  must  then  wait  until  that  I/O  instruction  concludes 
+before proceeding. 
+
+ 
+
+ 
+
+ 
+
+Page # 7
+
+ 
+
+ 
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+Type of JOB 
+Duration 
+Memory Required 
+Need Disk? 
+Need Terminal? 
+Need Printer? 
+
+ 
+
+JOB1 
+
+Heavy Compute 
+
+5 min 
+50 MB 
+
+No 
+No 
+No 
+
+JOB2 
+
+Heavy I/O 
+
+15 min 
+100 MB 
+
+No 
+Yes 
+No 
+
+Table: 2.1 Simple Program Execution Attributes. 
+
+JOB3 
+
+Heavy I/O 
+
+10 min 
+75 MB 
+
+Yes 
+No 
+Yes 
+
+ 
+This  inefficiency  is  not  necessary.  We  know  that  there  must  be  enough 
+memory to hold the OS (resident monitor) and one user program. Suppose that there 
+is room for the OS and two user programs. When one job needs to wait for I/O, the 
+processor can switch to the other job, which is likely not waiting for I/O (Figure 2.5b). 
+Furthermore,  we  might  expand  memory  to  hold  three,  four,  or  more  programs  and 
+switch  among  all  of 
+is  known  as 
+multiprogramming,  or  multitasking.  It  is  the  central  theme  of  modern  operating 
+systems.  
+
+(Figure  2.5c).  The  approach 
+
+them 
+
+To  illustrate  the  benefit  of  multiprogramming,  we  give  a  simple  example. 
+Consider a computer with 250 Mbytes of available memory (not used by the OS), a 
+disk,  a  terminal,  and  a  printer.  Three  programs,  JOB1,  JOB2,  and  JOB3,  are 
+submitted for execution at the same time, with the attributes listed in Table 2.1.We 
+assume  minimal  processor  requirements  for  JOB2  and  JOB3  and  continuous  disk 
+and  printer  use  by  JOB3.  For  a  simple  batch  environment,  these  jobs  will  be 
+executed in sequence. Thus, JOB1 completes in 5 minutes. JOB2 must wait until the 
+5 minutes are over and then completes 15 minutes after that. JOB3 begins after 20 
+minutes  and  completes  at  30  minutes  from  the  time  it  was  initially  submitted.  The 
+average  resource  utilization,  throughput,  and  response  times  are  shown  in  the 
+uniprogramming  column  of  Table  2.2.  Device-by-device  utilization  is  illustrated  in 
+Figure  2.6a.  It  is  evident  that  there  is  gross  underutilization  for  all  resources  when 
+averaged over the required 30-minute time period. 
+
+ 
+
+Uniprogramming 
+
+Multiprogramming 
+
+ 
+Processor Use 
+Memory Use 
+Disk Use 
+Printer Use 
+Elapsed Time 
+Throughput 
+Mean Response Time 
+
+20 % 
+33 % 
+33 % 
+33 % 
+30 min 
+6 jobs/hr 
+18 min 
+
+40 % 
+67 % 
+67 % 
+67 % 
+15 min 
+
+12 jobs/hr 
+
+10 min 
+Table: 2.2 Effects of Multi-Programming on Resource Utilization. 
+
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 8
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+ 
+
+ 
+
+Now  suppose  that  the  jobs  are  run  concurrently  under  a  multiprogramming 
+operating  system.  Because  there  is  little  resource  contention  between  the  jobs,  all 
+three  can  run  in  nearly  minimum  time  while  coexisting  with  the  others  in  the 
+computer  (assuming  that  JOB2  and  JOB3  are  allotted  enough  processor  time  to 
+keep  their  input  and  output  operations  active).  JOB1  will  still  require  5  minutes  to 
+complete, but at the end of that time, JOB2 will be one-third finished and JOB3 half 
+finished.  All  three  jobs  will  have  finished  within  15  minutes.  The  improvement  is 
+evident  when  examining  the multiprogramming  column  of Table 2.2,  obtained from 
+the histogram shown in Figure 2.6b.  
+
+As  with  a  simple batch  system,  a  multiprogramming  batch  system  must  rely 
+on certain computer hardware features. The most notable additional feature that is 
+useful  for  multiprogramming  is  the  hardware  that  supports  I/O  interrupts  and  DMA 
+(direct memory access).With interrupt-driven I/O or DMA, the processor can issue an 
+I/O command for one job and proceed with the execution of another job while the I/O 
+is  carried  out  by  the  device  controller.  When  the  I/O  operation  is  complete,  the 
+processor is interrupted and control is passed to an interrupt-handling program in the 
+OS. The OS will then pass control to another job.  
+
+Multiprogramming  operating  systems  are  fairly  sophisticated  compared  to 
+single-program,  or  uniprogramming,  systems.  To  have  several  jobs  ready  to  run, 
+they must be kept in main memory, requiring some form of memory management. 
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+Page # 9
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+In addition, if several jobs are ready to run, the processor must decide which one to 
+run;  this  decision  requires  an  algorithm  for  scheduling.  These  concepts  are 
+discussed later in this chapter. 
+
+ 
+
+ 
+
+4.  Time-Sharing System :- 
+
+ 
+
+ 
+
+ 
+
+With  the  use  of  multiprogramming,  batch  processing  can  be  quite  efficient. 
+However, for many jobs, it is desirable to provide a mode in which the user interacts 
+directly with the computer. Indeed, for some jobs, such as transaction processing, an 
+interactive mode is essential.  
+
+Today, the requirement for an interactive computing facility can be, and often 
+is, met by the use of a dedicated personal computer or workstation. That option was 
+not available in the 1960s, when most computers were big and costly. Instead, time 
+sharing was developed.  
+
+Just as multiprogramming allows the processor to handle multiple batch jobs 
+at a time, multiprogramming can also be used to handle multiple interactive jobs. In 
+this latter case, the technique is referred to as time sharing, because processor time 
+is  shared  among  multiple  users. 
+In  a  time-sharing  system,  multiple  users 
+simultaneously  access  the  system  through  terminals,  with  the  OS  interleaving  the 
+execution of each user program in a short burst or quantum of computation. Thus, if 
+there are n users actively requesting service at one time, each user will only see on 
+the  average  1/n  of  the  effective  computer  capacity,  not  counting  OS  overhead. 
+However,  given  the  relatively  slow  human  reaction  time,  the  response  time  on  a 
+properly designed system should be similar to that on a dedicated computer.  
+
+Both  batch  processing  and  time  sharing  use  multiprogramming.  The  key 
+
+differences are listed in Table 2.3. 
+
+ 
+Principle Objective 
+Source of Directives 
+to Operating System 
+
+Batch Multi-Programming 
+Maximize Processor’s Use. 
+JCL Command provided with 
+the job. 
+
+Time Sharing 
+
+Maximize Response Time. 
+Commands entered at the 
+terminals. 
+
+Table: 2.3 Batch Multi-Programming V/s Time-Sharing. 
+
+One  of  the  first  time-sharing  operating  systems  to  be  developed  was  the 
+
+Compatible Time-Sharing System (CTSS). 
+
+Compared to later systems, CTSS is primitive. The system ran on a computer 
+with 32,000 36-bit words of main memory, with the resident monitor consuming 5000 
+of that. When control was to be assigned to an interactive user, the user’s program 
+and data were loaded into the remaining 27,000 words of main memory. A program 
+was always loaded to start at the location of the 5000th word; this simplified both the 
+monitor and memory management. A system clock generated interrupts at a rate of 
+approximately  one  every  0.2  seconds.  At  each  clock  interrupt,  the  OS  regained 
+control and could assign the processor to another user. This technique is known as 
+time  slicing.  Thus,  at  regular  time  intervals,  the  current  user  would  be  preempted 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 10
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+and  another  user  loaded  in.  To  preserve  the  old  user  program  status  for  later 
+resumption, the old user programs and data were written out to disk before the new 
+user programs and data were read in. Subsequently, the old user program code and 
+data were restored in main memory when that program was next given a turn. 
+
+To  minimize  disk  traffic,  user  memory  was  only  written  out  when  the 
+incoming  program  would  overwrite  it.  This  principle  is  illustrated  in  Figure  2.7. 
+Assume that there are four interactive users with the following memory requirements, 
+in words: 
+
+•  JOB1: 15,000 
+•  JOB2: 20,000 
+•  JOB3: 5000 
+•  JOB4: 10,000 
+Initially,  the  monitor  loads  JOB1  and  transfers  control  to  it  (a).  Later,  the 
+monitor decides to transfer control to JOB2. Because JOB2 requires more memory 
+than JOB1, JOB1 must be written out first, and then JOB2 can be loaded (b).Next, 
+JOB3  is  loaded  in  to  be  run.  However,  because  JOB3  is  smaller  than  JOB2,  a 
+portion  of  JOB2  can  remain  in  memory,  reducing  disk  write  time  (c).Later,  the 
+monitor decides to transfer control back to JOB1.An additional portion of JOB2 must 
+be  written  out  when  JOB1  is  loaded  back  into  memory  (d).When  JOB4  is  loaded, 
+part of JOB1 and the portion of JOB2 remaining in memory are retained (e). At this 
+point, if either JOB1 or JOB2 is activated, only a partial load will be required. In 
+this example, it is JOB2 that runs next. This requires that JOB4 and the remaining 
+resident portion of JOB1 be written out and that the missing portion of JOB2 to be 
+read in (f).  
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+ 
+
+Page # 11
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+(cid:1) Major Achievements :- 
+
+ 
+
+ 
+
+ 
+
+ 
+
+There have been five major theoretical advances in the development of operating 
+
+systems: 
+
+1.  Processes 
+2.  Memory management 
+3.  Information protection and security 
+4.  Scheduling and resource management 
+5.  System structure 
+
+Each  advance  is  characterized  by  principles,  or  abstractions,  developed  to 
+meet difficult practical problems. Taken together, these five areas span many of the 
+key design and implementation issues of modern operating systems. 
+ 
+
+1.  The Process :- 
+
+The concept of process is fundamental to the structure of operating systems. 
+This  term  was first  used  by  the designers  of  Multics  in  the  1960. It  is  a  somewhat 
+more general term than job. Many definitions have been given for the term process, 
+including 
+
+•  A program in execution 
+•  An instance of a program running on a computer 
+•  The entity that can be assigned to and executed on a processor 
+•  A  unit  of  activity  characterized  by  a  single  sequential  thread  of  execution,  a 
+
+current state, and an associated set of system resource 
+Three  major  lines  of  computer  system  development  created  problems  in 
+timing and synchronization that contributed to the development of the concept of 
+the  process:  multiprogramming  batch  operation,  time  sharing,  and  real-time 
+transaction systems. As we have seen, multiprogramming was designed to keep 
+the  processor  and  I/O  devices,  including  storage  devices,  simultaneously  busy  to 
+achieve  maximum  efficiency.  The  key  mechanism  is  this:  In  response  to  signals 
+indicating  the  completion  of  I/O  transactions,  the  processor  is  switched  among  the 
+various programs residing in main memory. 
+
+A second line of development was general-purpose time sharing. Here, the 
+key design objective is to be responsive to the needs of the individual user and yet, 
+for cost reasons, be able to support many users simultaneously. 
+
+Another  important  line  of  development  has  been  real-time  transaction 
+processing  systems.  In  this  case,  a  number  of  users  are  entering  queries  or 
+updates against a database. An example is an airline reservation system. The key 
+difference between the transaction processing system and the time-sharing system 
+is  that  the former  is  limited  to  one  or  a few  applications,  whereas  users  of  a  time-
+sharing system can engage in program development, job execution, and the use of 
+various applications. In both cases, system response time is paramount. 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 12
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+The principal tool available to system programmers in developing the early 
+multiprogramming and multiuser interactive systems was the interrupt. The activity 
+of any job could be suspended by the occurrence of a defined event, such as an I/O 
+completion. The processor would save some sort of context (e. g., program counter 
+and  other  registers)  and  branch  to  an  interrupt-handling  routine,  which  would 
+determine  the  nature  of  the  interrupt,  process  the  interrupt,  and  then  resume  user 
+processing with the interrupted job or some other job. 
+
+With many jobs in progress at any one time, each of which involved numerous 
+steps  to  be  performed  in  sequence,  it  became  impossible  to  analyze  all  of  the 
+possible combinations of sequences of events. Even when the error was detected, it 
+was difficult to determine the cause, because the precise conditions under which the 
+errors appeared were very hard to reproduce. In general terms, there are four main 
+causes of such errors. 
+
+ 
+
+• 
+
+Improper  synchronization:  It  is  often  the  case  that  a  routine  must  be 
+suspended awaiting an event elsewhere in the system. For example, a program 
+that initiates an I/O read must wait until the data are available in a buffer before 
+proceeding. In such cases, a signal from some other routine is required. Improper 
+design  of  the  signaling  mechanism  can  result  in  signals  being  lost  or  duplicate 
+signals being received. 
+
+•  Failed  mutual  exclusion:  It  is  often  the  case  that  more  than  one  user  or 
+program  will  attempt  to  make  use  of  a  shared  resource  at  the  same  time.  For 
+example, two users may attempt to edit the same file at the same time. If these 
+accesses are not controlled, an error can occur. There must be some sort of 
+mutual exclusion mechanism that permits only one routine at a time to perform an 
+update against the file. 
+
+•  Nondeterminate  program  operation:  The  results  of  a  particular  program 
+normally should depend only on the input to that program and not on the activities 
+of  other  programs  in a  shared  system.  But when  programs  share  memory,  and 
+their execution is interleaved by the processor, they may interfere with each other 
+by overwriting common memory areas in unpredictable ways.Thus, the order in 
+which various programs are scheduled may affect the outcome of any particular 
+program. 
+
+•  Deadlocks:  It  is  possible  for  two  or  more  programs  to  be  hung  up  waiting  for 
+each  other.  For  example,  two  programs  may  each  require  two  I/O  devices  to 
+perform some operation (e.g., disk to tape copy). One of the programs has seized 
+control  of  one  of  the  devices  and  the  other  program  has  control  of  the  other 
+device.  Each  is  waiting  for  the  other  program  to  release  the  desired  resource. 
+Such  a  deadlock  may  depend  on  the  chance  timing  of  resource  allocation  and 
+release. 
+We can think of a process as consisting of three components: 
+
+•  An executable program 
+•  The associated data needed by the program (variables,work space, buffers, etc.) 
+•  The execution context of the program 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 13
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+This  last  element  is  essential.The  execution  context,  or  process  state,  is 
+the internal data by which the OS is able to supervise and control the process.This 
+internal information is separated from the process, because the OS has information 
+not permitted to the process. The context includes all of the information that the OS 
+needs to manage the process and that the processor needs to execute the process 
+properly. The context includes the contents of the various processor registers, such 
+as the program counter and data registers. It also includes information of use to the 
+OS,  such  as  the  priority  of  the  process  and  whether  the  process  is  waiting  for  the 
+completion of a particular I/O event.  
+
+Figure  2.8  indicates  a  way  in  which  processes  may  be  managed.Two 
+processes, A and B, exist in portions of main memory.That is, a block of memory is 
+allocated to each process that contains the program, data, and context information. 
+Each  process  is  recorded  in  a  process  list  built  and  maintained  by  the  OS.The 
+process  list  contains  one  entry  for  each  process,  which  includes  a  pointer  to  the 
+location of the block of memory that contains the process.  
+
+In  Figure  2.8,  the  process  index  register  indicates  that  process  B  is 
+executing.  Process  A  was  previously  executing  but  has  been  temporarily 
+interrupted. 
+
+ 
+
+ 
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+ 
+
+Page # 14
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+2.  Memory Management :- 
+
+ 
+
+ 
+
+ 
+
+The  needs  of  users  can  be  met  best  by  a  computing  environment  that 
+supports  modular  programming  and  the  flexible  use  of  data.  System  managers 
+need  efficient  and  orderly  control  of  storage  allocation.The  OS,  to  satisfy  these 
+requirements, has five principal storage management responsibilities: 
+•  Process  isolation:  The  OS  must  prevent  independent  processes  from 
+
+interfering with each other’s memory, both data and instructions. 
+
+•  Automatic  allocation  and  management:  Programs  should  be  dynamically 
+allocated  across  the  memory  hierarchy  as  required.  Allocation  should  be 
+transparent to the programmer. Thus, the programmer is relieved of concerns 
+relating to memory limitations, and the OS can achieve efficiency by assigning 
+memory to jobs only as needed. 
+
+•  Support  of  modular programming:  Programmers  should  be  able  to  define 
+program  modules,  and  to  create,  destroy,  and  alter  the  size  of  modules 
+dynamically. 
+
+•  Protection  and  access  control:  Sharing  of  memory,  at  any  level  of  the 
+memory  hierarchy,  creates  the  potential  for  one  program  to  address  the 
+memory  space  of  another.This  is  desirable  when  sharing  is  needed  by 
+particular  applications.  At  other  times,  it  threatens  the  integrity  of  programs 
+and  even  of  the  OS  itself.  The  OS  must  allow  portions  of  memory  to  be 
+accessible in various ways by various users. 
+
+•  Long-term  storage:  Many  application  programs  require  means  for  storing 
+information  for  extended  periods  of  time,  after  the  computer  has  been 
+powered down. 
+
+Typically,  operating  systems  meet  these  requirements  with  virtual 
+memory and file system facilities.The file system implements a long-term store, 
+with  information  stored  in  named  objects,  called  files.  The  file  is  a  convenient 
+concept for the programmer and is a useful unit of access control and protection 
+for the OS. Virtual memory is a facility that allows programs to address memory 
+from  a  logical  point  of  view,  without  regard  to  the  amount  of  main  memory 
+physically  available.Virtual  memory  was  conceived  to  meet  the  requirement  of 
+having  multiple  user  jobs  reside  in  main  memory  concurrently,  so  that  there 
+would not be a hiatus between the execution of successive processes while one 
+process was written 
+
+Out to secondary store and the successor process was read in. Because 
+processes vary in size, if the processor switches among a number of processes, 
+it  is  difficult  to  pack  them  compactly  into  main  memory.  Paging  systems  were 
+introduced,  which  allow  processes  to  be  comprised  of  a  number  of  fixed-size 
+blocks,  called  pages.  A  program  references  a  word  by  means  of  a  virtual 
+address consisting of a page number and an offset within the page. Each page 
+of a process may be located anywhere in main memory.  
+
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 15
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+ 
+
+ 
+
+The  paging  system  provides  for  a  dynamic  mapping  between the virtual 
+address used in the program and a real address, or physical address, in main 
+memory.  
+
+ 
+
+With  dynamic  mapping  hardware  available,  the  next  logical  step  was  to 
+eliminate  the  requirement  that  all  pages  of  a  process  reside  in  main  memory 
+simultaneously.  All  the  pages  of  a  process  are  maintained  on  disk.  When  a 
+process is executing, some of its pages are in main memory. If reference is made 
+to a page that is not in main memory, the memory management hardware detects 
+this and arranges for the missing page to be loaded. Such a scheme is referred 
+to as virtual memory and is depicted in Figure 2.9. 
+
+3.  Information Protection and Security :- 
+
+The  growth  in  the  use  of  time-sharing  systems  and,  more  recently, 
+computer networks has brought with it a growth in concern for the protection of 
+information.  The  nature  of  the  threat  that  concerns  an  organization  will  vary 
+greatly  depending  on  the  circumstances.  However,  there  are  some  general-
+purpose tools that can be built into computers and operating systems that support 
+a  variety  of  protection  and  security  mechanisms.  In  general,  we  are  concerned 
+with the problem of controlling access to computer systems and the information 
+stored  in  them.  Much  of  the  work  in  security  and  protection  as  it  relates  to 
+operating systems can be roughly grouped into four categories: 
+•  Availability: Concerned with protecting the system against interruption 
+•  Confidentiality:  Assures  that  users  cannot  read  data  for  which  access  is 
+
+unauthorized 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 16
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+•  Data integrity: Protection of data from unauthorized modification 
+•  Authenticity:  Concerned  with  the  proper  verification  of  the  identity  of  users 
+
+ 
+
+and the validity of messages or dat 
+
+ 
+
+ 
+
+ 
+
+4.  Scheduling and Resource Management :- 
+
+A  key  responsibility  of  the  OS  is  to  manage  the  various  resources 
+available  to  it  (main  memory  space,  I/O  devices,  processors)  and  to  schedule 
+their use by the various active processes. Any resource allocation and scheduling 
+policy must consider three factors: 
+•  Fairness:  Typically,  we  would  like  all  processes  that  are  competing  for  the 
+use of a particular resource to be given approximately equal and fair access 
+to that resource. This is especially so for jobs of the same class, that is, jobs 
+of similar demands. 
+
+•  Differential  responsiveness:  On  the  other  hand,  the  OS  may  need  to 
+jobs  with  different  service 
+discriminate  among  different  classes  of 
+requirements.  The  OS  should  attempt  to  make  allocation  and  scheduling 
+decisions  to  meet  the  total  set  of  requirements.  The  OS  should  also  make 
+these decisions dynamically. For example, if a process is waiting for the use 
+of an I/O device, the OS may wish to schedule that process for execution as 
+soon  as  possible  to  free  up  the  device  for  later  demands  from  other 
+processes. 
+
+•  Efficiency:  The  OS  should  attempt  to  maximize  throughput,  minimize 
+response  time,  and,  in  the  case  of  time  sharing,  accommodate  as  many 
+users  as  possible.These  criteria  conflict;  finding  the  right  balance  for  a 
+particular situation is an ongoing problem for operating system research. 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+ 
+
+Page # 17
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+Figure  2.11  suggests  the  major  elements  of  the  OS  involved  in  the 
+scheduling  of  processes  and  the  allocation  of  resources  in  a  multiprogramming 
+environment. The OS maintains a number of queues, each of which is simply a 
+list  of  processes  waiting  for  some  resource.The  short-term  queue  consists  of 
+processes  that  are  in  main  memory  and  are  ready  to  run  as  soon  as  the 
+processor  is  made  available.  Any  one  of  these  processes  could  use  the 
+processor next. It is up to the short-term scheduler, or dispatcher, to pick one.A 
+common strategy is to give each process in the queue some time in turn; this is 
+referred to as a round-robin technique.  
+
+The  long-term  queue  is  a  list  of  new  jobs  waiting  to  use  the  processor. 
+The  OS  adds  jobs  to  the  system  by  transferring  a  process  from  the  long-term 
+queue to the short-term queue. At that time, a portion of main memory must be 
+allocated  to  the  incoming  process.  Thus,  the  OS  must  be  sure  that  it  does  not 
+overcommit memory or processing time by admitting too many processes to the 
+system. There is an I/O queue for each I/O device.More than one process may 
+request the use of the same I/O device.All processes waiting to use each device 
+are lined up in that device’s queue.Again, the OS must determine which process 
+to assign to an available I/O device. 
+
+ 
+
+5.  System Structure :- 
+
+ 
+
+As more and more features have been added to operating systems, and 
+as the underlying hardware has become more capable and versatile, the size and 
+complexity of operating systems has grown. CTSS, put into operation at MIT in 
+1963,  consisted  of  approximately  32,000  36-bit  words  of  storage.  OS/360, 
+introduced a year later by IBM, had more than a million machine instructions. By 
+1975, the Multics system, developed by MIT and Bell Laboratories, had grown to 
+more  than  20  million  instructions.  It  is  true  that  more  recently,  some  simpler 
+operating  systems  have  been  introduced  for  smaller  systems,  but  these  have 
+inevitably  grown  more  complex  as 
+the  underlying  hardware  and  user 
+requirements have grown. Thus, the UNIX of today is far more complex than the 
+almost  toy  system  put  together  by  a  few  talented  programmers  in  the  early 
+1970s, and the simple MS-DOS has given way to the rich and complex power of 
+OS/2  and  Windows.  For  example,Windows  NT  4.0  contains  16  million  lines  of 
+code, and Windows 2000 has well over twice that number. 
+
+The  size  of  a  full-featured  OS,  and  the  difficulty  of  the  problem  it 
+addresses,  has  led  to  four  unfortunate  but  all-too-common  problems.  First, 
+operating  systems  are  chronically  late  in  being  delivered.This  goes  for  new 
+operating  systems  and  upgrades  to  older  systems.  Second,  the  systems  have 
+latent  bugs  that  show  up  in  the  field  and  must  be  fixed  and  reworked.  Third, 
+performance is often not what was expected. Fourth, it has proved impossible to 
+deploy  a  complex  OS  that  is  not  vulnerable  to  a  variety  of  security  attacks, 
+including viruses, worms, and unauthorized access. 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 18
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+To  manage  the  complexity  of  operating  systems  and  to  overcome  these 
+problems, there has been much focus over the years on the software structure of 
+the OS. Certain points seem obvious.The software must be modular.This will help 
+organize the software development process and limit the effort of diagnosing and 
+fixing errors. The modules must have well-defined interfaces to each other, and 
+the interfaces must be as simple as possible. Again, this eases the programming 
+burden.  It  also  facilitates  system  evolution.  With  clean,  minimal  interfaces 
+between  modules,  one  module  can  be  changed  with  minimal  impact  on  other 
+modules.  
+
+to 
+
+their  characteristic 
+
+For large operating systems, which run from millions to tens of millions of 
+lines  of  code,  modular  programming  alone  has  not  been  found  to  be  sufficient. 
+Instead there has been increasing use of the concepts of hierarchical layers and 
+information abstraction. The hierarchical structure of a modern OS separates its 
+functions  according 
+level  of 
+abstraction.We can view the system as a series of levels. Each level performs a 
+related subset of the functions required of the OS. It relies on the next lower level 
+to perform more primitive functions and to conceal the details of those functions. 
+It provides services to the next higher layer. Ideally, the levels should be defined 
+so  that  changes  in  one  level  do  not  require  changes  in  other  levels.Thus,  we 
+have  decomposed  one  problem 
+into  a  number  of  more  manageable 
+subproblems.  
+
+time  scale  and  their 
+
+In general, lower layers deal with a far shorter time scale. Some parts of 
+the OS must interact directly with the computer hardware, where events can have 
+a  time  scale  as  brief  as  a  few  billionths  of  a  second.  At  the  other  end  of  the 
+spectrum, parts of the OS communicate with the user, who issues commands at 
+a much more leisurely pace, perhaps one every few seconds. The use of a set of 
+levels conforms nicely to this environment. 
+
+The  way  in  which  these  principles  are  applied  varies  greatly  among 
+contemporary  operating  systems.  However,  it  is  useful  at  this  point,  for  the 
+purpose  of  gaining  an  overview  of  operating  systems,  to  present  a  model  of  a 
+hierarchical  OS.  Let  us  consider  the  model  proposed  in  [BROW84]  and 
+[DENN84].  Although  it  does  not  correspond  to  any  particular  OS,  this  model 
+provides a useful high-level  view of OS structure.The model is defined in Table 
+2.4 and consists of the following levels: 
+•  Level 1: Consists of electronic circuits, where the objects that are dealt with 
+are registers, memory cells, and logic gates. The operations defined on these 
+objects are actions, such as clearing a register or reading a memory location.  
+•  Level 2: The processor’s instruction set. The operations at this level are those 
+allowed in the machine language instruction set, such as add, subtract, load, 
+and store. 
+
+•  Level 3: Adds the concept of a procedure or subroutine, plus the call/return 
+
+operations. 
+
+•  Level 4: Introduces interrupts, which cause the processor to save the current 
+
+context and invoke an interrupt-handling routine. 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 19
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+ 
+
+These first four levels are not part of the OS but constitute the processor 
+hardware.  However,  some  elements of  the OS  begin  to appear  at  these  levels, 
+such as the interrupt-handling routines. It is at level 5 that we begin to reach the 
+OS  proper  and  that  the  concepts  associated  with  multiprogramming  begin  to 
+appear. 
+
+ 
+•  Level 5: The notion of a process as a program in execution is introduced at this 
+level.The  fundamental  requirements  on  the  OS  to  support  multiple  processes 
+include  the  ability  to  suspend  and  resume  processes.This  requires  saving 
+hardware  registers  so  that  execution  can  be  switched  from  one  process  to 
+another.  In  addition,  if  processes  need  to  cooperate,  then  some  method  of 
+synchronization  is  needed.  One  of  the  simplest  techniques,  and  an  important 
+concept  in  OS  design,  is  the  semaphore,  a  simple  signaling  technique  that  is 
+explored in Chapter 5. 
+
+•  Level 6: Deals with the secondary storage devices of the computer. At this level, 
+the functions of positioning the read/write heads and the actual transfer of blocks 
+of data occur. Level 6 relies on level 5 to schedule the operation and to notify the 
+requesting  process  of  completion  of  an  operation.  Higher  levels  are  concerned 
+with  the  address  of  the  needed  data  on  the  disk  and  provide  a  request  for  the 
+appropriate block to a device driver at level 5. 
+
+•  Level 7: Creates a logical address space for processes.This level organizes the 
+virtual address space into blocks that can be moved between main memory and 
+secondary  memory.Three  schemes  are  in  common  use:  those  using  fixedsize 
+pages,  those  using  variable-length  segments,  and  those  using  both.When  a 
+ 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+Page # 20
+
+ 
+
+B.H.GARDI COLLEGE OF MASTER OF COMPUTER APPLICATION 
+
+ 
+
+Ch-2 Operating System Overview 
+
+Operating System 
+
+needed block is not in main memory, logic at this level requests a transfer from 
+level 6. 
+
+ 
+
+Up  to  this  point,  the  OS  deals  with  the  resources  of  a  single  processor. 
+Beginning  with  level  8,  the  OS  deals  with  external  objects  such  as  peripheral 
+devices  and  possibly  networks  and  computers  attached  to  the  network.  The 
+objects  at  these  upper  levels  are  logical,  named  objects  that  can  be  shared 
+among processes on the same computer or on multiple computers. 
+
+•  Level  8:  Deals  with  the  communication  of  information  and  messages  between 
+processes.Whereas  level  5  provided  a  primitive  signal  mechanism  that  allowed 
+for  the  synchronization  of  processes,  this  level  deals  with  a  richer  sharing  of 
+information. One of the most powerful tools for this purpose is the pipe, which is a 
+logical channel for the flow of data between processes.A pipe is defined with its 
+output from one process and its input into another process. It can also be used to 
+link external devices or files to processes. The concept is discussed in Chapter 6. 
+•  Level 9: Supports the long-term storage of named files. At this level, the data on 
+secondary storage are viewed in terms of abstract, variable-length entities. This 
+is  in  contrast  to  the  hardware-oriented  view  of  secondary  storage  in  terms  of 
+tracks, sectors, and fixed-size blocks at level 6. 
+
+•  Level 10: Provides access to external devices using standardized interfaces. 
+•  Level 11: Is responsible for maintaining the association between the external and 
+internal identifiers of the system’s resources and objects. The external identifier is 
+a name that can be employed by an application or user.The internal identifier is 
+an address or other indicator that can be used by lower levels of the OS to locate 
+and  control  an  object.These  associations  are  maintained  in  a  directory.  Entries 
+include  not  only  external/internal  mapping,  but  also  characteristics  such  as 
+access rights. 
+
+•  Level 12: Provides a full-featured facility for the support of processes. This goes 
+far  beyond  what  is  provided  at  level  5.  At  level  5,  only  the  processor  register 
+contents associated with a process are maintained, plus the logic for dispatching 
+processes. At level 12, all of the information needed for the orderly management 
+of processes is supported.This includes the virtual address space of the process, 
+a list of objects and processes with which it may interact and the constraints of 
+that interaction, parameters passed to the process upon creation, and any other 
+characteristics of the process that might be used by the 
+
+•  OS to control the process. 
+•  Level  13:  Provides  an  interface  to  the  OS  for  the  user.  It  is  referred  to  as  the 
+shell because it separates the user from OS details and presents the OS simply 
+as  a  collection  of  services.  The  shell  accepts  user  commands  or  job  control 
+statements, interprets these, and creates and controls processes as needed. For 
+example, the interface at this level could be implemented in a graphical manner, 
+providing  the  user  with  commands  through  a  list  presented  as  a  menu  and 
+displaying results using graphical output to a specific device such as a screen. 
+
+Prepared By :- Ajay A. Ardeshana 
+Email :- ajay.24021985@gmail.com 
+
+ 
+
+Page # 21
+
+ 
+
+CSc33200: Operating Systems, CS-CCNY, Fall 2003
+
+Jinzhong Niu September 15, 2003
+
+Operating System Overview: Part 1
+
+This part aims to provide an overview of operating system principles and its history.
+
+We talk about the objectives of operating system ﬁrst, then look at how operation systems
+evolve to get closer to those goals step by step, and ﬁnally summarize the major progresses
+that have been made till now.
+
+1 Objectives and functions
+
+1.1 OS as a user/computer interface - Usability
+
+The reason for an operation system to exist is to make computers more convenient to use. An
+OS aims to wrap the underneath hardware resources and provides services to end users in a
+systematic way. These services may be divided into two types: services directly available for
+end users through all kinds of I/O devices, such as mouse, keyboard, monitor, printer, and so
+on; and services for application programs, which in turn provides services for end users.
+
+If we look on these services as interfaces among diﬀerent components of a computer system,
+then the following hierarchical architecture may be obtained:
+
+Users
+
+Programmer
+
+|
+|
+|
+v
+
+|
+|
+|
+|
+|
+v
+
+OS designer
+
+|
+v
+
+Utilities
+
++---------------+
+| Applications
+|
++-------------------------+
+|
+|
++------------------------------+
+|
+|
++-----------------------------------+
+|
+|
++-----------------------------------+
+
+|
+|
+V
+
+OS
+
+Hardware
+
+It is also common to consider Utilities and Applications that are distributed together
+with an OS parts of the OS, but obviously they are not essential. Utilities are usually called
+libraries or APIs, providing frequently used functions for the upper-level applications.
+
+1
+
+From the point of view of end users, a computer system consists of a variety of applications
+they may use. An application is developed by programmers in a programming language. The
+higher level the utilities are, the easier and more comfortable it is for programmers to code in
+the corresponding programming language; or the lower, the harder. In an extreme case, the
+assembly language is almost the same as machine instructions except that mnemonic symbols
+are used to replace binary strings or opcodes. In this kind of language, programmers have to
+deal with an overwhelmingly complexity of manipulating computer hardware. On the contrary,
+in a higher-level language, more user-friendly APIs are available, e.g. opening a ﬁle by calling
+
+open("C:/filename.txt", "rw")
+
+1.2 OS as resource manager - Eﬃciency
+
+It is not the OS itself but the hardware that makes all kinds of services possible and available
+to application programs. An OS merely exploits the hardware to provide easily accessible
+interfaces. Exploitation means management upon the hardware resources, and thus also im-
+poses control upon or manages the entities that use the services so that the resources are used
+eﬃciently. In the classes later on, we will discuss this aspect, including process scheduling,
+memory management, I/O device management, etc.
+
+One thing worth mentioning here is that, diﬀerent from other control systems where the con-
+trolling facility, the controller, is distinct and external to the controlled parts, the OS has to
+depend on the hardware resources it manages to work.
+
++-------------------+
+|
+|
++------------+
+|
+|
+|
+|
+|
+| Controller |-------->|
+|
+|
+|
+|
++------------+
++-------------------+
+
+Controlled
+components
+
+As we know, an OS is in nature a program, consisting instructions, thus it also needs CPU to
+execute instructions so as to function as a controller, and main memory to hold instructions
+for CPU to fetch. At the same time, the OS has to be able to relinquish and regain later
+the control of CPU so that other programs can get chance to run but still under the control
+of the OS (An analogy to this is that an administrator of an apartment building might live
+in the same building himself). By utilizing the facilities provided by hardware, the OS may
+schedule diﬀerent processes to run at diﬀerent moments and exchange the instructions and
+data of programs between external storage devices, like hard disks, and main memory. These
+topics will be covered as the course proceeds.
+
+2
+
+1.3 Evolution of OS - Maintainability
+
+It does not suﬃce to simply consider an operating system an unvariable unit. An OS may
+evolve while time elapses due to the following reasons:
+
+• hardware upgrades or new types of hardware: With hardware technologies devel-
+opment, the OS also needs to upgrade so as to utilize the new mechanisms introduced
+by new hardware. For example, Pentium IV extended instruction set of Pentium III
+for multimedia applications and internet transmission. An OS designed for the previous
+versions of Intel x86 series will have to be upgraded to be able to accommodate these
+new instructions.
+
+• new services: An OS may also expand to include more services in response to user
+
+demand.
+
+• ﬁxes: No software is perfect, and any program may contain more or less bugs or defects,
+thus ﬁxes should be made from time to time. Microsoft Windows is a vivid example of
+this kind.
+
+These situations all require OS designers to build an OS in the way that the system can be
+maintained and upgraded easily. All the common software design techniques may be applied
+to an OS, such as modularization. With modularization, the OS is split into multiple modules
+with clearly deﬁned interfaces between them. Thus, as long as the interfaces are left untouched,
+each single module may be upgraded independently.
+
+2 The evolution of operating systems
+
+To better understand the requirements for an operating system, it is useful to consider how
+operating systems have evolved over the years.
+
+2.1 Serial processing
+
+The earliest computer system has no OS at all, and is characterized as serial processing because
+users have to reserve time slots in advance, and during the alloted period, they occupy the
+computer exclusively. Thus the computer will be used in sequence by diﬀerent users.
+
+These early systems presented two major problems:
+
+3
+
+1. Users may ﬁnish their tasks earlier than you have expected, and unfortunately the rest
+time is simply wasted. Or they may run into problems, cannot ﬁnish in the allotted time,
+and thus are forced to stop, which causes much inconvenience and delays the development.
+
+2. In such systems, programs are presented by cards. Each card has several locations on it,
+where there may be a hole or not, respectively indicating 0 or 1. Programs are loaded
+into memory via a card reader. With no OS available, to compile their programs, users
+have to manually load the compiler program ﬁrst with the user program as input. This
+involves mounting, or dismounting tapes or setting up card decks. If an error occurred,
+the user has to repeat the whole process from the very beginning. Thus much time is
+wasted.
+
+2.2 Simple batch systems
+
+To improve the utilization of computer systems, the concept of a batch operating system was
+developed later on. The central idea is the use of a piece of software known as the monitor.
+With it, users don’t have direct access to the computer systems any longer;
+instead, the
+operator of the system collects the user programs and batches them together sequentially for
+use by the monitor.
+
+To process user programs, the monitor ﬁrst has to be loaded into memory. Then it reads in
+programs one at a time from the input devices. As each program is read in, it will be placed
+in the user program area of main memory, and control is passed to this program. When the
+execution of the program is completed, it returns control to the monitor, which moves on to
+process the next program.
+
+To assist in this, a special language is used, called job control language or JCL (At that time,
+each user program was called a job), which provides instructions to the monitor. For example,
+the following is a FORTRAN program with JCL commands.
+
+$JOB
+$FTN
+...
+FORTRAN instructions
+...
+
+$RUN
+...
+Data
+...
+$END
+
+$JOB indicates the beginning of a job. $FTN tells the monitor to load the FORTRAN compiler,
+which generates object code from the FORTRAN source program. The monitor regains control
+after the compile operation. $RUN makes control transferred from the monitor to the current
+program, which works on the data following until a successful or unsuccessful completion. The
+monitor then may move on to another job. To much extent, JCL instructions are similar to
+
+4
+
+the command sequence in a DOS batch ﬁle or a UNIX shell ﬁle. The latters tell the operating
+systems to run multiple commands automatically.
+
+The advantage of this mode is that the monitor automates the execution of multiple jobs thus
+much time is saved by avoiding manual operations.
+
+2.3 Multiprogrammed batch systems
+
+Even with the automatic job processing by a monitor, the processor is still often idle. The
+problem is actually what we have discussed before regarding programmed I/O. That is a pro-
+gram may have to wait for I/O operation to ﬁnish and thus leads to the processor’s idling. The
+solution is to run multiple programs concurrently during a certain period so that whenever the
+current program has to wait for I/O devices, control may be transferred to another program. If
+needed, a third program may be loaded, or even more. This scheme is called multiprogramming
+or multitasking.
+
+With multiprogramming, the utilization of processor is greatly improved, but it has its own
+problems. To run multiple programs concurrently, the memory should be organized properly
+so that each program has its own space and does not invade others’. What’s more, at some
+moment, there may be more than programs ready to run. Thus some form of scheduling is
+needed to obtain better performance.
+
+2.4 Time-sharing system
+
+With multiprogramming, the overall system is quite eﬃcient. However a problem remains.
+That is those jobs that come late in the batch job list won’t get chance to run until the jobs
+before them have completed, thus their users have to wait a long time to obtain the results.
+Some programs may even need interaction with users, which requires the processor to switch
+to these programs frequently.
+
+To reach this new goal, a similar technique to multiprogramming can be used, called time
+sharing. In such a system, multiple users simultaneously access the system through terminals,
+with the operating system interleaving the execution of each user program in a short burst of
+computation. For example, suppose a computer system may have at most 10 users at the same
+time, and the human reaction time is 200 ms. Then we may assign 200/10 = 20ms CPU time
+to the user programs one by one in a cyclic manner, thus each user will be responded within
+the human reaction time so that the computer system seems to service the user program itself.
+
+The following table gives the diﬀerence between the batch multiprogramming and time sharing:
+
+5
+
+Principal objective
+Source of directives to
+operating system
+
+Batch multiprogramming
+Maximize processor use
+Job control language commands
+provided with the job
+
+Time sharing
+Minimize response time
+Commands entered at
+the terminal
+
+Table 1: Batch multiprogramming versus time sharing
+
+6
+
+Operating Systems:
+
+Internals and Design Principles, 6/E
+
+William Stallings
+
+Chapter 2
+
+Operating System Overview
+Operating System Overview
+
+Dave Bremer
+
+Otago Polytechnic, N.Z.
+
+©2008, Prentice Hall
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern Operating 
+– Developments Leading to Modern Operating 
+
+Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Operating System
+
+• A program that controls the execution of 
+
+application programs
+
+• An interface between applications and 
+
+hardware
+hardware
+
+• Main objectives of an OS:
+
+– Convenience
+– Efficiency
+– Ability to evolve
+
+Layers and Views
+
+Services Provided
+
+by the Operating System
+
+• Program development
+– Editors and debuggers.
+
+• Program execution
+
+– OS handles scheduling of numerous tasks 
+– OS handles scheduling of numerous tasks 
+
+required to execute a program
+
+• Access I/O devices
+
+– Each device will have unique interface
+– OS presents standard interface to users
+
+Services cont…
+
+• Controlled access to files
+
+– Accessing different media but presenting a 
+
+common interface to users
+
+– Provides protection in multi-access systems
+– Provides protection in multi-access systems
+
+• System access
+
+– Controls access to the system and its 
+
+resources
+
+Services cont…
+
+• Error detection and response
+
+– Internal and external hardware errors
+– Software errors 
+– Operating system cannot grant request of 
+– Operating system cannot grant request of 
+
+application
+• Accounting
+
+– Collect usage statistics 
+– Monitor performance
+
+The Role of an OS
+
+• A computer is a set of resources for the 
+movement, storage, and processing of 
+data.
+
+• The OS is responsible for managing these 
+• The OS is responsible for managing these 
+
+resources.
+
+Operating System
+
+as Software
+
+• The OS functions in the same way as an 
+
+ordinary computer software
+– It is a program that is executed by the CPU
+• Operating system relinquishes control of 
+• Operating system relinquishes control of 
+
+the processor
+
+OS as
+
+Resource Manager
+
+Evolution of Operating
+
+Systems
+
+• Operating systems will evolve over time
+
+– Hardware upgrades plus new types of 
+
+hardware
+
+– New services
+– New services
+– Fixes
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern Operating 
+– Developments Leading to Modern Operating 
+
+Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Evolution of
+
+Operating Systems
+
+• It may be easier to understand the key 
+
+requirements of an OS by considering the 
+evolution of Operating Systems
+
+• Stages include
+• Stages include
+
+– Serial Processing
+– Simple Batch Systems
+– Multiprogrammed batch systems
+– Time Sharing Systems
+
+Serial Processing
+
+• No operating system
+• Machines run from a console with display 
+lights, toggle switches, input device, and 
+printer
+printer
+
+• Problems include:
+
+– Scheduling
+– Setup time
+
+Simple batch system
+
+• Early computers were extremely 
+
+expensive
+– Important to maximize processor utilization
+
+• Monitor
+• Monitor
+
+– Software that controls the sequence of events
+– Batch jobs together
+– Program returns control to monitor when 
+
+finished
+
+Monitor’s perspective
+
+• Monitor controls the 
+sequence of events
+
+• Resident Monitor is software 
+
+always in memory
+always in memory
+
+• Monitor reads in job and 
+
+gives control
+
+• Job returns control to monitor
+
+Job Control Language
+
+• Special type of programming language to 
+
+control jobs 
+
+• Provides instruction to the monitor
+
+– What compiler to use
+– What compiler to use
+– What data to use
+
+Desirable Hardware
+
+Features
+
+• Memory protection for monitor
+
+– Jobs cannot overwrite or alter
+
+• Timer
+
+– Prevent a job from monopolizing system
+– Prevent a job from monopolizing system
+
+• Privileged instructions
+
+– Only executed by the monitor
+
+• Interrupts
+
+Modes of Operation
+
+• User Mode
+
+– User program executes in user mode 
+– Certain areas of memory protected from user 
+
+access
+access
+
+– Certain instructions may not be executed
+
+• Kernel Mode
+
+– Monitor executes in kernel mode
+– Privileged instructions may be executed, all 
+
+memory accessible.
+
+Multiprogrammed
+Batch Systems
+
+• CPU is often idle 
+
+– Even with automatic job sequencing.
+– I/O devices are slow compared to processor
+
+Uniprogramming
+
+• Processor must wait for I/O instruction to 
+
+complete before preceding
+
+Multiprogramming
+
+• When one job needs to wait for I/O, the 
+
+processor can switch to the other job
+
+Multiprogramming
+
+Example
+
+Utilization Histograms
+
+Time Sharing Systems
+
+• Using multiprogramming to handle multiple 
+
+interactive jobs
+
+• Processor’s time is shared among multiple 
+
+users
+users
+
+• Multiple users simultaneously access the 
+
+system through terminals
+
+Batch Multiprogramming
+
+vs. Time Sharing
+
+Early Example: CTSS
+
+• Compatible Time-Sharing System (CTSS) 
+
+– Developed at MIT as project MAC
+
+• Time Slicing:
+
+– When control was passed to a user
+– When control was passed to a user
+– User program and data loaded
+– Clock generates interrupts about every 0.2 
+
+sec
+
+– At each interrupt OS gained control and could 
+
+assign processor to another user
+
+CTSS Operation
+
+Problems and Issues
+
+• Multiple jobs in memory must be protected 
+
+from each other’s data
+
+• File system must be protected so that only 
+
+authorised users can access
+authorised users can access
+
+• Contention for resources must be handled
+
+– Printers, storage etc
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern Operating 
+– Developments Leading to Modern Operating 
+
+Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Major Advances
+
+• Operating Systems are among the most 
+
+complex pieces of software ever 
+developed
+
+• Major advances include:
+• Major advances include:
+
+– Processes
+– Memory management
+– Information protection and security
+– Scheduling and resource management
+– System 
+
+Process
+
+• Fundamental to the structure of OS’s
+• A process is:
+
+– A program in execution
+– An instance of a running program
+– An instance of a running program
+– The entity that can be assigned to and 
+
+executed on a processor
+
+– A single sequential thread of execution, a 
+
+current state, and an associated set of system 
+resources.
+
+Causes of Errors when
+
+Designing System Software
+• Error in designing an OS are often subtle 
+
+and difficult to diagnose
+• Errors typically include:
+– Improper synchronization
+– Improper synchronization
+– Failed mutual exclusion
+– Non-determinate program operation
+– Deadlocks
+
+Components of
+
+a Process
+
+• A process consists of
+
+– An executable program
+– Associated data needed by the program
+– Execution context of the program (or “process 
+– Execution context of the program (or “process 
+
+state”)
+
+• The execution context contains all 
+
+information the operating system needs to 
+manage the process
+
+Process Management
+
+Memory Management
+
+• The OS has 5 principal storage 
+
+management responsibilities
+– Process isolation
+– Automatic allocation and management
+– Automatic allocation and management
+– Support of modular programming
+– Protection and access control
+– Long-term storage
+
+Virtual Memory
+
+• File system implements long-term store
+• Virtual memory allows programs to 
+
+address memory from a logical point of 
+viewview
+– Without regard to the limits of physical 
+
+memory
+
+Paging
+
+• Allows process to be comprised of a 
+
+number of fixed-size blocks, called pages
+• Virtual address is a page number and an 
+
+offset within the page
+offset within the page
+
+• Each page may be located any where in 
+
+main memory
+
+Virtual Memory
+
+Virtual Memory
+
+Addressing
+
+Information Protection
+
+and Security
+
+• The problem involves controlling access to 
+
+computer systems and the information 
+stored in them.
+
+• Main issues are:
+• Main issues are:
+
+– Availability
+– Confidentiality
+– Data integrity
+– Authenticity
+
+Scheduling and
+
+Resource Management
+
+• Key responsibility of an OS is managing 
+
+resources
+
+• Resource allocation policies must 
+
+consider:
+consider:
+– Fairness
+– Differential responsiveness
+– Efficiency
+
+Key Elements of an
+Operating System
+
+System Structure
+
+• View the system as a series of levels
+• Each level performs a related subset of 
+
+functions
+
+• Each level relies on the next lower level to 
+• Each level relies on the next lower level to 
+
+perform more primitive functions
+
+• This decomposes a problem into a number 
+
+of more manageable subproblems
+
+OS Design Hierarchy
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern 
+– Developments Leading to Modern 
+
+Operating Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Different Architectural
+
+Approaches
+
+• Various approaches have been tried, 
+
+categories include:
+– Microkernel architecture
+– Multithreading
+– Multithreading
+– Symmetric multiprocessing
+– Distributed operating systems
+– Object-oriented design
+
+Microkernel Architecture
+
+• Most early OS are a monolithic kernel
+
+– Most OS functionality resides in the kernel.
+
+• A microkernel assigns only a few essential 
+
+functions to the kernel
+functions to the kernel
+– Address spaces
+– Interprocess communication (IPC)
+– Basic scheduling
+
+Multithreading
+
+• Process is divided into threads that can 
+
+run concurrently
+
+• Thread
+
+– Dispatchable unit of work
+– Dispatchable unit of work
+– executes sequentially and is interruptible
+• Process is a collection of one or more 
+
+threads
+
+Symmetric
+
+multiprocessing (SMP)
+
+• An SMP system has
+– multiple processors
+– These processors share same main memory 
+
+and I/O facilities
+and I/O facilities
+
+– All processors can perform the same 
+
+functions
+
+• The OS of an SMP schedules processes 
+
+or threads across all of the processors.
+
+SMP Advantages
+
+• Performance
+
+– Allowing parallel processing
+
+• Availability
+
+– Failure of a single process does not halt the 
+– Failure of a single process does not halt the 
+
+system
+
+• Incremental Growth
+
+– Additional processors can be added.
+
+• Scaling
+
+Multiprogramming and
+
+Multiprocessing
+
+Distributed
+
+Operating Systems
+
+• Provides the illusion of
+
+– a single main memory space and 
+– single secondary memory space
+
+• Early stage of development
+• Early stage of development
+
+Object-oriented design
+
+• Used for adding modular extensions to a 
+
+small kernel
+
+• Enables programmers to customize an 
+
+operating system without disrupting 
+operating system without disrupting 
+system integrity
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern Operating 
+– Developments Leading to Modern Operating 
+
+Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Single-User
+Multitasking
+
+• From Windows 2000 on Windows 
+
+development developed to exploit modern 
+32-bit and 64-bit microprocessors
+
+• Designed for single users who run multiple 
+• Designed for single users who run multiple 
+
+programs
+
+• Main drivers are:
+
+– Increased memory and speed of 
+
+microprocessors
+
+– Support for virtual memory
+
+Windows Architecture
+
+Client/Server Model
+
+• Windows OS, protected subsystem, and 
+applications all use a client/server model
+– Common in distributed systems, but can be 
+
+used internal to a single system
+used internal to a single system
+
+• Processes communicate via RPC
+
+Windows Objects
+
+• Windows draws heavily on the concepts of 
+
+object-oriented design.
+
+• Key Object Oriented concepts used by 
+
+Windows are:
+Windows are:
+– Encapsulation
+– Object class and instance
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern Operating 
+– Developments Leading to Modern Operating 
+
+Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Description of UNIX
+
+Traditional UNIX Kernel
+
+System V Release 4
+
+(SVR4)
+
+Roadmap
+
+– Operating System Objectives/Functions
+– The Evolution of Operating Systems
+– Major Achievements
+– Developments Leading to Modern Operating 
+– Developments Leading to Modern Operating 
+
+Systems
+
+– Microsoft Windows Overview
+– UNIX Systems
+– Linux
+
+Modular
+
+Monolithic Kernel
+• Although monolithic, the kernel is 
+
+structures as a collection of modules
+– Loadable modules
+– An object file which can be linked and 
+– An object file which can be linked and 
+
+unlinked at run time
+
+• Characteristics:
+– Dynamic Linking
+– Stackable modules
+
+Linux Kernel Modules
+
+Linux Kernel
+Components
+
+Objectives and Functions
+
+• Convenience
+
+– Making the computer easier to use
+
+• Efficiency
+
+– Allowing better use of computer resources
+
+William Stallings 
+
+Computer Organization 
+
+Operating System Support
+
+and Architecture
+
+6th Edition
+Week 10
+
+By Dr. Ahmet ÖZKURT
+
+1
+
+Layers and Views of a Computer System
+
+Operating System Services
+
+• Program creation
+• Program execution
+• Access to I/O devices
+• Controlled access to files
+• System access
+• Error detection and response
+• Accounting
+
+3
+
+2
+
+4
+
+1
+
+O/S as a Resource Manager
+
+Types of Operating System
+
+Interactive
+
+•
+• Batch
+• Single program (Uni-programming)
+• Multi-programming (Multi-tasking)
+
+5
+
+7
+
+Early Systems
+
+• Late 1940s to mid 1950s
+• No Operating System
+• Programs interact directly with hardware
+• Two main problems:
+
+– Scheduling
+– Setup time
+
+Simple Batch Systems
+
+• Resident Monitor program
+• Users submit jobs to operator
+• Operator batches jobs
+• Monitor controls sequence of events to process batch
+• When one job is finished, control returns to Monitor 
+
+which reads next job
+
+• Monitor handles scheduling
+
+6
+
+8
+
+2
+
+Memory Layout for Resident Monitor
+
+Job Control Language
+
+Instructions to Monitor
+
+•
+• Usually denoted by $
+• e.g.
+
+– $JOB
+– $FTN
+– ...
+– $LOAD
+– $RUN
+– ...
+– $END
+
+Some Fortran instructions
+
+Some data
+
+9
+
+10
+
+Desirable Hardware Features
+
+Multi-programmed Batch Systems
+
+• Memory protection
+
+– To protect the Monitor
+
+• Timer
+
+– To prevent a job monopolizing the system
+
+• Privileged instructions
+
+– Only executed by Monitor
+– e.g. I/O
+Interrupts
+– Allows for relinquishing and regaining control
+
+•
+
+I/O devices very slow
+
+•
+• When one program is waiting for I/O, another can use 
+
+the CPU
+
+11
+
+12
+
+3
+
+Single Program
+
+Multi-Programming with 
+
+Two Programs
+
+13
+
+14
+
+Multi-Programming with 
+
+Three Programs
+
+Utilization
+
+15
+
+16
+
+4
+
+Time Sharing Systems
+
+Scheduling
+
+• Allow users to interact directly with the computer
+
+– i.e. Interactive
+
+• Multi-programming allows a number of users to interact 
+
+with the computer
+
+• Key to multi-programming
+• Long term
+• Medium term
+• Short term
+•
+
+I/O
+
+17
+
+18
+
+Long Term Scheduling
+
+Medium Term Scheduling
+
+• Determines which programs are submitted for 
+
+processing
+i.e. controls the degree of multi-programming
+
+•
+• Once submitted, a job becomes a process for the short 
+
+•
+
+term scheduler
+(or it becomes a swapped out job for the medium term 
+scheduler)
+
+• Part of the swapping function (later…)
+• Usually based on the need to manage multi-
+
+•
+
+programming
+If no virtual memory, memory management is also an 
+issue
+
+19
+
+20
+
+5
+
+Short Term Scheduler
+
+Process States
+
+• Dispatcher
+• Fine grained decisions of which job to execute next
+•
+
+i.e. which job actually gets to use the processor in the 
+next time slot
+
+21
+
+22
+
+Process Control Block
+
+PCB Diagram
+
+Identifier
+
+•
+• State
+• Priority
+• Program counter
+• Memory pointers
+• Context data
+•
+• Accounting information
+
+I/O status
+
+23
+
+24
+
+6
+
+Key Elements of O/S
+
+Process Scheduling
+
+25
+
+26
+
+Memory Management
+
+• Uni-program
+
+– Memory split into two
+– One for Operating System (monitor)
+– One for currently executing program
+
+• Multi-program
+
+– “User” part is sub-divided and shared among active 
+
+processes
+
+Swapping
+
+• Problem:  I/O is so slow compared with CPU that even 
+in multi-programming system, CPU can be idle most of 
+the time
+
+• Solutions:
+
+– Increase main memory 
+
+• Expensive
+• Leads to larger programs
+
+– Swapping
+
+27
+
+28
+
+7
+
+What is Swapping?
+
+Partitioning
+
+• Long term queue of processes stored on disk
+• Processes “swapped” in as space becomes available
+• As a process completes it is moved out of main 
+
+•
+
+memory
+If none of the processes in memory are ready (i.e. all I/O 
+blocked)
+– Swap out a blocked process to intermediate queue
+– Swap in a ready process or a new process
+– But swapping is an I/O process...
+
+• Splitting memory into sections to allocate to processes 
+
+(including Operating System)
+
+• Fixed-sized partitions
+
+– May not be equal size
+– Process is fitted into smallest hole that will take it 
+
+(best fit)
+
+– Some wasted memory
+– Leads to variable sized partitions
+
+29
+
+30
+
+Fixed
+
+Partitioning
+
+Variable Sized Partitions (1)
+
+• Allocate exactly the required memory to a process
+• This leads to a hole at the end of memory, too small to 
+
+use
+– Only one small hole - less waste
+
+• When all processes are blocked, swap out a process 
+
+and bring in another
+
+• New process may be smaller than swapped out process
+• Another hole
+
+31
+
+32
+
+8
+
+Variable Sized Partitions (2)
+
+• Eventually have lots of holes (fragmentation)
+• Solutions:
+
+– Coalesce - Join adjacent holes into one large hole
+– Compaction - From time to time go through memory 
+
+and move all hole into one free block (c.f. disk de-
+fragmentation)
+
+Effect of Dynamic Partitioning
+
+33
+
+34
+
+Relocation
+
+Paging
+
+• No guarantee that process will load into the same place 
+
+•
+
+in memory
+Instructions contain addresses
+– Locations of data
+– Addresses for instructions (branching)
+
+• Logical address - relative to beginning of program
+• Physical address - actual location in memory (this time)
+• Automatic conversion using base address
+
+• Split memory into equal sized, small chunks -page 
+
+frames
+
+• Split programs (processes) into equal sized small 
+
+chunks - pages
+
+• Allocate the required number page frames to a process
+• Operating System maintains list of free frames
+• A process does not require contiguous page frames
+• Use page table to keep track
+
+35
+
+36
+
+9
+
+Logical and Physical Addresses - Paging
+
+Virtual Memory
+
+• Demand paging
+
+– Do not require all pages of a process in memory
+– Bring in pages as required
+
+• Page fault
+
+– Required page is not in memory
+– Operating System must swap in required page
+– May need to swap out a page to make space
+– Select page to throw out based on recent history
+
+37
+
+38
+
+Thrashing
+
+Bonus
+
+• Too many processes in too little memory
+• Operating System spends all its time swapping
+• Little or no real work is done
+• Disk light is on all the time
+
+• Solutions
+
+– Good page replacement algorithms
+– Reduce number of processes running
+– Fit more memory
+
+• We do not need all of a process in memory for it to run
+• We can swap in pages as required
+• So - we can now run processes that are bigger than 
+
+total memory available!
+
+• Main memory is called real memory
+• User/programmer sees much bigger memory - virtual 
+
+memory
+
+39
+
+40
+
+10
+
+Page Table Structure
+
+Translation Lookaside Buffer
+
+• Every virtual memory reference causes two physical 
+
+memory access
+– Fetch page table entry
+– Fetch data
+
+• Use special cache for page table
+
+– TLB
+
+41
+
+42
+
+TLB Operation
+
+TLB and Cache Operation
+
+43
+
+44
+
+11
+
+Segmentation
+
+Advantages of Segmentation
+
+• Paging is not (usually) visible to the programmer
+• Segmentation is visible to the programmer
+• Usually different segments allocated to program and 
+
+data
+
+• May be a number of program and data segments
+
+• Simplifies handling of growing data structures
+• Allows programs to be altered and recompiled 
+independently, without re-linking and re-loading
+
+• Lends itself to sharing among processes
+• Lends itself to protection
+• Some systems combine segmentation with paging
+
+45
+
+46
+
+Pentium II
+
+Pentium II Address Translation 
+
+Mechanism
+
+• Hardware for segmentation and paging
+• Unsegmented unpaged
+
+– virtual address = physical address
+– Low complexity
+– High performance
+• Unsegmented paged
+
+– Memory viewed as paged linear address space
+– Protection and management via paging
+– Berkeley UNIX
+
+• Segmented unpaged
+
+– Paging manages allocation of memory within partitions
+– Unix System V
+
+– Collection of local address spaces
+– Protection to single byte level
+– Translation table needed is on chip when segment is in memory
+
+– Segmentation used to define logical memory partitions subject to
+
+• Segmented paged
+
+access control
+
+47
+
+48
+
+12
+
+Pentium II Segmentation
+
+Pentium II Protection
+
+• Each virtual address is 16-bit segment and 32-bit offset
+• 2 bits of segment are protection mechanism
+• 14 bits specify segment
+• Unsegmented virtual memory 232 = 4Gbytes
+• Segmented 246=64 terabytes
+
+– Can be larger – depends on which process is active
+– Half (8K segments of 4Gbytes) is global
+– Half is local and distinct for each process
+
+• Protection bits give 4 levels of privilege
+
+– 0 most protected, 3 least
+– Use of levels software dependent
+– Usually level 3 for applications, level 1 for O/S and 
+
+level 0 for kernel (level 2 not used)
+
+– Level 2 may be used for apps that have internal 
+
+security e.g. database
+
+– Some instructions only work in level 0
+
+49
+
+50
+
+Pentium II Paging
+
+PowerPC Memory Management Hardware
+
+• Segmentation may be disabled
+
+– In which case linear address space is used
+
+• Two level page table lookup
+
+– First, page directory
+• 1024 entries max
+• Splits 4G linear memory into 1024 page groups of 
+
+4Mbyte
+
+• Each page table has 1024 entries corresponding 
+
+to 4Kbyte pages
+
+• Can use one page directory for all processes, one 
+
+per process or mixture
+
+• Page directory for current process always in 
+
+memory
+
+– Use TLB holding 32 page table entries
+
+51
+
+• 32 bit – paging with simple segmentation
+
+– 64 bit paging with more powerful segmentation
+
+• Or, both do block address translation
+
+– Map 4 large blocks of instructions & 4 of memory to 
+
+bypass paging
+
+– e.g. OS tables or graphics frame buffers
+
+• 32 bit effective address
+– 12 bit byte selector 
+
+• =4kbyte pages
+
+– 16 bit page id
+
+• 64k pages per segment
+
+– 4 bits indicate one of 16 segment registers
+
+• Segment registers under OS control
+
+52
+
+13
+
+PowerPC 32-bit Memory Management 
+
+Formats
+
+PowerPC 32-bit Address Translation
+
+53
+
+54
+
+Required Reading
+
+• Stallings chapter 8
+• Stallings, W. Operating Systems, Internals and Design 
+
+Principles, Prentice Hall 1998
+
+• Loads of Web sites on Operating Systems
+
+55
+
+14
+
+1 of 30 Introduction to Operating System PCSC-301 (For UG students) (Class notes and reference books are required to complete this study) Release Date: 27.12.2014     An OS is a program that controls the execution of application programs and acts as an interface between applications and the computer hardware. It can be thought of as having three objectives:  • Convenience: An OS makes a computer more convenient to use.  • Efficiency: An OS allows the computer system resources to be used in an efficient manner.  • Ability to evolve: An OS should be constructed in such a way as to permit the effective development, testing, and introduction of new system functions without interfering with service.  Let us examine these three aspects of an OS in turn.  1. The Operating System as a User/Computer Interface  The hardware and software used in providing applications to a user can be viewed in a layered or hierarchical fashion, as depicted in Figure below. The user of those applications, the end user, generally is not concerned with the details of computer hardware. Thus, the end user views a computer system in terms of a set of applications.  An application can be expressed in a programming language and is developed by an application programmer. If one were to develop an application program as a set of machine instructions that is completely responsible for controlling the computer hardware, one would be faced with an overwhelmingly complex undertaking. To ease this chore, a set of system programs is provided. Some of these programs are referred to as utilities, or library programs. These implement frequently used functions that assist in program creation, the management of files, and the control of I/O devices. A programmer will make use of these facilities in developing an application, and the application, while it is running, will invoke the utilities to perform certain functions. The most important collection of system programs comprises the OS. The OS masks the details of the hardware from the programmer and provides the programmer with a convenient interface for using the system. It acts as mediator, making it easier for the programmer and for application programs to access and use those facilities and services.  Operating System – Objectives and Functions  2 of 30    Details of interfaces:   3 of 30 Briefly, the OS typically provides services in the following areas: • Program development: The OS provides a variety of facilities and services, such as editors and debuggers, to assist the programmer in creating programs. Typically, these services are in the form of utility programs that, while not strictly part of the core of the OS, are supplied with the OS and are referred to as application program development tools.  • Program execution: A number of steps need to be performed to execute a program. Instructions and data must be loaded into main memory, I/O devices and files must be initialized, and other resources must be prepared. The OS handles these scheduling duties for the user.  • Access to I/O devices: Each I/O device requires its own peculiar set of instructions or control signals for operation. The OS provides a uniform interface that hides these details so that programmers can access such devices using simple reads and writes.  • Controlled access to files: For file access, the OS must reflect a detailed understanding of not only the nature of the I/O device (disk drive, tape drive) but also the structure of the data contained in the files on the storage medium. In the case of a system with multiple users, the OS may provide protection mechanisms to control access to the files.  • System access: For shared or public systems, the OS controls access to the system as a whole and to specific system resources. The access function must provide protection of resources and data from unauthorized users and must resolve conflicts for resource contention.  • Error detection and response: A variety of errors can occur while a computer system is running. These include internal and external hardware errors, such as a memory error, or a device failure or malfunction; and various software errors, such as division by zero, attempt to access forbidden memory location, and inability of the OS to grant the request of an application. In each case, the OS must provide a response that clears the error condition with the least impact on running applications. The response may range from ending the program that caused the error, to retrying the operation, to simply reporting the error to the application.  • Accounting: A good OS will collect usage statistics for various resources and monitor performance parameters such as response time. On any system, this information is useful in anticipating the need for future enhancements and in tuning the system to improve performance. On a multiuser system, the information can be used for billing purposes.              4 of 30 2. The Operating System as Resource Manager    The figure above suggests the main resources that are managed by the OS. A portion of the OS is in main memory. This includes the kernel , or nucleus , which contains the most frequently used functions in the OS and, at a given time, other portions of the OS currently in use. The remainder of main memory contains user programs and data. The memory management hardware in the processor and the OS jointly control the allocation of main memory, as we shall see. The OS decides when an I/O device can be used by a program in execution and controls access to and use of files. The processor itself is a resource, and the OS must determine how much processor time is to be devoted to the execution of a particular user program. In the case of a multiple-processor system, this decision must span all of the processors.   3. Ease of Evolution of an Operating System  A major OS will evolve over time for a number of reasons:  • Hardware upgrades plus new types of hardware: For example, early versions of UNIX and the Macintosh OS did not employ a paging mechanism because they were run on processors without paging hardware. 1 Subsequent versions of these operating systems were modified to exploit paging capabilities. Also, the use of graphics terminals and page-mode terminals instead of line-at-a-time scroll mode terminals affects OS design. For example, a graphics terminal typically allows the user to view several applications at the same time through “windows” on the screen. This requires more sophisticated support in the OS.  • New services: In response to user demand or in response to the needs of system managers, the OS expands to offer new services. For example, if it is found to be difficult to maintain good 5 of 30 performance for users with existing tools, new measurement and control tools may be added to the OS.  • Fixes: Any OS has faults. These are discovered over the course of time and fixes are made. Of course, the fix may introduce new faults.    The first four states in the list below are found on most every Unix system. Other state names may appear on different platforms, and some of these are also listed below. Idle Nothing to do User Running a user's process Kernel Handling a kernel call, fault, or interrupt Nice Running a user's niced process Wait Waiting on some form of i/o iowait Waiting on user i/o Swap Waiting on swapping or paging i/o   The disparity between the I/O devices and the CPU motivated the development of I/O Processors (also called I/O channels).  Function: provide data flow path between I/O devices and memory.  Characteristics: • Simple (minimal processing capabilities). • Specialized, and not too fast, and much less expensive than conventional CPU. Computer systems that use channel I/O have special hardware components that handle all input/output operations in their entirety independently of the systems' CPU(s). The CPU of a system that uses channel I/O typically has only one machine instruction in its repertoire for input and output; this instruction is used to pass input/output commands to the specialized I/O hardware in the form of channel programs. I/O thereafter proceeds without intervention from the CPU until an event requiring notification of the operating system occurs, at which point the I/O hardware signals an interrupt to the CPU. A channel is an independent hardware component that coordinates all I/O to a set of controllers or devices. It is not merely a medium of communication, despite the name; it is a programmable device that handles all details of I/O after being given a list of I/O operations to carry out (the channel program). CPU States   I/O Channels or I/O Processors  6 of 30 Each channel may support one or more controllers and/or devices, but each channel program may only be directed at one of those connected devices. A channel program contain lists of commands to the channel itself and to the controller and device to which it is directed. Once the operating system has prepared a complete list of channel commands, it executes a single I/O machine instruction to initiate the channel program; the channel thereafter assumes control of the I/O operations until they are completed. It is possible to develop very complex channel programs, including testing of data and conditional branching within that channel program. This flexibility frees the CPU from the overhead of starting, monitoring, and managing individual I/O operations. The specialized channel hardware, in turn, is dedicated to I/O and can carry it out more efficiently than the CPU (and entirely in parallel with the CPU). Channel I/O is not unlike the Direct Memory Access (DMA) of microcomputers, only more complex and advanced. Most mainframe operating systems do not fully exploit all the features of channel I/O. On large mainframe computer systems, CPUs are only one of several powerful hardware components that work in parallel. Special input/output controllers (the exact names of which vary from one manufacturer to another) handle I/O exclusively, and these in turn are connected to hardware channels that also are dedicated to input and output. There may be several CPUs and several I/O processors. The overall architecture optimizes input/output performance without degrading pure CPU performance. Since most real-world applications of mainframe systems are heavily I/O-intensive business applications, this architecture helps provide the very high levels of throughput that distinguish mainframes from other types of computer.  7 of 30   The design constraints on a computer’s memory can be summed up by three questions: How much? How fast? How expensive? i.e. capacity, speed and cost.  The question of how much is somewhat open ended. If the capacity is there, applications will likely be developed to use it. The question of how fast is, in a sense, easier to answer. To achieve greatest performance, the memory must be able to keep up with the processor. That is, as the processor is executing instructions, we would not want it to have to pause waiting for instructions or operands. The final question must also be considered. For a practical system, the cost of memory must be reasonable in relationship to other components. As might be expected, there is a trade-off among the three key characteristics of memory: namely, capacity, access time, and cost. A variety of technologies are used to implement memory systems, and across this spectrum of technologies, the following relationships hold:  • Faster access time, greater cost per bit  • Greater capacity, smaller cost per bit  • Greater capacity, slower access speed  The dilemma facing the designer is clear. The designer would like to use memory technologies that provide for large-capacity memory, both because the capacity is needed and because the cost per bit is low. However, to meet performance requirements, the designer needs to use expensive, relatively lower-capacity memories with fast access times. The way out of this dilemma is to not rely on a single memory component or technology, but to employ a memory hierarchy . A typical hierarchy is illustrated in Figure given below. As one goes down the hierarchy, the following occur: a. Decreasing cost per bit b. Increasing capacity c. Increasing access time d. Decreasing frequency of access to the memory by the processor Thus, smaller, more expensive, faster memories are supplemented by larger, cheaper, slower memories. The key to the success of this organization is the decreasing frequency of access at lower levels. We will examine this concept in greater detail later in this chapter, when we discuss the cache, and when we discuss virtual memory later in this book. A brief explanation is provided at this point. Suppose that the processor has access to two levels of memory. Level 1 contains 1,000 bytes and has an access time of 0.1 μs; level 2 contains 100,000 bytes and has an access time of 1 μs. Assume that if a byte to be accessed is in level 1, then the processor accesses it directly. If it is in level 2, then the byte is first transferred to level 1 and then accessed by the processor. For simplicity, we ignore the time required for the processor to determine whether the byte is in level 1 or level 2.   Memory Hierarchy  8 of 30     Simple Batch Systems  Early computers were very expensive, and therefore it was important to maximize processor utilization. The wasted time due to scheduling and setup time was unacceptable. To improve utilization, the concept of a batch OS was developed. It appears that the first batch OS (and the first OS of any kind) was developed in the mid-1950s by General Motors for use on an IBM 701 [WEIZ81]. The concept was subsequently refined and implemented on the IBM 704 by a number of IBM customers. By the early 1960s, a number of vendors had developed batch operating systems for their computer systems. IBSYS, the IBM OS for the 7090/7094 computers, is particularly notable because of its widespread influence on other systems. The central idea behind the simple batch-processing scheme is the use of a piece of software known as the monitor. With this type of OS, the user no longer has direct access to the processor. Instead, the user submits the job on cards or tape to a computer operator, who batches the Types of OS  9 of 30 jobs together sequentially and places the entire batch on an input device, for use by the monitor. Each program is constructed to branch back to the monitor when it completes processing, at which point the monitor automatically begins loading the next program. The problems with Batch Systems are following.  Lack of interaction between the user and job.  CPU is often idle, because the speed of the mechanical I/O devices is slower than CPU.  Difficult to provide the desired priority.  Multiprogramming Operating Systems  To overcome the problem of underutilization of CPU and main memory, the multiprogramming was introduced. The multiprogramming is interleaved execution of multiple jobs by the same computer.  In multiprogramming system, when one program is waiting for I/O transfer; there is another program ready to utilize the CPU. So it is possible for several jobs to share the time of the CPU. But it is important to note that multiprogramming is not defined to be the execution of jobs at the same instance of time. Rather it does mean that there are a number of jobs available to the CPU (placed in main memory) and a portion of one is executed then a segment of another and so on.  Multiprogramming operating systems are fairly sophisticated compared to single-program, or uniprogramming, systems. To have several jobs ready to run, they must be kept in main memory, requiring some form of memory management. In addition, if several jobs are ready to run, the processor must decide which one to run; this decision requires an algorithm for scheduling means extra CPU time to process on this scheduling.    Multitasking Operating Systems  Multitasking, in an operating system, is allowing a user to perform more than one computer task (such as the operation of an application program) at a time. The operating system is able to keep track of where you are in these tasks and go from one to the other without losing information. Microsoft Windows 2000 / 7 / 8, IBM's OS/390, and Linux etc. are examples of operating systems that can do multitasking (almost all of today's operating systems can). When you open your Web browser and then open Word at the same time, you are causing the operating system to do multitasking.  Multitasking has the same meaning as multiprogramming in the general sense as both refer to having multiple (programs, processes, tasks, threads) running at the same time. Multitasking is the term used in modern operating systems when multiple tasks share a common processing resource (CPU and Memory). At any point in time the CPU is executing one task only while other tasks waiting their turn. The illusion of parallelism is achieved when the CPU is reassigned to another task (context switch). There are few main differences between multitasking and multiprogramming. A task in a multitasking operating system is not a whole application program 10 of 30 (recall that programs in modern operating systems are divided into logical pages). Task can also refer to a thread of execution when one process is divided into sub tasks (will talk about multi threading later). The task does not hijack the CPU until it finishes like in the older multiprogramming model but rather have a fair share amount of the CPU time called quantum (will talk about time sharing later in this article). Just to make it easy to remember, multitasking and multiprogramming refer to a similar concept (sharing CPU time) where one is used in modern operating systems while the other is used in older operating systems. Multitasking always refers to multiprogramming but vice versa is not true.  Being able to do multitasking doesn't mean that an unlimited number of tasks can be juggled at the same time. Each task consumes system storage and other resources. As more tasks are started, the system may slow down or begin to run out of shared storage.   Time-sharing Operating Systems  With the use of multiprogramming, batch processing can be quite efficient. However, for many jobs, it is desirable to provide a mode in which the user interacts directly with the computer. Indeed, for some jobs, such as transaction processing, an interactive mode is essential.   Today, the requirement for an interactive computing facility can be, and often is, met by the use of a dedicated personal computer or workstation. That option was not available in the 1960s, when most computers were big and costly. Instead, time sharing was developed. Just as multiprogramming allows the processor to handle multiple batch jobs at a time, multiprogramming can also be used to handle multiple interactive jobs. In this latter case, the technique is referred to as time-sharing, because processor time is shared among multiple users. In a time-sharing system, multiple users simultaneously access the system through terminals, with the OS interleaving the execution of each user program in a short burst or quantum of computation. Thus, if there are n users actively requesting service at one time, each user will only see on the average 1/ n of the effective computer capacity, not counting OS overhead. However, given the relatively slow human reaction time, the response time on a properly designed system should be similar to that on a dedicated computer. Both batch processing and time sharing use multiprogramming.   One of the first time-sharing operating systems to be developed was the Compatible Time-Sharing System (CTSS) [CORB62], developed at MIT by a group known as Project MAC (Machine-Aided Cognition, or Multiple-Access Computers). The system was first developed for the IBM 709 in 1961 and later transferred to an IBM 7094.   Recall that in a single processor system, parallel execution is an illusion. One instruction from one process at a time can be executed by the CPU even though multiple processes reside in main memory. Imagine a restaurant with only one waiter and few customers. There is no way for the waiter to serve more than one customer at a time but if it happens that the waiter is fast enough to rotate on the tables and provide food quickly then you get the feeling that all customers are being served at the same time. This is the example of time sharing when CPU time (or waiter time) is being shared between processes (customers). Multiprogramming and multitasking operating systems are nothing but time sharing systems. In multiprogramming though the CPU is shared between programs it is not the perfect example on CPU time sharing 11 of 30 because one program keeps running until it blocks however in a multitasking (modern operating system) time sharing is best manifested because each running process takes only a fair amount of the CPU time called quantum time. Even in a multiprocessing system when we have more than one processor still each processor time is shared between running processes. Time-sharing is implemented to have a better response time.  Compatible Time-Sharing System or CTSS, was demonstrated in November 1961. CTSS has a good claim to be the first time-sharing system and remained in use until 1973. Another contender for the first demonstrated time-sharing system was PLATO II, created by Donald Bitzer.  Real-time Operating System It is a multitasking operating system that aims at executing real-time applications. Real-time operating systems often use specialized scheduling algorithms so that they can achieve a deterministic nature of behavior. The main object of real-time operating systems is their quick and predictable response to events. They either have an event-driven design or a time-sharing one. An event-driven system switches between tasks based of their priorities while time-sharing operating systems switch tasks based on clock interrupts.   An RTOS performs all general purpose tasks of an OS, but is also specially designed to run applications with very precise timing and a high degree of reliability. This can be especially important in measurement and automation systems where downtime is costly or a program delay could cause a safety hazard.  To be considered "real-time", an operating system must have a known maximum time for each of the critical operations that it performs (or at least be able to guarantee that maximum most of the time). Some of these operations include OS calls and interrupt handling. Operating systems that can absolutely guarantee a maximum time for these operations are commonly referred to as "hard real-time", while operating systems that can only guarantee a maximum most of the time are referred to as "soft real-time". In practice, these strict categories have limited usefulness - each RTOS solution demonstrates unique performance characteristics and the user should carefully investigate these characteristics.  Windows CE, OS-9, Symbian and LynxOS are some of the commonly known real-time operating systems.   12 of 30  What is a process? • A program in execution • An instance of a program running on a computer • The entity that can be assigned to and executed on a processor • A unit of activity characterized by the execution of a sequence of instructions, a current state, and an associated set of system resources.   We can also think of a process as an entity that consists of a number of elements. Two essential elements of a process are program code (which may be shared with other processes that are executing the same program) and a set of data associated with that code. Let us suppose that the processor begins to execute this program code, and we refer to this executing entity as a process. At any given point in time, while the program is executing, this process can be uniquely characterized by a number of elements which can be found in a Process Control Block.     The information in the preceding list is stored in a data structure, typically called a process control block (Figure above), that is created and managed by the OS. The significant point about the process control block is that it contains sufficient information so that it is possible to Process  Process Control Block  13 of 30 interrupt a running process and later resume execution as if the interruption had not occurred. The process control block is the key tool that enables the OS to support multiple processes and to provide for multiprocessing. When a process is interrupted, the current values of the program counter and the processor registers (context data) are saved in the appropriate fields of the corresponding process control block, and the state of the process is changed to some other value, such as blocked or ready (described subsequently). The OS is now free to put some other process in the running state. The program counter and context data for this process are loaded into the processor registers and this process now begins to execute.   We can say that a process consists of program code and associated data plus a process control block. For a single-processor computer, at any given time, at most one process is executing and that process is in the running state.  • Identifier: A unique identifier associated with this process, to distinguish it from all other processes. • State: If the process is currently executing, it is in the running state. • Priority: Priority level relative to other processes. • Program counter: The address of the next instruction in the program to be executed. • Memory pointers: Includes pointers to the program code and data associated with this process, plus any memory blocks shared with other processes. • Context data: These are data that are present in registers in the processor while the process is executing. • I/O status information: Includes outstanding I/O requests, I/O devices (e.g., disk drives) assigned to this process, a list of files in use by the process, and so on. • Accounting information: May include the amount of processor time and clock time used, time limits, account numbers, and so on.     • Running: The process that is currently being executed. For this chapter, we will assume a computer with a single processor, so at most one process at a time can be in this state. • Ready: A process that is prepared to execute when given the opportunity. Process states  14 of 30 • Blocked/Waiting: A process that cannot execute until some event occurs, such as the completion of an I/O operation. • New: A process that has just been created but has not yet been admitted to the pool of executable processes by the OS. Typically, a new process has not yet been loaded into main memory, although its process control block has been created. • Exit: A process that has been released from the pool of executable processes by the OS, either because it halted or because it aborted for some reason.  The types of events that lead to each state transition for a process; the possible transitions are as follows: • Null: New: A new process is created to execute a program. This event occurs for any specific reason. • New : Ready: The OS will move a process from the New state to the Ready state when it is prepared to take on an additional process. Most systems set some limit based on the number of existing processes or the amount of virtual memory committed to existing processes. This limit assures that there are not so many active processes as to degrade performance. • Ready : Running: When it is time to select a process to run, the OS chooses one of the processes in the Ready state. This is the job of the scheduler or dispatcher. Scheduling is explored in Part Four. • Running: Exit: The currently running process is terminated by the OS if the process indicates that it has completed, or if it aborts. • Running : Ready: The most common reason for this transition is that the running process has reached the maximum allowable time for uninterrupted execution; virtually all multiprogramming operating systems impose this type of time discipline. There are several other alternative causes for this transition, which are not implemented in all operating systems. Of particular importance is the case in which the OS assigns different levels of priority to different processes. Suppose, for example, that process A is running at a given priority level, and process B, at a higher priority level, is blocked. If the OS learns that the event upon which process B has been waiting has occurred, moving B to a ready state, then it can interrupt process A and dispatch process B. We say that the OS has preempted process A. 6 Finally, a process may voluntarily release control of the processor. An example is a background process that performs some accounting or maintenance function periodically. • Running: Blocked: A process is put in the Blocked state if it requests something for which it must wait. A request to the OS is usually in the form of a system service call; that is, a call from the running program to a procedure that is part of the operating system code. For example, a process may request a service from the OS that the OS is not prepared to perform immediately. It can request a resource, such as a file or a shared section of virtual memory, that is not immediately available. Or the process may initiate an action, such as an I/O operation, that must be completed before the process can continue. When processes communicate with each other, a process may be blocked when it is waiting for another process to provide data or waiting for a message from another process. • Blocked: Ready: A process in the Blocked state is moved to the Ready state when the event for which it has been waiting occurs. • Ready : Exit: For clarity, this transition is not shown on the state diagram. In some systems, a parent may terminate a child’ process at any time. Also, if a parent terminates, all child processes associated with that parent may be terminated. • Blocked: Exit: The comments under the preceding item apply.   15 of 30  Modern general purpose operating systems permit a user to create and destroy processes.      In unix this is done by the fork system call, which creates a child process, and the exit system call, which terminates the current process.     After a fork both parent and child keep running (indeed they have the same program text) and each can fork off other processes.     A process tree results. The root of the tree is a special process created by the OS during startup.     A process can choose to wait for children to terminate. For example, if C issued a wait() system call it would block until G finished.   Old or primitive operating system like MS-DOS are not multiprogrammed so when one process starts another, the first process is automatically blocked and waits until the second is finished.         Context Switch - When CPU switches to another process, the system must save the state of the old process and load the saved state for the new process.  Context-Switch Time is overhead; the system does no useful work while switching.   Context-Switch Time depends on hardware support.  Context-Switch Speed varies from machine to machine depending on memory speed, number of registers copied. The speed ranges from 1 to 1000 microsecond  Process Hierarchy  Context Switching  16 of 30    Long-term scheduler (or job scheduler) – selects which processes should be brought into the ready queue (i.e, selects processes from pool (disk) and loads them into memory for execution). Short-term scheduler (or CPU scheduler) – selects which process should be executed next and allocates CPU (i.e, selects from among the processes that are ready to execute, and allocates the CPU to one of them). Short-term scheduler is invoked very frequently (milliseconds) ⇒ (must be fast). Long-term scheduler is invoked very infrequently (seconds, minutes) ⇒ (may be slow). The long-term scheduler controls the degree of multiprogramming (the number of processes in memory) Schedulers  17 of 30 Medium-term scheduler – to remove processes from memory and reduce the degree of multiprogramming (the process is swapped out and swapped in by the medium-term scheduler).   Independent process cannot affect or be affected by the execution of another process. Cooperating process can affect or be affected by the execution of another process. Any process that shares data with other processes is a cooperating process.   Scheduling criteria is also called as scheduling methodology. Key to multiprogramming is scheduling. Different CPU scheduling algorithm have different properties .The criteria used for comparing these algorithms include the following:     CPU Utilization: Keep the CPU as busy as possible. It range from 0 to 100%. In practice, it ranges from 40 to 90%.     Throughput: Throughput is the rate at which processes are completed per unit of time.     Turnaround time: This is the how long a process takes to execute a process. It is calculated as the time gap between the submission of a process and its completion.     Waiting time: Waiting time is the sum of the time periods spent in waiting in the ready queue.     Response time: Response time is the time it takes to start responding from submission time. It is calculated as the amount of time it takes from when a request was submitted until the first response is produced.     Fairness: Each process should have a fair share of CPU. Non-preemptive Scheduling: In non-preemptive mode, once if a process enters into running state, it continues to execute until it terminates or blocks itself to wait for Input/Output or by requesting some operating system service.   Independent and Cooperating Process  CPU Scheduling  18 of 30 Preemptive Scheduling: In preemptive mode, currently running process may be interrupted and moved to the ready state by the operating system. When a new process arrives or when an interrupt occurs, preemptive policies may incur greater overhead than non-preemptive version but preemptive version may provide better service. It is desirable to maximize CPU utilization and throughput, and to minimize turnaround time, waiting time and response time. Scheduling Algorithms Scheduling algorithms or scheduling policies are mainly used for short-term scheduling. The main objective of short-term scheduling is to allocate processor time in such a way as to optimize one or more aspects of system behavior. For these scheduling algorithms assume only a single processor is present. Scheduling algorithms decide which of the processes in the ready queue is to be allocated to the CPU is basis on the type of scheduling policy and whether that policy is either preemptive or non-preemptive. For scheduling arrival time and service time are also will play a role. List of scheduling algorithms are as follows: Non Preemptive Preemptive First-come, first-served scheduling (FCFS)  Round-Robin (RR) Shortest Job First Scheduling (SJF)  Shortest Remaining time (SRT)      The central themes of operating system design are all concerned with the management of processes and threads: • Multiprogramming: The management of multiple processes within a uniprocessor system • Multiprocessing : The management of multiple processes within a multiprocessor • Distributed processing: The management of multiple processes executing on multiple, distributed computer systems. The recent proliferation of clusters is a prime example of this type of system.  Fundamental to all of these areas, and fundamental to OS design, is concurrency. Concurrency encompasses a host of design issues, including communication among processes, sharing of and competing for resources (such as memory, files, and I/O access), synchronization of the activities of multiple processes, and allocation of processor time to processes. We shall see that these issues arise not just in multiprocessing and distributed processing environments but even in single-processor multiprogramming systems.    Concurrency  19 of 30        We can classify the ways in which processes interact on the basis of the degree to which they are aware of each other’s existence. Table 5.2 lists three possible degrees of awareness plus the consequences of each:  • Processes unaware of each other: These are independent processes that are not intended to work together. The best example of this situation is the multiprogramming of multiple independent processes. These can either be batch jobs or interactive sessions or a mixture. Although the processes are not working together, the OS needs to be concerned about competition for resources. For example, two independent applications may both want to access the same disk or file or printer. The OS must regulate these accesses.  • Processes indirectly aware of each other: These are processes that are not necessarily aware of each other by their respective process IDs but that share access to some object, such as an I/O buffer. Such processes exhibit cooperation in sharing the common object.  • Processes directly aware of each other: These are processes that are able to communicate with each other by process ID and that are designed to work jointly on some activity. Again, such processes exhibit cooperation. Conditions will not always be as clear-cut as suggested in Table follows. Rather, several processes may exhibit aspects of both competition and cooperation. Nevertheless, it is productive to examine each of the three items in the preceding list separately and determine their implications for the OS.  Process Interaction  20 of 30    A race condition occurs when multiple processes or threads read and write data items so that the final result depends on the order of execution of instructions in the multiple processes. Let us consider two simple examples.  As an example, suppose that two processes, P1 and P2, share the global variable a. At some point in its execution, P1 updates a to the value 1, and at some point in its execution, P2 updates a to the value 2. Thus, the two tasks are in a race to write variable a. In this example, the “loser” of the race (the process that updates last) determines the final value of a.  For our second example, consider two processes, P3 and P4, that share global variables b and c, with initial values b = 1 and c = 2. At some point in its execution, P3 executes the assignment b = b + c, and at some point in its execution, P4 executes the assignment c = b + c. Note that the two processes update different variables. However, the final values of the two variables depend on the order in which the two processes execute these two assignments. If P3 executes its assignment statement first, then the final values are b = 3 and c = 5. If P4 executes its assignment statement first, then the final values are b = 4 and c = 3.     Race Condition  21 of 30  COMPETITION AMONG PROCESSES FOR RESOURCES:  Concurrent processes come into conflict with each other when they are competing for the use of the same resource. In its pure form, we can describe the situation as follows. Two or more processes need to access a resource during the course of their execution. Each process is unaware of the existence of other processes, and each is to be unaffected by the execution of the other processes. It follows from this that each process should leave the state of any resource that it uses unaffected. Examples of resources include I/O devices, memory, processor time, and the clock. There is no exchange of information between the competing processes. However, the execution of one process may affect the behavior of competing processes. In particular, if two processes both wish access to a single resource, then one process will be allocated that resource by the OS, and the other will have to wait. Therefore, the process that is denied access will be slowed down. In an extreme case, the blocked process may never get access to the resource and hence will never terminate successfully.  In the case of competing processes three control problems must be faced. First is the need for mutual exclusion. Suppose two or more processes require access to a single non-sharable resource, such as a printer. During the course of execution, each process will be sending commands to the I/O device, receiving status information, sending data, and/or receiving data. We will refer to such a resource as a critical resource, and the portion of the program that uses it as a critical section of the program. It is important that only one program at a time be allowed in its critical section. We cannot simply rely on the OS to understand and enforce this restriction because the detailed requirements may not be obvious. In the case of the printer, for example, we want any individual process to have control of the printer while it prints an entire file. Otherwise, lines from competing processes will be interleaved. The enforcement of mutual exclusion creates two additional control problems. One is that of deadlock. For example, consider two processes, P1 and P2, and two resources, R1 and R2. Suppose that each process needs access to both resources to perform part of its function. Then it is possible to have the following situation: the OS assigns R1 to P2, and R2 to P1. Each process is waiting for one of the two resources. Neither will release the resource that it already owns until it has acquired the other resource and performed the function requiring both resources. The two processes are deadlocked.  A final control problem is starvation. Suppose that three processes (P1, P2, P3) each require periodic access to resource R. Consider the situation in which P1 is in possession of the resource, and both P2 and P3 are delayed, waiting for that resource. When P1 exits its critical section, either P2 or P3 should be allowed access to R. Assume that the OS grants access to P3 and that P1 again requires access before P3 completes its critical section. If the OS grants access to P1 after P3 has finished, and subsequently alternately grants access to P1 and P3, then P2 may indefinitely be denied access to the resource, even though there is no deadlock situation.     Problems of Concurrency – Mutual exclusion, Deadlock & Starvation  22 of 30   Deadlock can be defined as the permanent blocking of a set of processes that either compete for system resources or communicate with each other. A set of processes is deadlocked when each process in the set is blocked awaiting an event (typically the freeing up of some requested resource) that can only be triggered by another blocked process in the set. Deadlock is permanent because none of the events is ever triggered. Unlike other problems in concurrent process management, there is no efficient solution in the general case.  Resource Allocation Graph A useful tool in characterizing the allocation of resources to processes is the resource allocation graph, introduced by Holt [HOLT72]. The resource allocation graph is a directed graph that depicts a state of the system of resources and processes, with each process and each resource represented by a node. A graph edge directed from a process to a resource indicates a resource that has been requested by the process but not yet granted (Figure given below). Within a resource node, a dot is shown for each instance of that resource. Examples of resource types that may have multiple instances are I/O devices that are allocated by a resource management module in the OS. A graph edge directed from a reusable resource node dot to a process indicates a request that has been granted (Figure given below); that is, the process has been assigned one unit of that resource. A graph edge directed from a consumable resource node dot to a process indicates that the process is the producer of that resource. Figure C shows an example deadlock. There is only one unit each of resources Ra and Rb. Process P1 holds Rb and requests Ra, while P2 holds Ra but requests Rb. Figure d has the same topology as Figure c, but there is no deadlock because multiple units of each resource are available. The resource allocation graph of Figure e corresponds to the deadlock situation in Figure b. Note that in this case; we do not have a simple situation in which two processes each have one resource the other needs. Rather, in this case, there is a circular chain of processes and resources that results in deadlock.  Deadlock  23 of 30    Necessary conditions for Deadlock  24 of 30  Do not allow one of the four conditions those may invoke deadlock to prevent deadlock: 1. No preemption 2. Circular wait 3. Mutual Exclusion 4. Hold and wait   Banker’s behavior  (example of one resource type with many instances):  Clients are asking for loans up-to an agreed limit  The banker knows that not all clients need their limit simultaneously  All clients must achieve their limits at some point of time but not necessarily simultaneously  After fulfilling their needs, the clients will pay-back their loans   Example: The banker knows that all 4 clients need 22 units together, but he has only total 10 units  As per Banker’s following points are to be maintained:  Always keep so many resources that satisfy the needs of at least one client  Multiple instances.  Each process must a priori claim maximum use.  When a process requests a resource it may have to wait.   When a process gets all its resources it must return them in a finite amount of time.    Banker’s Algorithm – Deadlock Avoidance  Deadlock Prevention  25 of 30  Mechanism for processes to communicate and to synchronize their actions:  Message system – processes communicate with each other without resorting to shared variables  IPC facility provides two operations:  send(message) – message size fixed or variable   receive(message)  If P and Q wish to communicate, they need to:  establish a communication link between them   exchange messages via send/receive  Implementation of communication link:  physical (e.g., shared memory, hardware bus)  logical (e.g., logical properties) Examples of interprocess and interthread communication facilities include:  Data transfer: o Pipes (named, dynamic – shell or process generated) o shared buffers or files o TCP/IP socket communication (named, dynamic - loop back interface or network interface) o D-Bus is an IPC mechanism offering one to many broadcast and subscription facilities between processes. Among other uses, it is used by graphical frameworks such as KDE and GNOME.  Shared memory o Between Processes o Between Threads (global memory)  Messages o OS provided message passing: send() / receive(): o Signals o Via locks, semaphores or monitors     Interprocess Communication - IPC  26 of 30    What is the Base register and what is the Limit register?   Base register: Specifies the smallest legal physical memory address.   Limit register: Specifies the size of the range.   A pair of base and limit registers specifies the logical address space.   The base and limit registers can be loaded only by the operating system.   Ex: If the base register holds 300040 and the limit register is 120900, then the program can legally access all addresses from 300040 through 420939 (inclusive).       Address binding can occur at three different stages:   Compile Time: if you know at compile time where the process will reside in memory, then absolute code can be generated.   Load Time: if it is not know at compile time where the process will reside in memory, then the compiler must generate relocatable code and the final binding is delayed until the load time. Execution Time: if the process can be moved during its execution from one memory segment to another, then binding must be delayed until run time.    Base Register – Limit Register  Address Binding  Base register 27 of 30     Logical Memory Address: Addresses generated by the CPU.   Physical Memory Address: Addresses seen by the memory unit.   Logical and Physical addresses are the same compile-time and load-time address binding schemes, and differ in the execution-time address-binding scheme.   What is the Memory Management Unit (MMU)?   Memory Management Unit (MMU): It is a hardware device that maps the logical address to physical address.   The value in the MMU relocation register is added to every logical address generated by the CPU to be mapped into a physical memory address.   Logical Memory and Physical Memory  28 of 30   Fixed Partitioning In most schemes for memory management, we can assume that the OS occupies some fixed portion of main memory and that the rest of main memory is available for use by multiple processes. The simplest scheme for managing this available memory is to partition it into regions with fixed boundaries.  One possibility is to make use of equal-size partitions. In this case, any process whose size is less than or equal to the partition size can be loaded into any available partition. If all partitions are full and no process is in the Ready or Running state, the operating system can swap a process out of any of the partitions and load in another process, so that there is some work for the processor. There are two difficulties with the use of equal-size fixed partitions: • A program may be too big to fit into a partition. In this case, the programmer must design the program with the use of overlays so that only a portion of the program need be in main memory at any one time. When a module is needed that is not present, the user’s program must load that module into the program’s partition, overlaying whatever programs or data are there.  Dynamic Partitioning To overcome some of the difficulties with fixed partitioning, an approach known as dynamic partitioning was developed. Again, this approach has been supplanted by more sophisticated memory management techniques. An important operating system that used this technique was IBM’s mainframe operating system, OS/MVT (Multiprogramming with a Variable Number of Tasks). With dynamic partitioning, the partitions are of variable length and number. When a process is brought into main memory, it is allocated exactly as much memory as it requires and no more.          Memory Partitioning 29 of 30    To satisfy a request of size n from a list of free holes, we use one of the following strategies:   First-Fit: Allocate the process to the first big enough hole.    Best-Fit: Allocate the process to the smallest hole that is big enough to accommodate the process. The must search the entire list unless ordered by size and produce the smallest leftover hole.    Worst-Fit: Allocate the process to the largest hole. The must search the entire list unless ordered by size and produce the largest leftover hole.    The OS obviously needs to keep track of both partitions and free memory. Once created, a partition defined by its base address and size. Those attributes remain essentially unchanged for as long as the related partition exists. In addition for the purpose of process switching and swapping, it is important to know which partition belongs to a given process. An enhanced version of Partition Description Table is required to keep track of partitions in the case of dynamic partitioning. To imply any dynamic allocation strategies the PDT data is very much required. For each and every allocation of process into memory PDT access is must. The structure of PDT can be designed as given below: Partition SL No Base (in K) Size (in K) Status 1 0 100 Allocated  2 100 120 Allocated 3 220 300 Not allocated ……       In computer memory/ storage, fragmentation is a phenomenon in which storage space is used inefficiently, reducing capacity or performance and often both. The exact consequences of fragmentation depend on the specific system of storage allocation in use and the particular form of fragmentation. In many cases, fragmentation leads to storage space being "wasted", and in that case the term also refers to the wasted space itself. Fragmentation can be one of the following:   External Fragmentation: Total memory space exists to satisfy a request but is not contiguous. It can be resulted from best-fit and first-fit in the case of dynamic memory allocation. Dynamic Partitioning strategies to allocate processes into memory Fragmentation Page Description Table 30 of 30  Internal Fragmentation: Allocated memory may be slightly larger than the required memory resulted in a size difference that is memory internal to a partition but is not used in the case of fixed-sized partitioning.   The general approach to avoiding external fragmentation is to break the physical memory into fixed-sized blocks and allocate memory in units based on block size.   How to reduce the external fragmentation?  To reduce the external fragmentation by:   Compaction: Shuffle memory contents to place all free memory together in one large block. It is possible only if relocation is dynamic, and is done at execution time.   Another possible solution: paging and segmentation.    Non-Contiguous Memory Allocation:  1. Paging  2.  Segments  3.  Segments with paging.    A storage allocation scheme in which secondary memory can be addressed as though it were part of main memory. The addresses a program may use to reference memory are distinguished from the addresses the memory system uses to identify physical storage sites, and program-generated addresses are translated automatically to the corresponding machine addresses. The size of virtual storage is limited by the addressing scheme of the computer system and by the amount of secondary memory available and not by the actual number of main storage locations. Virtual Memory involves separation of user logical memory from physical memory.   Simulating more random access memory (RAM) than actually exists, allowing the computer to run larger programs and multiple programs concurrently.   A common function in most every OS and hardware platform, virtual memory uses the hard disk to temporarily hold what was in real memory.  It can be implemented as:   Demand paging.   Demand segmentation.  Non contiguous Memory Allocation types Virtual Memory 
